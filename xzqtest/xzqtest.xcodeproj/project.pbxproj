@@ -14,6 +14,21 @@
 		83ADBFB31B7ADEC000BD3DD2 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 83ADBFB21B7ADEC000BD3DD2 /* Images.xcassets */; };
 		83ADBFB61B7ADEC000BD3DD2 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83ADBFB41B7ADEC000BD3DD2 /* LaunchScreen.xib */; };
 		83ADBFC21B7ADEC000BD3DD2 /* xzqtestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 83ADBFC11B7ADEC000BD3DD2 /* xzqtestTests.m */; };
+		83ADBFD51B7AE8EB00BD3DD2 /* KCStatusTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 83ADBFD41B7AE8EB00BD3DD2 /* KCStatusTableViewCell.m */; };
+		83ADBFD81B7AE97200BD3DD2 /* KCDbManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 83ADBFD71B7AE97200BD3DD2 /* KCDbManager.m */; };
+		83ADBFDB1B7AE9D900BD3DD2 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 83ADBFDA1B7AE9D900BD3DD2 /* libsqlite3.dylib */; };
+		83ADBFE01B7AEDC300BD3DD2 /* KCDatabaseCreator.m in Sources */ = {isa = PBXBuildFile; fileRef = 83ADBFDF1B7AEDC300BD3DD2 /* KCDatabaseCreator.m */; };
+		83ADBFE31B7AEE8400BD3DD2 /* KCUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 83ADBFE21B7AEE8400BD3DD2 /* KCUser.m */; };
+		83ADBFE61B7AEF9900BD3DD2 /* KCStatus.m in Sources */ = {isa = PBXBuildFile; fileRef = 83ADBFE51B7AEF9900BD3DD2 /* KCStatus.m */; };
+		83ADBFE91B7AF06900BD3DD2 /* KCUserService.m in Sources */ = {isa = PBXBuildFile; fileRef = 83ADBFE81B7AF06900BD3DD2 /* KCUserService.m */; };
+		83ADBFEC1B7AF19600BD3DD2 /* KCStatusService.m in Sources */ = {isa = PBXBuildFile; fileRef = 83ADBFEB1B7AF19600BD3DD2 /* KCStatusService.m */; };
+		83ADBFEF1B7AF28B00BD3DD2 /* KCMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83ADBFEE1B7AF28B00BD3DD2 /* KCMainViewController.m */; };
+		83ADBFF21B7AF51B00BD3DD2 /* DatabaseMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83ADBFF11B7AF51B00BD3DD2 /* DatabaseMainViewController.m */; };
+		83ADBFF91B7AF90300BD3DD2 /* binger.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 83ADBFF41B7AF90300BD3DD2 /* binger.jpg */; };
+		83ADBFFA1B7AF90300BD3DD2 /* lily.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 83ADBFF51B7AF90300BD3DD2 /* lily.jpg */; };
+		83ADBFFB1B7AF90300BD3DD2 /* mbtype@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 83ADBFF61B7AF90300BD3DD2 /* mbtype@2x.png */; };
+		83ADBFFC1B7AF90300BD3DD2 /* qianmo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 83ADBFF71B7AF90300BD3DD2 /* qianmo.jpg */; };
+		83ADBFFD1B7AF90300BD3DD2 /* xiaona.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 83ADBFF81B7AF90300BD3DD2 /* xiaona.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +55,32 @@
 		83ADBFBB1B7ADEC000BD3DD2 /* xzqtestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = xzqtestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		83ADBFC01B7ADEC000BD3DD2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		83ADBFC11B7ADEC000BD3DD2 /* xzqtestTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = xzqtestTests.m; sourceTree = "<group>"; };
+		83ADBFD31B7AE8EB00BD3DD2 /* KCStatusTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KCStatusTableViewCell.h; sourceTree = "<group>"; };
+		83ADBFD41B7AE8EB00BD3DD2 /* KCStatusTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KCStatusTableViewCell.m; sourceTree = "<group>"; };
+		83ADBFD61B7AE97200BD3DD2 /* KCDbManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KCDbManager.h; sourceTree = "<group>"; };
+		83ADBFD71B7AE97200BD3DD2 /* KCDbManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KCDbManager.m; sourceTree = "<group>"; };
+		83ADBFDA1B7AE9D900BD3DD2 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		83ADBFDC1B7AEAAB00BD3DD2 /* KCSingleton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KCSingleton.h; sourceTree = "<group>"; };
+		83ADBFDD1B7AEB3A00BD3DD2 /* KCAppConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KCAppConfig.h; sourceTree = "<group>"; };
+		83ADBFDE1B7AEDC300BD3DD2 /* KCDatabaseCreator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KCDatabaseCreator.h; sourceTree = "<group>"; };
+		83ADBFDF1B7AEDC300BD3DD2 /* KCDatabaseCreator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KCDatabaseCreator.m; sourceTree = "<group>"; };
+		83ADBFE11B7AEE8400BD3DD2 /* KCUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KCUser.h; sourceTree = "<group>"; };
+		83ADBFE21B7AEE8400BD3DD2 /* KCUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KCUser.m; sourceTree = "<group>"; };
+		83ADBFE41B7AEF9900BD3DD2 /* KCStatus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KCStatus.h; sourceTree = "<group>"; };
+		83ADBFE51B7AEF9900BD3DD2 /* KCStatus.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KCStatus.m; sourceTree = "<group>"; };
+		83ADBFE71B7AF06900BD3DD2 /* KCUserService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KCUserService.h; sourceTree = "<group>"; };
+		83ADBFE81B7AF06900BD3DD2 /* KCUserService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KCUserService.m; sourceTree = "<group>"; };
+		83ADBFEA1B7AF19600BD3DD2 /* KCStatusService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KCStatusService.h; sourceTree = "<group>"; };
+		83ADBFEB1B7AF19600BD3DD2 /* KCStatusService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KCStatusService.m; sourceTree = "<group>"; };
+		83ADBFED1B7AF28B00BD3DD2 /* KCMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KCMainViewController.h; sourceTree = "<group>"; };
+		83ADBFEE1B7AF28B00BD3DD2 /* KCMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KCMainViewController.m; sourceTree = "<group>"; };
+		83ADBFF01B7AF51B00BD3DD2 /* DatabaseMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DatabaseMainViewController.h; sourceTree = "<group>"; };
+		83ADBFF11B7AF51B00BD3DD2 /* DatabaseMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DatabaseMainViewController.m; sourceTree = "<group>"; };
+		83ADBFF41B7AF90300BD3DD2 /* binger.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = binger.jpg; sourceTree = "<group>"; };
+		83ADBFF51B7AF90300BD3DD2 /* lily.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = lily.jpg; sourceTree = "<group>"; };
+		83ADBFF61B7AF90300BD3DD2 /* mbtype@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mbtype@2x.png"; sourceTree = "<group>"; };
+		83ADBFF71B7AF90300BD3DD2 /* qianmo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = qianmo.jpg; sourceTree = "<group>"; };
+		83ADBFF81B7AF90300BD3DD2 /* xiaona.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = xiaona.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +88,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				83ADBFDB1B7AE9D900BD3DD2 /* libsqlite3.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -64,6 +106,7 @@
 			isa = PBXGroup;
 			children = (
 				83ADBFA41B7ADEC000BD3DD2 /* xzqtest */,
+				83ADBFD91B7AE9C400BD3DD2 /* Frameworks */,
 				83ADBFBE1B7ADEC000BD3DD2 /* xzqtestTests */,
 				83ADBFA31B7ADEC000BD3DD2 /* Products */,
 			);
@@ -81,6 +124,7 @@
 		83ADBFA41B7ADEC000BD3DD2 /* xzqtest */ = {
 			isa = PBXGroup;
 			children = (
+				83ADBFCB1B7AE82300BD3DD2 /* database */,
 				83ADBFA91B7ADEC000BD3DD2 /* AppDelegate.h */,
 				83ADBFAA1B7ADEC000BD3DD2 /* AppDelegate.m */,
 				83ADBFAC1B7ADEC000BD3DD2 /* ViewController.h */,
@@ -117,6 +161,112 @@
 				83ADBFC01B7ADEC000BD3DD2 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		83ADBFCB1B7AE82300BD3DD2 /* database */ = {
+			isa = PBXGroup;
+			children = (
+				83ADBFCC1B7AE82F00BD3DD2 /* SQLite */,
+				83ADBFF01B7AF51B00BD3DD2 /* DatabaseMainViewController.h */,
+				83ADBFF11B7AF51B00BD3DD2 /* DatabaseMainViewController.m */,
+			);
+			path = database;
+			sourceTree = "<group>";
+		};
+		83ADBFCC1B7AE82F00BD3DD2 /* SQLite */ = {
+			isa = PBXGroup;
+			children = (
+				83ADBFF31B7AF90300BD3DD2 /* Resource */,
+				83ADBFD21B7AE89F00BD3DD2 /* Common */,
+				83ADBFD11B7AE89300BD3DD2 /* App */,
+				83ADBFD01B7AE88A00BD3DD2 /* Service */,
+				83ADBFCF1B7AE86F00BD3DD2 /* Model */,
+				83ADBFCE1B7AE86200BD3DD2 /* View */,
+				83ADBFCD1B7AE85800BD3DD2 /* Controller */,
+			);
+			path = SQLite;
+			sourceTree = "<group>";
+		};
+		83ADBFCD1B7AE85800BD3DD2 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				83ADBFED1B7AF28B00BD3DD2 /* KCMainViewController.h */,
+				83ADBFEE1B7AF28B00BD3DD2 /* KCMainViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		83ADBFCE1B7AE86200BD3DD2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				83ADBFD31B7AE8EB00BD3DD2 /* KCStatusTableViewCell.h */,
+				83ADBFD41B7AE8EB00BD3DD2 /* KCStatusTableViewCell.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		83ADBFCF1B7AE86F00BD3DD2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				83ADBFE11B7AEE8400BD3DD2 /* KCUser.h */,
+				83ADBFE21B7AEE8400BD3DD2 /* KCUser.m */,
+				83ADBFE41B7AEF9900BD3DD2 /* KCStatus.h */,
+				83ADBFE51B7AEF9900BD3DD2 /* KCStatus.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		83ADBFD01B7AE88A00BD3DD2 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				83ADBFE71B7AF06900BD3DD2 /* KCUserService.h */,
+				83ADBFE81B7AF06900BD3DD2 /* KCUserService.m */,
+				83ADBFEA1B7AF19600BD3DD2 /* KCStatusService.h */,
+				83ADBFEB1B7AF19600BD3DD2 /* KCStatusService.m */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		83ADBFD11B7AE89300BD3DD2 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				83ADBFDD1B7AEB3A00BD3DD2 /* KCAppConfig.h */,
+				83ADBFDE1B7AEDC300BD3DD2 /* KCDatabaseCreator.h */,
+				83ADBFDF1B7AEDC300BD3DD2 /* KCDatabaseCreator.m */,
+			);
+			name = App;
+			path = Common;
+			sourceTree = "<group>";
+		};
+		83ADBFD21B7AE89F00BD3DD2 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				83ADBFD61B7AE97200BD3DD2 /* KCDbManager.h */,
+				83ADBFD71B7AE97200BD3DD2 /* KCDbManager.m */,
+				83ADBFDC1B7AEAAB00BD3DD2 /* KCSingleton.h */,
+			);
+			name = Common;
+			path = App;
+			sourceTree = "<group>";
+		};
+		83ADBFD91B7AE9C400BD3DD2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				83ADBFDA1B7AE9D900BD3DD2 /* libsqlite3.dylib */,
+			);
+			path = Frameworks;
+			sourceTree = "<group>";
+		};
+		83ADBFF31B7AF90300BD3DD2 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				83ADBFF41B7AF90300BD3DD2 /* binger.jpg */,
+				83ADBFF51B7AF90300BD3DD2 /* lily.jpg */,
+				83ADBFF61B7AF90300BD3DD2 /* mbtype@2x.png */,
+				83ADBFF71B7AF90300BD3DD2 /* qianmo.jpg */,
+				83ADBFF81B7AF90300BD3DD2 /* xiaona.jpg */,
+			);
+			path = Resource;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -199,7 +349,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				83ADBFF91B7AF90300BD3DD2 /* binger.jpg in Resources */,
+				83ADBFFD1B7AF90300BD3DD2 /* xiaona.jpg in Resources */,
+				83ADBFFB1B7AF90300BD3DD2 /* mbtype@2x.png in Resources */,
+				83ADBFFA1B7AF90300BD3DD2 /* lily.jpg in Resources */,
 				83ADBFB11B7ADEC000BD3DD2 /* Main.storyboard in Resources */,
+				83ADBFFC1B7AF90300BD3DD2 /* qianmo.jpg in Resources */,
 				83ADBFB61B7ADEC000BD3DD2 /* LaunchScreen.xib in Resources */,
 				83ADBFB31B7ADEC000BD3DD2 /* Images.xcassets in Resources */,
 			);
@@ -220,8 +375,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				83ADBFAE1B7ADEC000BD3DD2 /* ViewController.m in Sources */,
+				83ADBFE91B7AF06900BD3DD2 /* KCUserService.m in Sources */,
+				83ADBFE31B7AEE8400BD3DD2 /* KCUser.m in Sources */,
+				83ADBFEF1B7AF28B00BD3DD2 /* KCMainViewController.m in Sources */,
 				83ADBFAB1B7ADEC000BD3DD2 /* AppDelegate.m in Sources */,
 				83ADBFA81B7ADEC000BD3DD2 /* main.m in Sources */,
+				83ADBFD81B7AE97200BD3DD2 /* KCDbManager.m in Sources */,
+				83ADBFD51B7AE8EB00BD3DD2 /* KCStatusTableViewCell.m in Sources */,
+				83ADBFF21B7AF51B00BD3DD2 /* DatabaseMainViewController.m in Sources */,
+				83ADBFEC1B7AF19600BD3DD2 /* KCStatusService.m in Sources */,
+				83ADBFE01B7AEDC300BD3DD2 /* KCDatabaseCreator.m in Sources */,
+				83ADBFE61B7AEF9900BD3DD2 /* KCStatus.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

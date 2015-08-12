@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "DatabaseMainViewController.h"
 
 @interface ViewController ()
 
@@ -17,10 +18,22 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(10, 100, [UIScreen mainScreen].bounds.size.width-20, 40)];
-    label.text = @"Hello World!";
-    label.textAlignment = NSTextAlignmentCenter;
-    [self.view addSubview:label];
+    self.title = @"首页";
+    self.view.backgroundColor = [UIColor whiteColor];
+    
+    UIButton *database = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    [database setTitle:@"数据库" forState:UIControlStateNormal];
+    [database setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    database.layer.masksToBounds = YES;
+    database.layer.borderWidth = 0.5;
+    database.frame = CGRectMake(10, 80, [UIScreen mainScreen].bounds.size.width/2-20, 40);
+    [database addTarget:self action:@selector(databaseClick) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:database];
+}
+
+- (void)databaseClick {
+    DatabaseMainViewController *vc = [[DatabaseMainViewController alloc] init];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 - (void)didReceiveMemoryWarning {
