@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>7EB8B8E4-8BC6-456A-91A6-50050A93C6FE</string>
+	<key>IDESourceControlProjectName</key>
+	<string>project</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>573104FC78D11B9AE90E6FC2B49091946D98DDCF</key>
+		<string>https://github.com/xzq666/xzqtests.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>xzqtest/xzqtest.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>573104FC78D11B9AE90E6FC2B49091946D98DDCF</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/xzq666/xzqtests.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>573104FC78D11B9AE90E6FC2B49091946D98DDCF</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>573104FC78D11B9AE90E6FC2B49091946D98DDCF</string>
+			<key>IDESourceControlWCCName</key>
+			<string>xzqtests</string>
+		</dict>
+	</array>
+</dict>
+</plist>
