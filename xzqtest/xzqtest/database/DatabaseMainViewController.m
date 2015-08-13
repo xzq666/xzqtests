@@ -8,6 +8,7 @@
 
 #import "DatabaseMainViewController.h"
 #import "KCMainViewController.h"
+#import "CDMainTableViewController.h"
 
 @implementation DatabaseMainViewController
 
@@ -52,7 +53,8 @@
 }
 
 - (void)CoreDataClick {
-    NSLog(@"1");
+    CDMainTableViewController *vc = [[CDMainTableViewController alloc] init];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 - (void)FMDBClick {

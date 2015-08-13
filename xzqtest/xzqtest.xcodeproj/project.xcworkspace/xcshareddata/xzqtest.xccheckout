@@ -7,14 +7,14 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>7EB8B8E4-8BC6-456A-91A6-50050A93C6FE</string>
 	<key>IDESourceControlProjectName</key>
-	<string>project</string>
+	<string>xzqtest</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>573104FC78D11B9AE90E6FC2B49091946D98DDCF</key>
 		<string>https://github.com/xzq666/xzqtests.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>xzqtest/xzqtest.xcodeproj/project.xcworkspace</string>
+	<string>xzqtest/xzqtest.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>573104FC78D11B9AE90E6FC2B49091946D98DDCF</key>

@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		839BAB111B7C34F9006FBDFA /* XZQModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 839BAB0F1B7C34F9006FBDFA /* XZQModel.xcdatamodeld */; };
+		839BAB151B7C3788006FBDFA /* CDUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 839BAB141B7C3788006FBDFA /* CDUser.m */; };
+		839BAB181B7C3788006FBDFA /* CDStatus.m in Sources */ = {isa = PBXBuildFile; fileRef = 839BAB171B7C3788006FBDFA /* CDStatus.m */; };
+		839BAB1A1B7C37B1006FBDFA /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 839BAB191B7C37B1006FBDFA /* CoreData.framework */; };
+		839BAB1F1B7C39E4006FBDFA /* CDDBManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 839BAB1E1B7C39E4006FBDFA /* CDDBManager.m */; };
+		839BAB221B7C3B16006FBDFA /* CDUserService.m in Sources */ = {isa = PBXBuildFile; fileRef = 839BAB211B7C3B16006FBDFA /* CDUserService.m */; };
+		839BAB251B7C3B35006FBDFA /* CDStatusService.m in Sources */ = {isa = PBXBuildFile; fileRef = 839BAB241B7C3B35006FBDFA /* CDStatusService.m */; };
+		839BAB281B7C3F3F006FBDFA /* CDMainTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 839BAB271B7C3F3F006FBDFA /* CDMainTableViewController.m */; };
+		839BAB2C1B7C4121006FBDFA /* CDStatusTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 839BAB2B1B7C4121006FBDFA /* CDStatusTableViewCell.m */; };
 		83ADBFA81B7ADEC000BD3DD2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 83ADBFA71B7ADEC000BD3DD2 /* main.m */; };
 		83ADBFAB1B7ADEC000BD3DD2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 83ADBFAA1B7ADEC000BD3DD2 /* AppDelegate.m */; };
 		83ADBFAE1B7ADEC000BD3DD2 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83ADBFAD1B7ADEC000BD3DD2 /* ViewController.m */; };
@@ -42,6 +51,22 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		839BAB101B7C34F9006FBDFA /* XZQModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = XZQModel.xcdatamodel; sourceTree = "<group>"; };
+		839BAB131B7C3788006FBDFA /* CDUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDUser.h; sourceTree = "<group>"; };
+		839BAB141B7C3788006FBDFA /* CDUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDUser.m; sourceTree = "<group>"; };
+		839BAB161B7C3788006FBDFA /* CDStatus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDStatus.h; sourceTree = "<group>"; };
+		839BAB171B7C3788006FBDFA /* CDStatus.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDStatus.m; sourceTree = "<group>"; };
+		839BAB191B7C37B1006FBDFA /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		839BAB1D1B7C39E4006FBDFA /* CDDBManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDDBManager.h; sourceTree = "<group>"; };
+		839BAB1E1B7C39E4006FBDFA /* CDDBManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDDBManager.m; sourceTree = "<group>"; };
+		839BAB201B7C3B16006FBDFA /* CDUserService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDUserService.h; sourceTree = "<group>"; };
+		839BAB211B7C3B16006FBDFA /* CDUserService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDUserService.m; sourceTree = "<group>"; };
+		839BAB231B7C3B35006FBDFA /* CDStatusService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDStatusService.h; sourceTree = "<group>"; };
+		839BAB241B7C3B35006FBDFA /* CDStatusService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDStatusService.m; sourceTree = "<group>"; };
+		839BAB261B7C3F3F006FBDFA /* CDMainTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDMainTableViewController.h; sourceTree = "<group>"; };
+		839BAB271B7C3F3F006FBDFA /* CDMainTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDMainTableViewController.m; sourceTree = "<group>"; };
+		839BAB2A1B7C4121006FBDFA /* CDStatusTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDStatusTableViewCell.h; sourceTree = "<group>"; };
+		839BAB2B1B7C4121006FBDFA /* CDStatusTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDStatusTableViewCell.m; sourceTree = "<group>"; };
 		83ADBFA21B7ADEC000BD3DD2 /* xzqtest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = xzqtest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		83ADBFA61B7ADEC000BD3DD2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		83ADBFA71B7ADEC000BD3DD2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -88,6 +113,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				839BAB1A1B7C37B1006FBDFA /* CoreData.framework in Frameworks */,
 				83ADBFDB1B7AE9D900BD3DD2 /* libsqlite3.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -102,6 +128,60 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		839BAB0E1B7C3414006FBDFA /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				839BAB291B7C410E006FBDFA /* View */,
+				839BAB1C1B7C39AA006FBDFA /* Service */,
+				839BAB1B1B7C399C006FBDFA /* Common */,
+				839BAB121B7C3741006FBDFA /* Model */,
+				839BAB0F1B7C34F9006FBDFA /* XZQModel.xcdatamodeld */,
+				839BAB261B7C3F3F006FBDFA /* CDMainTableViewController.h */,
+				839BAB271B7C3F3F006FBDFA /* CDMainTableViewController.m */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		839BAB121B7C3741006FBDFA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				839BAB161B7C3788006FBDFA /* CDStatus.h */,
+				839BAB171B7C3788006FBDFA /* CDStatus.m */,
+				839BAB131B7C3788006FBDFA /* CDUser.h */,
+				839BAB141B7C3788006FBDFA /* CDUser.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		839BAB1B1B7C399C006FBDFA /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				839BAB1D1B7C39E4006FBDFA /* CDDBManager.h */,
+				839BAB1E1B7C39E4006FBDFA /* CDDBManager.m */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		839BAB1C1B7C39AA006FBDFA /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				839BAB201B7C3B16006FBDFA /* CDUserService.h */,
+				839BAB211B7C3B16006FBDFA /* CDUserService.m */,
+				839BAB231B7C3B35006FBDFA /* CDStatusService.h */,
+				839BAB241B7C3B35006FBDFA /* CDStatusService.m */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		839BAB291B7C410E006FBDFA /* View */ = {
+			isa = PBXGroup;
+			children = (
+				839BAB2A1B7C4121006FBDFA /* CDStatusTableViewCell.h */,
+				839BAB2B1B7C4121006FBDFA /* CDStatusTableViewCell.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		83ADBF991B7ADEC000BD3DD2 = {
 			isa = PBXGroup;
 			children = (
@@ -166,6 +246,7 @@
 		83ADBFCB1B7AE82300BD3DD2 /* database */ = {
 			isa = PBXGroup;
 			children = (
+				839BAB0E1B7C3414006FBDFA /* CoreData */,
 				83ADBFCC1B7AE82F00BD3DD2 /* SQLite */,
 				83ADBFF01B7AF51B00BD3DD2 /* DatabaseMainViewController.h */,
 				83ADBFF11B7AF51B00BD3DD2 /* DatabaseMainViewController.m */,
@@ -252,6 +333,7 @@
 		83ADBFD91B7AE9C400BD3DD2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				839BAB191B7C37B1006FBDFA /* CoreData.framework */,
 				83ADBFDA1B7AE9D900BD3DD2 /* libsqlite3.dylib */,
 			);
 			path = Frameworks;
@@ -374,17 +456,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				839BAB281B7C3F3F006FBDFA /* CDMainTableViewController.m in Sources */,
+				839BAB1F1B7C39E4006FBDFA /* CDDBManager.m in Sources */,
 				83ADBFAE1B7ADEC000BD3DD2 /* ViewController.m in Sources */,
 				83ADBFE91B7AF06900BD3DD2 /* KCUserService.m in Sources */,
+				839BAB2C1B7C4121006FBDFA /* CDStatusTableViewCell.m in Sources */,
 				83ADBFE31B7AEE8400BD3DD2 /* KCUser.m in Sources */,
+				839BAB251B7C3B35006FBDFA /* CDStatusService.m in Sources */,
 				83ADBFEF1B7AF28B00BD3DD2 /* KCMainViewController.m in Sources */,
+				839BAB111B7C34F9006FBDFA /* XZQModel.xcdatamodeld in Sources */,
 				83ADBFAB1B7ADEC000BD3DD2 /* AppDelegate.m in Sources */,
 				83ADBFA81B7ADEC000BD3DD2 /* main.m in Sources */,
+				839BAB151B7C3788006FBDFA /* CDUser.m in Sources */,
 				83ADBFD81B7AE97200BD3DD2 /* KCDbManager.m in Sources */,
+				839BAB221B7C3B16006FBDFA /* CDUserService.m in Sources */,
 				83ADBFD51B7AE8EB00BD3DD2 /* KCStatusTableViewCell.m in Sources */,
 				83ADBFF21B7AF51B00BD3DD2 /* DatabaseMainViewController.m in Sources */,
 				83ADBFEC1B7AF19600BD3DD2 /* KCStatusService.m in Sources */,
 				83ADBFE01B7AEDC300BD3DD2 /* KCDatabaseCreator.m in Sources */,
+				839BAB181B7C3788006FBDFA /* CDStatus.m in Sources */,
 				83ADBFE61B7AEF9900BD3DD2 /* KCStatus.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -582,6 +672,7 @@
 				83ADBFC71B7ADEC000BD3DD2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		83ADBFC81B7ADEC000BD3DD2 /* Build configuration list for PBXNativeTarget "xzqtestTests" */ = {
 			isa = XCConfigurationList;
@@ -590,8 +681,22 @@
 				83ADBFCA1B7ADEC000BD3DD2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		839BAB0F1B7C34F9006FBDFA /* XZQModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				839BAB101B7C34F9006FBDFA /* XZQModel.xcdatamodel */,
+			);
+			currentVersion = 839BAB101B7C34F9006FBDFA /* XZQModel.xcdatamodel */;
+			path = XZQModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 83ADBF9A1B7ADEC000BD3DD2 /* Project object */;
 }
