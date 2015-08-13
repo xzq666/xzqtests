@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "DatabaseMainViewController.h"
+#import "PaoMaViewController.h"
 
 @interface ViewController ()
 
@@ -29,10 +30,24 @@
     database.frame = CGRectMake(10, 80, [UIScreen mainScreen].bounds.size.width/2-20, 40);
     [database addTarget:self action:@selector(databaseClick) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:database];
+    
+    UIButton *paoma = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    [paoma setTitle:@"跑马灯" forState:UIControlStateNormal];
+    [paoma setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    paoma.layer.masksToBounds = YES;
+    paoma.layer.borderWidth = 0.5;
+    paoma.frame = CGRectMake([UIScreen mainScreen].bounds.size.width/2+10, 80, [UIScreen mainScreen].bounds.size.width/2-20, 40);
+    [paoma addTarget:self action:@selector(paomaClick) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:paoma];
 }
 
 - (void)databaseClick {
     DatabaseMainViewController *vc = [[DatabaseMainViewController alloc] init];
+    [self.navigationController pushViewController:vc animated:YES];
+}
+
+- (void)paomaClick {
+    PaoMaViewController *vc = [[PaoMaViewController alloc] init];
     [self.navigationController pushViewController:vc animated:YES];
 }
 

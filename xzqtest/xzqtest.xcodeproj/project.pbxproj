@@ -16,6 +16,8 @@
 		839BAB251B7C3B35006FBDFA /* CDStatusService.m in Sources */ = {isa = PBXBuildFile; fileRef = 839BAB241B7C3B35006FBDFA /* CDStatusService.m */; };
 		839BAB281B7C3F3F006FBDFA /* CDMainTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 839BAB271B7C3F3F006FBDFA /* CDMainTableViewController.m */; };
 		839BAB2C1B7C4121006FBDFA /* CDStatusTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 839BAB2B1B7C4121006FBDFA /* CDStatusTableViewCell.m */; };
+		839BAB311B7C4540006FBDFA /* PaoMaView.m in Sources */ = {isa = PBXBuildFile; fileRef = 839BAB301B7C4540006FBDFA /* PaoMaView.m */; };
+		839BAB341B7C4598006FBDFA /* PaoMaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 839BAB331B7C4598006FBDFA /* PaoMaViewController.m */; };
 		83ADBFA81B7ADEC000BD3DD2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 83ADBFA71B7ADEC000BD3DD2 /* main.m */; };
 		83ADBFAB1B7ADEC000BD3DD2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 83ADBFAA1B7ADEC000BD3DD2 /* AppDelegate.m */; };
 		83ADBFAE1B7ADEC000BD3DD2 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83ADBFAD1B7ADEC000BD3DD2 /* ViewController.m */; };
@@ -67,6 +69,10 @@
 		839BAB271B7C3F3F006FBDFA /* CDMainTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDMainTableViewController.m; sourceTree = "<group>"; };
 		839BAB2A1B7C4121006FBDFA /* CDStatusTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDStatusTableViewCell.h; sourceTree = "<group>"; };
 		839BAB2B1B7C4121006FBDFA /* CDStatusTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDStatusTableViewCell.m; sourceTree = "<group>"; };
+		839BAB2F1B7C4540006FBDFA /* PaoMaView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PaoMaView.h; sourceTree = "<group>"; };
+		839BAB301B7C4540006FBDFA /* PaoMaView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PaoMaView.m; sourceTree = "<group>"; };
+		839BAB321B7C4598006FBDFA /* PaoMaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PaoMaViewController.h; sourceTree = "<group>"; };
+		839BAB331B7C4598006FBDFA /* PaoMaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PaoMaViewController.m; sourceTree = "<group>"; };
 		83ADBFA21B7ADEC000BD3DD2 /* xzqtest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = xzqtest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		83ADBFA61B7ADEC000BD3DD2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		83ADBFA71B7ADEC000BD3DD2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -182,6 +188,25 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		839BAB2D1B7C4521006FBDFA /* paoma */ = {
+			isa = PBXGroup;
+			children = (
+				839BAB2E1B7C4532006FBDFA /* View */,
+				839BAB321B7C4598006FBDFA /* PaoMaViewController.h */,
+				839BAB331B7C4598006FBDFA /* PaoMaViewController.m */,
+			);
+			path = paoma;
+			sourceTree = "<group>";
+		};
+		839BAB2E1B7C4532006FBDFA /* View */ = {
+			isa = PBXGroup;
+			children = (
+				839BAB2F1B7C4540006FBDFA /* PaoMaView.h */,
+				839BAB301B7C4540006FBDFA /* PaoMaView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		83ADBF991B7ADEC000BD3DD2 = {
 			isa = PBXGroup;
 			children = (
@@ -204,6 +229,7 @@
 		83ADBFA41B7ADEC000BD3DD2 /* xzqtest */ = {
 			isa = PBXGroup;
 			children = (
+				839BAB2D1B7C4521006FBDFA /* paoma */,
 				83ADBFCB1B7AE82300BD3DD2 /* database */,
 				83ADBFA91B7ADEC000BD3DD2 /* AppDelegate.h */,
 				83ADBFAA1B7ADEC000BD3DD2 /* AppDelegate.m */,
@@ -475,7 +501,9 @@
 				83ADBFEC1B7AF19600BD3DD2 /* KCStatusService.m in Sources */,
 				83ADBFE01B7AEDC300BD3DD2 /* KCDatabaseCreator.m in Sources */,
 				839BAB181B7C3788006FBDFA /* CDStatus.m in Sources */,
+				839BAB341B7C4598006FBDFA /* PaoMaViewController.m in Sources */,
 				83ADBFE61B7AEF9900BD3DD2 /* KCStatus.m in Sources */,
+				839BAB311B7C4540006FBDFA /* PaoMaView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
