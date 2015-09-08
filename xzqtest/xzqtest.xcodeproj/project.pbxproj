@@ -40,6 +40,11 @@
 		83ADBFFB1B7AF90300BD3DD2 /* mbtype@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 83ADBFF61B7AF90300BD3DD2 /* mbtype@2x.png */; };
 		83ADBFFC1B7AF90300BD3DD2 /* qianmo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 83ADBFF71B7AF90300BD3DD2 /* qianmo.jpg */; };
 		83ADBFFD1B7AF90300BD3DD2 /* xiaona.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 83ADBFF81B7AF90300BD3DD2 /* xiaona.jpg */; };
+		83B459291B8E9E53002BEDC1 /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 83B4591F1B8E9E53002BEDC1 /* FMDatabase.m */; };
+		83B4592A1B8E9E53002BEDC1 /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 83B459211B8E9E53002BEDC1 /* FMDatabaseAdditions.m */; };
+		83B4592B1B8E9E53002BEDC1 /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = 83B459231B8E9E53002BEDC1 /* FMDatabasePool.m */; };
+		83B4592C1B8E9E53002BEDC1 /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 83B459251B8E9E53002BEDC1 /* FMDatabaseQueue.m */; };
+		83B4592D1B8E9E53002BEDC1 /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 83B459281B8E9E53002BEDC1 /* FMResultSet.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -112,6 +117,17 @@
 		83ADBFF61B7AF90300BD3DD2 /* mbtype@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mbtype@2x.png"; sourceTree = "<group>"; };
 		83ADBFF71B7AF90300BD3DD2 /* qianmo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = qianmo.jpg; sourceTree = "<group>"; };
 		83ADBFF81B7AF90300BD3DD2 /* xiaona.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = xiaona.jpg; sourceTree = "<group>"; };
+		83B4591E1B8E9E53002BEDC1 /* FMDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabase.h; sourceTree = "<group>"; };
+		83B4591F1B8E9E53002BEDC1 /* FMDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabase.m; sourceTree = "<group>"; };
+		83B459201B8E9E53002BEDC1 /* FMDatabaseAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseAdditions.h; sourceTree = "<group>"; };
+		83B459211B8E9E53002BEDC1 /* FMDatabaseAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseAdditions.m; sourceTree = "<group>"; };
+		83B459221B8E9E53002BEDC1 /* FMDatabasePool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabasePool.h; sourceTree = "<group>"; };
+		83B459231B8E9E53002BEDC1 /* FMDatabasePool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabasePool.m; sourceTree = "<group>"; };
+		83B459241B8E9E53002BEDC1 /* FMDatabaseQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseQueue.h; sourceTree = "<group>"; };
+		83B459251B8E9E53002BEDC1 /* FMDatabaseQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseQueue.m; sourceTree = "<group>"; };
+		83B459261B8E9E53002BEDC1 /* FMDB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDB.h; sourceTree = "<group>"; };
+		83B459271B8E9E53002BEDC1 /* FMResultSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMResultSet.h; sourceTree = "<group>"; };
+		83B459281B8E9E53002BEDC1 /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMResultSet.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -272,6 +288,7 @@
 		83ADBFCB1B7AE82300BD3DD2 /* database */ = {
 			isa = PBXGroup;
 			children = (
+				83B4591C1B8E9DE2002BEDC1 /* FMDB */,
 				839BAB0E1B7C3414006FBDFA /* CoreData */,
 				83ADBFCC1B7AE82F00BD3DD2 /* SQLite */,
 				83ADBFF01B7AF51B00BD3DD2 /* DatabaseMainViewController.h */,
@@ -375,6 +392,32 @@
 				83ADBFF81B7AF90300BD3DD2 /* xiaona.jpg */,
 			);
 			path = Resource;
+			sourceTree = "<group>";
+		};
+		83B4591C1B8E9DE2002BEDC1 /* FMDB */ = {
+			isa = PBXGroup;
+			children = (
+				83B4591D1B8E9E53002BEDC1 /* fmdb */,
+			);
+			path = FMDB;
+			sourceTree = "<group>";
+		};
+		83B4591D1B8E9E53002BEDC1 /* fmdb */ = {
+			isa = PBXGroup;
+			children = (
+				83B4591E1B8E9E53002BEDC1 /* FMDatabase.h */,
+				83B4591F1B8E9E53002BEDC1 /* FMDatabase.m */,
+				83B459201B8E9E53002BEDC1 /* FMDatabaseAdditions.h */,
+				83B459211B8E9E53002BEDC1 /* FMDatabaseAdditions.m */,
+				83B459221B8E9E53002BEDC1 /* FMDatabasePool.h */,
+				83B459231B8E9E53002BEDC1 /* FMDatabasePool.m */,
+				83B459241B8E9E53002BEDC1 /* FMDatabaseQueue.h */,
+				83B459251B8E9E53002BEDC1 /* FMDatabaseQueue.m */,
+				83B459261B8E9E53002BEDC1 /* FMDB.h */,
+				83B459271B8E9E53002BEDC1 /* FMResultSet.h */,
+				83B459281B8E9E53002BEDC1 /* FMResultSet.m */,
+			);
+			path = fmdb;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -490,13 +533,17 @@
 				83ADBFE31B7AEE8400BD3DD2 /* KCUser.m in Sources */,
 				839BAB251B7C3B35006FBDFA /* CDStatusService.m in Sources */,
 				83ADBFEF1B7AF28B00BD3DD2 /* KCMainViewController.m in Sources */,
+				83B459291B8E9E53002BEDC1 /* FMDatabase.m in Sources */,
 				839BAB111B7C34F9006FBDFA /* XZQModel.xcdatamodeld in Sources */,
 				83ADBFAB1B7ADEC000BD3DD2 /* AppDelegate.m in Sources */,
 				83ADBFA81B7ADEC000BD3DD2 /* main.m in Sources */,
+				83B4592B1B8E9E53002BEDC1 /* FMDatabasePool.m in Sources */,
 				839BAB151B7C3788006FBDFA /* CDUser.m in Sources */,
 				83ADBFD81B7AE97200BD3DD2 /* KCDbManager.m in Sources */,
+				83B4592D1B8E9E53002BEDC1 /* FMResultSet.m in Sources */,
 				839BAB221B7C3B16006FBDFA /* CDUserService.m in Sources */,
 				83ADBFD51B7AE8EB00BD3DD2 /* KCStatusTableViewCell.m in Sources */,
+				83B4592C1B8E9E53002BEDC1 /* FMDatabaseQueue.m in Sources */,
 				83ADBFF21B7AF51B00BD3DD2 /* DatabaseMainViewController.m in Sources */,
 				83ADBFEC1B7AF19600BD3DD2 /* KCStatusService.m in Sources */,
 				83ADBFE01B7AEDC300BD3DD2 /* KCDatabaseCreator.m in Sources */,
@@ -504,6 +551,7 @@
 				839BAB341B7C4598006FBDFA /* PaoMaViewController.m in Sources */,
 				83ADBFE61B7AEF9900BD3DD2 /* KCStatus.m in Sources */,
 				839BAB311B7C4540006FBDFA /* PaoMaView.m in Sources */,
+				83B4592A1B8E9E53002BEDC1 /* FMDatabaseAdditions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
