@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import "DatabaseMainViewController.h"
 #import "PaoMaViewController.h"
+#import "UMCommunity.h"
 
 @interface ViewController ()
 
@@ -39,6 +40,15 @@
     paoma.frame = CGRectMake([UIScreen mainScreen].bounds.size.width/2+10, 80, [UIScreen mainScreen].bounds.size.width/2-20, 40);
     [paoma addTarget:self action:@selector(paomaClick) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:paoma];
+    
+    UIButton *community = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    [community setTitle:@"社区" forState:UIControlStateNormal];
+    [community setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    community.layer.masksToBounds = YES;
+    community.layer.borderWidth = 0.5;
+    community.frame = CGRectMake(10, 140, [UIScreen mainScreen].bounds.size.width/2-20, 40);
+    [community addTarget:self action:@selector(communityClick) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:community];
 }
 
 - (void)databaseClick {
@@ -49,6 +59,13 @@
 - (void)paomaClick {
     PaoMaViewController *vc = [[PaoMaViewController alloc] init];
     [self.navigationController pushViewController:vc animated:YES];
+}
+
+- (void)communityClick {
+    UIViewController *communityController = [UMCommunity getFeedsModalViewController];
+    [self presentViewController:communityController animated:YES completion:^{
+        
+    }];
 }
 
 - (void)didReceiveMemoryWarning {

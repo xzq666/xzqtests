@@ -7,6 +7,15 @@
 //
 
 #import "AppDelegate.h"
+#import "UMCommunity.h"
+#import "UMSocialQQHandler.h"
+#import "UMSocialSinaHandler.h"
+#import "UMSocialWechatHandler.h"
+#import "UMComNavigationController.h"
+
+#define UMengCommunityAppkey @"54d19091fd98c55a19000406"
+
+#define UMengLoginAppkey UMengCommunityAppkey
 
 @interface AppDelegate ()
 
@@ -14,10 +23,62 @@
 
 @implementation AppDelegate
 
+void uncaughtExceptionHandler(NSException *exception) {
+    NSLog(@"CRASH: %@", exception);
+    NSLog(@"Stack Trace: %@", [exception callStackSymbols]);
+    // Internal error reporting
+}
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    NSSetUncaughtExceptionHandler(&uncaughtExceptionHandler);
+    [UMCommunity openLog:YES];
+    //Message
+    [UMCommunity setWithAppKey:UMengCommunityAppkey];
+    
+    NSDictionary *notificationDict = [launchOptions valueForKey:UIApplicationLaunchOptionsRemoteNotificationKey];
+    if ([notificationDict valueForKey:@"umwsq"]) {
+        [UMComMessageManager startWithOptions:launchOptions];
+        if ([notificationDict valueForKey:@"aps"]) { // 点击推送进入
+            [UMComMessageManager didReceiveRemoteNotification:notificationDict];
+        }
+    } else {
+        [UMComMessageManager startWithOptions:nil];
+        //使用你的消息通知处理
+    }
+    
+    //设置微信AppId、appSecret，分享url
+    [UMSocialWechatHandler setWXAppId:@"wx96110a1e3af63a39" appSecret:@"c60e3d3ff109a5d17013df272df99199" url:@"http://www.umeng.com/social"];
+    //设置分享到QQ互联的appId和appKey
+    [UMSocialQQHandler setQQWithAppId:@"1104606393" appKey:@"X4BAsJAVKtkDQ1zQ" url:@"http://www.umeng.com/social"];
+    [UMComLoginManager setAppKey:UMengLoginAppkey];
+    
     return YES;
+}
+
+#pragma mark Login
+- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
+    BOOL result = [UMComLoginManager handleOpenURL:url];
+    if (result == FALSE) {
+        //调用其他SDK，例如新浪微博SDK等
+    }
+    return result;
+}
+
+#pragma mark Message
+- (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
+    NSLog(@"----devicetoken------%@",[[[[deviceToken description] stringByReplacingOccurrencesOfString: @"<" withString: @""]
+                                       stringByReplacingOccurrencesOfString: @">" withString: @""]
+                                      stringByReplacingOccurrencesOfString: @" " withString: @""]);
+    [UMComMessageManager registerDeviceToken:deviceToken];
+}
+
+- (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo {
+    if ([userInfo valueForKey:@"umwsq"]) {
+        [UMComMessageManager didReceiveRemoteNotification:userInfo];
+    } else {
+        //使用你自己的消息推送处理
+    }
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {
