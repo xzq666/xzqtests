@@ -13,7 +13,7 @@
 #import "UMSocialWechatHandler.h"
 #import "UMComNavigationController.h"
 
-#define UMengCommunityAppkey @"54d19091fd98c55a19000406"
+#define UMengCommunityAppkey @"55eff44ae0f55a9c7e003582"
 
 #define UMengLoginAppkey UMengCommunityAppkey
 
