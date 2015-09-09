@@ -83,13 +83,16 @@
     
     NSString *text = [NSString stringWithFormat:@"%i%%", (int)(_progress * 100.0f)];
     
-    CGSize textSize = [text sizeWithFont:font constrainedToSize:CGSizeMake(30000, 13)];
+    CGSize size = CGSizeMake(30000, 13);
+    NSAttributedString *attributedText = [[NSAttributedString alloc] initWithString:text attributes:@ {NSFontAttributeName: font}];
+    CGRect rect = [attributedText boundingRectWithSize:size options:NSStringDrawingUsesLineFragmentOrigin context:nil];
+    CGSize textSize = rect.size;
     
     float x = floorf(allRect.size.width / 2) + 3 + 0;
     float y = floorf(allRect.size.height / 2) - 6 + 0;
     
     CGContextSetFillColorWithColor(context, self.textColor.CGColor);
-    [text drawAtPoint:CGPointMake(x - textSize.width / 2.0, y) withFont:font];
+    [text drawAtPoint:CGPointMake(x - textSize.width / 2.0, y) withAttributes:@ {NSFontAttributeName: font}];
 }
 
 

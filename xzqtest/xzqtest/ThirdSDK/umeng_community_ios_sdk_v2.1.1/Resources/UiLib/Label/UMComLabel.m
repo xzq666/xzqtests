@@ -49,7 +49,7 @@
         return;
     }
     
-    CGSize size = [text sizeWithFont:self.font];
+    CGSize size = [text sizeWithAttributes:@ {NSFontAttributeName: self.font}];
     
     [self setFrame:CGRectMake(0, 0, size.width, size.height+4)];
     
@@ -65,7 +65,7 @@
         return;
     }
     
-    CGSize size = [text sizeWithFont:self.font];
+    CGSize size = [text sizeWithAttributes:@ {NSFontAttributeName: self.font}];
     
     [self setFrame:CGRectMake(0, 0, size.width, size.height+4)];
     

@@ -70,7 +70,10 @@
         fans_count = @0;
     }
     self.descriptionLable.text =  [NSString stringWithFormat:@"发表消息: %@ / 粉丝: %@",post_count,fans_count];
-    CGSize textSize = [self.userName.text sizeWithFont:self.userName.font constrainedToSize:CGSizeMake(self.frame.size.width, self.userName.frame.size.height) lineBreakMode:NSLineBreakByWordWrapping];
+    CGSize size = CGSizeMake(self.frame.size.width, self.userName.frame.size.height);
+    NSAttributedString *attributedText = [[NSAttributedString alloc] initWithString:self.userName.text attributes:@ {NSFontAttributeName: self.userName.font}];
+    CGRect rect = [attributedText boundingRectWithSize:size options:NSStringDrawingUsesLineFragmentOrigin context:nil];
+    CGSize textSize = rect.size;
     CGFloat originX = textSize.width;
     if (textSize.width >= self.userName.frame.size.width) {
         originX = self.userName.frame.size.width-5;

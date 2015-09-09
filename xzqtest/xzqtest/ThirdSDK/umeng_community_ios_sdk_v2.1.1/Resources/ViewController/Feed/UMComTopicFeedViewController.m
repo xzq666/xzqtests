@@ -149,7 +149,9 @@
     } else {
         topicDescriptionString = self.topic.name;
     }
-    CGSize size = [topicDescriptionString sizeWithFont:UMComFontNotoSansLightWithSafeSize(15) constrainedToSize:CGSizeMake(self.view.frame.size.width-buttonWidth-rightSpace-10, MAXFLOAT) lineBreakMode:NSLineBreakByWordWrapping];
+    NSAttributedString *attributedText = [[NSAttributedString alloc] initWithString:topicDescriptionString attributes:@ {NSFontAttributeName: UMComFontNotoSansLightWithSafeSize(15)}];
+    CGRect rect = [attributedText boundingRectWithSize:CGSizeMake(self.view.frame.size.width-buttonWidth-rightSpace-10, MAXFLOAT) options:NSStringDrawingUsesLineFragmentOrigin context:nil];
+    CGSize size = rect.size;
     if (size.height > followViewHeight) {
         followViewHeight = size.height;
     }

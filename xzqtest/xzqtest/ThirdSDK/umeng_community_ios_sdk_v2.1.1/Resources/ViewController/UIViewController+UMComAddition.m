@@ -17,7 +17,6 @@ const char kTopTipLabelKey;
 
 @implementation UIViewController (UMComAddition)
 
-
 - (void)setBackButtonWithTitle:(NSString *)title
 {
     if ([[UIDevice currentDevice].systemVersion floatValue] < 7.0 || self.navigationController.viewControllers.count == 1) {

@@ -65,7 +65,10 @@
         };
     }
     self.timeLabel.text = createTimeString(comment.create_time);
-    CGSize textSize = [self.timeLabel.text sizeWithFont:self.timeLabel.font constrainedToSize:CGSizeMake(self.timeLabel.frame.size.width, self.timeLabel.frame.size.height) lineBreakMode:NSLineBreakByCharWrapping];
+    CGSize size = CGSizeMake(self.timeLabel.frame.size.width, self.timeLabel.frame.size.height);
+    NSAttributedString *attributedText = [[NSAttributedString alloc] initWithString:self.timeLabel.text attributes:@ {NSFontAttributeName: self.timeLabel.font}];
+    CGRect rect = [attributedText boundingRectWithSize:size options:NSStringDrawingUsesLineFragmentOrigin context:nil];
+    CGSize textSize = rect.size;
     self.nameLabel.frame = CGRectMake(self.nameLabel.frame.origin.x, self.nameLabel.frame.origin.y, self.commentTextView.frame.size.width-textSize.width-10, self.nameLabel.frame.size.height);
     self.nameLabel.backgroundColor = [UIColor clearColor];
     self.timeLabel.backgroundColor = [UIColor clearColor];

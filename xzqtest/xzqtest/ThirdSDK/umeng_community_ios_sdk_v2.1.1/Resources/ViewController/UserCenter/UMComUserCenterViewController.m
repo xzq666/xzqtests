@@ -339,7 +339,10 @@ typedef enum {
     }
     CGSize textSize = CGSizeMake(self.userName.frame.size.width, self.userName.frame.size.height);
     if (user.name && user.name.length > 0) {
-        textSize = [user.name sizeWithFont:UMComFontNotoSansLightWithSafeSize(14) constrainedToSize:CGSizeMake(self.view.frame.size.width, MAXFLOAT) lineBreakMode:NSLineBreakByWordWrapping];
+        CGSize size = CGSizeMake(self.view.frame.size.width, MAXFLOAT);
+        NSAttributedString *attributedText = [[NSAttributedString alloc] initWithString:user.name attributes:@ {NSFontAttributeName: UMComFontNotoSansLightWithSafeSize(14)}];
+        CGRect rect = [attributedText boundingRectWithSize:size options:NSStringDrawingUsesLineFragmentOrigin context:nil];
+        textSize = rect.size;
         [self.userName setText:user.name];
         self.userName.frame = CGRectMake(0, self.userName.frame.origin.y, textSize.width, self.userName.frame.size.height);
         self.userName.center = CGPointMake(self.view.frame.size.width/2, self.userName.center.y);
