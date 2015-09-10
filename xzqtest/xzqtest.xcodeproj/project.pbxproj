@@ -18,6 +18,28 @@
 		839BAB2C1B7C4121006FBDFA /* CDStatusTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 839BAB2B1B7C4121006FBDFA /* CDStatusTableViewCell.m */; };
 		839BAB311B7C4540006FBDFA /* PaoMaView.m in Sources */ = {isa = PBXBuildFile; fileRef = 839BAB301B7C4540006FBDFA /* PaoMaView.m */; };
 		839BAB341B7C4598006FBDFA /* PaoMaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 839BAB331B7C4598006FBDFA /* PaoMaViewController.m */; };
+		83AC8EB81BA1839400590B6B /* UIImage+MLTint.m in Sources */ = {isa = PBXBuildFile; fileRef = 83AC8E8D1BA1839400590B6B /* UIImage+MLTint.m */; };
+		83AC8EB91BA1839400590B6B /* UIView+MLExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 83AC8E8F1BA1839400590B6B /* UIView+MLExtension.m */; };
+		83AC8EBA1BA1839400590B6B /* MLSelectPhotoAssets.m in Sources */ = {isa = PBXBuildFile; fileRef = 83AC8E941BA1839400590B6B /* MLSelectPhotoAssets.m */; };
+		83AC8EBB1BA1839400590B6B /* MLSelectPhotoPickerBrowserPhoto.m in Sources */ = {isa = PBXBuildFile; fileRef = 83AC8E961BA1839400590B6B /* MLSelectPhotoPickerBrowserPhoto.m */; };
+		83AC8EBC1BA1839400590B6B /* MLSelectPhotoPickerDatas.m in Sources */ = {isa = PBXBuildFile; fileRef = 83AC8E981BA1839400590B6B /* MLSelectPhotoPickerDatas.m */; };
+		83AC8EBD1BA1839400590B6B /* MLSelectPhotoPickerGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 83AC8E9A1BA1839400590B6B /* MLSelectPhotoPickerGroup.m */; };
+		83AC8EBE1BA1839400590B6B /* MLSelectPhotoBrowserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83AC8E9D1BA1839400590B6B /* MLSelectPhotoBrowserViewController.m */; };
+		83AC8EBF1BA1839400590B6B /* MLSelectPhotoNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83AC8E9F1BA1839400590B6B /* MLSelectPhotoNavigationViewController.m */; };
+		83AC8EC01BA1839400590B6B /* MLSelectPhotoPickerAssetsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83AC8EA11BA1839400590B6B /* MLSelectPhotoPickerAssetsViewController.m */; };
+		83AC8EC11BA1839400590B6B /* MLSelectPhotoPickerGroupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83AC8EA31BA1839400590B6B /* MLSelectPhotoPickerGroupViewController.m */; };
+		83AC8EC21BA1839400590B6B /* MLSelectPhotoPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83AC8EA51BA1839400590B6B /* MLSelectPhotoPickerViewController.m */; };
+		83AC8EC31BA1839400590B6B /* MLPhotoPickerImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 83AC8EA81BA1839400590B6B /* MLPhotoPickerImageView.m */; };
+		83AC8EC41BA1839400590B6B /* MLSelectPhotoPickerBrowserPhotoImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 83AC8EAA1BA1839400590B6B /* MLSelectPhotoPickerBrowserPhotoImageView.m */; };
+		83AC8EC51BA1839400590B6B /* MLSelectPhotoPickerBrowserPhotoScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 83AC8EAC1BA1839400590B6B /* MLSelectPhotoPickerBrowserPhotoScrollView.m */; };
+		83AC8EC61BA1839400590B6B /* MLSelectPhotoPickerBrowserPhotoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 83AC8EAE1BA1839400590B6B /* MLSelectPhotoPickerBrowserPhotoView.m */; };
+		83AC8EC71BA1839400590B6B /* MLSelectPhotoPickerCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 83AC8EB01BA1839400590B6B /* MLSelectPhotoPickerCollectionView.m */; };
+		83AC8EC81BA1839400590B6B /* MLSelectPhotoPickerCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 83AC8EB21BA1839400590B6B /* MLSelectPhotoPickerCollectionViewCell.m */; };
+		83AC8EC91BA1839400590B6B /* MLSelectPhotoPickerFooterCollectionReusableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 83AC8EB41BA1839400590B6B /* MLSelectPhotoPickerFooterCollectionReusableView.m */; };
+		83AC8ECA1BA1839400590B6B /* MLSelectPhotoPickerGroupTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 83AC8EB61BA1839400590B6B /* MLSelectPhotoPickerGroupTableViewCell.m */; };
+		83AC8ECB1BA1839400590B6B /* MLSelectPhoto.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 83AC8EB71BA1839400590B6B /* MLSelectPhoto.bundle */; };
+		83AC8ECF1BA1849800590B6B /* PhotoSelectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83AC8ECE1BA1849800590B6B /* PhotoSelectViewController.m */; };
+		83AC8ED31BA192DB00590B6B /* Common.m in Sources */ = {isa = PBXBuildFile; fileRef = 83AC8ED21BA192DB00590B6B /* Common.m */; };
 		83ADBFA81B7ADEC000BD3DD2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 83ADBFA71B7ADEC000BD3DD2 /* main.m */; };
 		83ADBFAB1B7ADEC000BD3DD2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 83ADBFAA1B7ADEC000BD3DD2 /* AppDelegate.m */; };
 		83ADBFAE1B7ADEC000BD3DD2 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83ADBFAD1B7ADEC000BD3DD2 /* ViewController.m */; };
@@ -341,6 +363,51 @@
 		839BAB301B7C4540006FBDFA /* PaoMaView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PaoMaView.m; sourceTree = "<group>"; };
 		839BAB321B7C4598006FBDFA /* PaoMaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PaoMaViewController.h; sourceTree = "<group>"; };
 		839BAB331B7C4598006FBDFA /* PaoMaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PaoMaViewController.m; sourceTree = "<group>"; };
+		83AC8E8C1BA1839400590B6B /* UIImage+MLTint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+MLTint.h"; sourceTree = "<group>"; };
+		83AC8E8D1BA1839400590B6B /* UIImage+MLTint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+MLTint.m"; sourceTree = "<group>"; };
+		83AC8E8E1BA1839400590B6B /* UIView+MLExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+MLExtension.h"; sourceTree = "<group>"; };
+		83AC8E8F1BA1839400590B6B /* UIView+MLExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+MLExtension.m"; sourceTree = "<group>"; };
+		83AC8E901BA1839400590B6B /* MLSelectPhoto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLSelectPhoto.h; sourceTree = "<group>"; };
+		83AC8E911BA1839400590B6B /* MLSelectPhotoCommon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLSelectPhotoCommon.h; sourceTree = "<group>"; };
+		83AC8E931BA1839400590B6B /* MLSelectPhotoAssets.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLSelectPhotoAssets.h; sourceTree = "<group>"; };
+		83AC8E941BA1839400590B6B /* MLSelectPhotoAssets.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLSelectPhotoAssets.m; sourceTree = "<group>"; };
+		83AC8E951BA1839400590B6B /* MLSelectPhotoPickerBrowserPhoto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLSelectPhotoPickerBrowserPhoto.h; sourceTree = "<group>"; };
+		83AC8E961BA1839400590B6B /* MLSelectPhotoPickerBrowserPhoto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLSelectPhotoPickerBrowserPhoto.m; sourceTree = "<group>"; };
+		83AC8E971BA1839400590B6B /* MLSelectPhotoPickerDatas.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLSelectPhotoPickerDatas.h; sourceTree = "<group>"; };
+		83AC8E981BA1839400590B6B /* MLSelectPhotoPickerDatas.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLSelectPhotoPickerDatas.m; sourceTree = "<group>"; };
+		83AC8E991BA1839400590B6B /* MLSelectPhotoPickerGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLSelectPhotoPickerGroup.h; sourceTree = "<group>"; };
+		83AC8E9A1BA1839400590B6B /* MLSelectPhotoPickerGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLSelectPhotoPickerGroup.m; sourceTree = "<group>"; };
+		83AC8E9C1BA1839400590B6B /* MLSelectPhotoBrowserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLSelectPhotoBrowserViewController.h; sourceTree = "<group>"; };
+		83AC8E9D1BA1839400590B6B /* MLSelectPhotoBrowserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLSelectPhotoBrowserViewController.m; sourceTree = "<group>"; };
+		83AC8E9E1BA1839400590B6B /* MLSelectPhotoNavigationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLSelectPhotoNavigationViewController.h; sourceTree = "<group>"; };
+		83AC8E9F1BA1839400590B6B /* MLSelectPhotoNavigationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLSelectPhotoNavigationViewController.m; sourceTree = "<group>"; };
+		83AC8EA01BA1839400590B6B /* MLSelectPhotoPickerAssetsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLSelectPhotoPickerAssetsViewController.h; sourceTree = "<group>"; };
+		83AC8EA11BA1839400590B6B /* MLSelectPhotoPickerAssetsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLSelectPhotoPickerAssetsViewController.m; sourceTree = "<group>"; };
+		83AC8EA21BA1839400590B6B /* MLSelectPhotoPickerGroupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLSelectPhotoPickerGroupViewController.h; sourceTree = "<group>"; };
+		83AC8EA31BA1839400590B6B /* MLSelectPhotoPickerGroupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLSelectPhotoPickerGroupViewController.m; sourceTree = "<group>"; };
+		83AC8EA41BA1839400590B6B /* MLSelectPhotoPickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLSelectPhotoPickerViewController.h; sourceTree = "<group>"; };
+		83AC8EA51BA1839400590B6B /* MLSelectPhotoPickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLSelectPhotoPickerViewController.m; sourceTree = "<group>"; };
+		83AC8EA71BA1839400590B6B /* MLPhotoPickerImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLPhotoPickerImageView.h; sourceTree = "<group>"; };
+		83AC8EA81BA1839400590B6B /* MLPhotoPickerImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLPhotoPickerImageView.m; sourceTree = "<group>"; };
+		83AC8EA91BA1839400590B6B /* MLSelectPhotoPickerBrowserPhotoImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLSelectPhotoPickerBrowserPhotoImageView.h; sourceTree = "<group>"; };
+		83AC8EAA1BA1839400590B6B /* MLSelectPhotoPickerBrowserPhotoImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLSelectPhotoPickerBrowserPhotoImageView.m; sourceTree = "<group>"; };
+		83AC8EAB1BA1839400590B6B /* MLSelectPhotoPickerBrowserPhotoScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLSelectPhotoPickerBrowserPhotoScrollView.h; sourceTree = "<group>"; };
+		83AC8EAC1BA1839400590B6B /* MLSelectPhotoPickerBrowserPhotoScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLSelectPhotoPickerBrowserPhotoScrollView.m; sourceTree = "<group>"; };
+		83AC8EAD1BA1839400590B6B /* MLSelectPhotoPickerBrowserPhotoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLSelectPhotoPickerBrowserPhotoView.h; sourceTree = "<group>"; };
+		83AC8EAE1BA1839400590B6B /* MLSelectPhotoPickerBrowserPhotoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLSelectPhotoPickerBrowserPhotoView.m; sourceTree = "<group>"; };
+		83AC8EAF1BA1839400590B6B /* MLSelectPhotoPickerCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLSelectPhotoPickerCollectionView.h; sourceTree = "<group>"; };
+		83AC8EB01BA1839400590B6B /* MLSelectPhotoPickerCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLSelectPhotoPickerCollectionView.m; sourceTree = "<group>"; };
+		83AC8EB11BA1839400590B6B /* MLSelectPhotoPickerCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLSelectPhotoPickerCollectionViewCell.h; sourceTree = "<group>"; };
+		83AC8EB21BA1839400590B6B /* MLSelectPhotoPickerCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLSelectPhotoPickerCollectionViewCell.m; sourceTree = "<group>"; };
+		83AC8EB31BA1839400590B6B /* MLSelectPhotoPickerFooterCollectionReusableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLSelectPhotoPickerFooterCollectionReusableView.h; sourceTree = "<group>"; };
+		83AC8EB41BA1839400590B6B /* MLSelectPhotoPickerFooterCollectionReusableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLSelectPhotoPickerFooterCollectionReusableView.m; sourceTree = "<group>"; };
+		83AC8EB51BA1839400590B6B /* MLSelectPhotoPickerGroupTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLSelectPhotoPickerGroupTableViewCell.h; sourceTree = "<group>"; };
+		83AC8EB61BA1839400590B6B /* MLSelectPhotoPickerGroupTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLSelectPhotoPickerGroupTableViewCell.m; sourceTree = "<group>"; };
+		83AC8EB71BA1839400590B6B /* MLSelectPhoto.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = MLSelectPhoto.bundle; sourceTree = "<group>"; };
+		83AC8ECD1BA1849800590B6B /* PhotoSelectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoSelectViewController.h; sourceTree = "<group>"; };
+		83AC8ECE1BA1849800590B6B /* PhotoSelectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoSelectViewController.m; sourceTree = "<group>"; };
+		83AC8ED11BA192DB00590B6B /* Common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Common.h; sourceTree = "<group>"; };
+		83AC8ED21BA192DB00590B6B /* Common.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Common.m; sourceTree = "<group>"; };
 		83ADBFA21B7ADEC000BD3DD2 /* xzqtest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = xzqtest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		83ADBFA61B7ADEC000BD3DD2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		83ADBFA71B7ADEC000BD3DD2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -938,6 +1005,112 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		83AC8E891BA1839400590B6B /* MLSelectPhoto */ = {
+			isa = PBXGroup;
+			children = (
+				83AC8E8A1BA1839400590B6B /* Classes */,
+				83AC8EB71BA1839400590B6B /* MLSelectPhoto.bundle */,
+			);
+			path = MLSelectPhoto;
+			sourceTree = "<group>";
+		};
+		83AC8E8A1BA1839400590B6B /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				83AC8E8B1BA1839400590B6B /* Category */,
+				83AC8E901BA1839400590B6B /* MLSelectPhoto.h */,
+				83AC8E911BA1839400590B6B /* MLSelectPhotoCommon.h */,
+				83AC8E921BA1839400590B6B /* Models */,
+				83AC8E9B1BA1839400590B6B /* ViewControllers */,
+				83AC8EA61BA1839400590B6B /* Views */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		83AC8E8B1BA1839400590B6B /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				83AC8E8C1BA1839400590B6B /* UIImage+MLTint.h */,
+				83AC8E8D1BA1839400590B6B /* UIImage+MLTint.m */,
+				83AC8E8E1BA1839400590B6B /* UIView+MLExtension.h */,
+				83AC8E8F1BA1839400590B6B /* UIView+MLExtension.m */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		83AC8E921BA1839400590B6B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				83AC8E931BA1839400590B6B /* MLSelectPhotoAssets.h */,
+				83AC8E941BA1839400590B6B /* MLSelectPhotoAssets.m */,
+				83AC8E951BA1839400590B6B /* MLSelectPhotoPickerBrowserPhoto.h */,
+				83AC8E961BA1839400590B6B /* MLSelectPhotoPickerBrowserPhoto.m */,
+				83AC8E971BA1839400590B6B /* MLSelectPhotoPickerDatas.h */,
+				83AC8E981BA1839400590B6B /* MLSelectPhotoPickerDatas.m */,
+				83AC8E991BA1839400590B6B /* MLSelectPhotoPickerGroup.h */,
+				83AC8E9A1BA1839400590B6B /* MLSelectPhotoPickerGroup.m */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		83AC8E9B1BA1839400590B6B /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				83AC8E9C1BA1839400590B6B /* MLSelectPhotoBrowserViewController.h */,
+				83AC8E9D1BA1839400590B6B /* MLSelectPhotoBrowserViewController.m */,
+				83AC8E9E1BA1839400590B6B /* MLSelectPhotoNavigationViewController.h */,
+				83AC8E9F1BA1839400590B6B /* MLSelectPhotoNavigationViewController.m */,
+				83AC8EA01BA1839400590B6B /* MLSelectPhotoPickerAssetsViewController.h */,
+				83AC8EA11BA1839400590B6B /* MLSelectPhotoPickerAssetsViewController.m */,
+				83AC8EA21BA1839400590B6B /* MLSelectPhotoPickerGroupViewController.h */,
+				83AC8EA31BA1839400590B6B /* MLSelectPhotoPickerGroupViewController.m */,
+				83AC8EA41BA1839400590B6B /* MLSelectPhotoPickerViewController.h */,
+				83AC8EA51BA1839400590B6B /* MLSelectPhotoPickerViewController.m */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		83AC8EA61BA1839400590B6B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				83AC8EA71BA1839400590B6B /* MLPhotoPickerImageView.h */,
+				83AC8EA81BA1839400590B6B /* MLPhotoPickerImageView.m */,
+				83AC8EA91BA1839400590B6B /* MLSelectPhotoPickerBrowserPhotoImageView.h */,
+				83AC8EAA1BA1839400590B6B /* MLSelectPhotoPickerBrowserPhotoImageView.m */,
+				83AC8EAB1BA1839400590B6B /* MLSelectPhotoPickerBrowserPhotoScrollView.h */,
+				83AC8EAC1BA1839400590B6B /* MLSelectPhotoPickerBrowserPhotoScrollView.m */,
+				83AC8EAD1BA1839400590B6B /* MLSelectPhotoPickerBrowserPhotoView.h */,
+				83AC8EAE1BA1839400590B6B /* MLSelectPhotoPickerBrowserPhotoView.m */,
+				83AC8EAF1BA1839400590B6B /* MLSelectPhotoPickerCollectionView.h */,
+				83AC8EB01BA1839400590B6B /* MLSelectPhotoPickerCollectionView.m */,
+				83AC8EB11BA1839400590B6B /* MLSelectPhotoPickerCollectionViewCell.h */,
+				83AC8EB21BA1839400590B6B /* MLSelectPhotoPickerCollectionViewCell.m */,
+				83AC8EB31BA1839400590B6B /* MLSelectPhotoPickerFooterCollectionReusableView.h */,
+				83AC8EB41BA1839400590B6B /* MLSelectPhotoPickerFooterCollectionReusableView.m */,
+				83AC8EB51BA1839400590B6B /* MLSelectPhotoPickerGroupTableViewCell.h */,
+				83AC8EB61BA1839400590B6B /* MLSelectPhotoPickerGroupTableViewCell.m */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		83AC8ECC1BA1847100590B6B /* photoselect */ = {
+			isa = PBXGroup;
+			children = (
+				83AC8ECD1BA1849800590B6B /* PhotoSelectViewController.h */,
+				83AC8ECE1BA1849800590B6B /* PhotoSelectViewController.m */,
+			);
+			path = photoselect;
+			sourceTree = "<group>";
+		};
+		83AC8ED01BA192BD00590B6B /* CommonData */ = {
+			isa = PBXGroup;
+			children = (
+				83AC8ED11BA192DB00590B6B /* Common.h */,
+				83AC8ED21BA192DB00590B6B /* Common.m */,
+			);
+			path = CommonData;
+			sourceTree = "<group>";
+		};
 		83ADBF991B7ADEC000BD3DD2 = {
 			isa = PBXGroup;
 			children = (
@@ -961,7 +1134,9 @@
 		83ADBFA41B7ADEC000BD3DD2 /* xzqtest */ = {
 			isa = PBXGroup;
 			children = (
+				83AC8ED01BA192BD00590B6B /* CommonData */,
 				83C3CD5F1B9FDE7C007EF0DB /* ThirdSDK */,
+				83AC8ECC1BA1847100590B6B /* photoselect */,
 				839BAB2D1B7C4521006FBDFA /* paoma */,
 				83ADBFCB1B7AE82300BD3DD2 /* database */,
 				83ADBFA91B7ADEC000BD3DD2 /* AppDelegate.h */,
@@ -1151,6 +1326,7 @@
 		83C3CD5F1B9FDE7C007EF0DB /* ThirdSDK */ = {
 			isa = PBXGroup;
 			children = (
+				83AC8E891BA1839400590B6B /* MLSelectPhoto */,
 				83C3CD601B9FDE86007EF0DB /* umeng_community_ios_sdk_v2.1.1 */,
 			);
 			path = ThirdSDK;
@@ -2111,6 +2287,7 @@
 				83C3CF971B9FDE87007EF0DB /* um_wechat_logo@2x.png in Resources */,
 				83C3CF701B9FDE87007EF0DB /* um_emoji.png in Resources */,
 				83C3CF441B9FDE87007EF0DB /* gray_point@2x.png in Resources */,
+				83AC8ECB1BA1839400590B6B /* MLSelectPhoto.bundle in Resources */,
 				83C3CF841B9FDE87007EF0DB /* um_public.png in Resources */,
 				83C3CF4B1B9FDE87007EF0DB /* likex@2x.png in Resources */,
 				83C3D0131B9FDE87007EF0DB /* UMSCommentDetailController.xib in Resources */,
@@ -2196,23 +2373,30 @@
 				83C3CFEA1B9FDE87007EF0DB /* UMComFindTableViewCell.m in Sources */,
 				83ADBFE91B7AF06900BD3DD2 /* KCUserService.m in Sources */,
 				83C3D0031B9FDE87007EF0DB /* UMComSettingViewController.m in Sources */,
+				83AC8EC61BA1839400590B6B /* MLSelectPhotoPickerBrowserPhotoView.m in Sources */,
 				83C3CFA31B9FDE87007EF0DB /* UMImageProgressView.m in Sources */,
+				83AC8EBF1BA1839400590B6B /* MLSelectPhotoNavigationViewController.m in Sources */,
+				83AC8EC01BA1839400590B6B /* MLSelectPhotoPickerAssetsViewController.m in Sources */,
 				83C3CFBA1B9FDE87007EF0DB /* UMComCommentEditView.m in Sources */,
 				83C3D0061B9FDE87007EF0DB /* UMComUserCenterViewController.m in Sources */,
+				83AC8EB81BA1839400590B6B /* UIImage+MLTint.m in Sources */,
 				839BAB2C1B7C4121006FBDFA /* CDStatusTableViewCell.m in Sources */,
 				83C3CFE11B9FDE87007EF0DB /* UMComCommentTableView.m in Sources */,
 				83C3CFC41B9FDE87007EF0DB /* UMComTableViewCell.m in Sources */,
 				83C3CFD81B9FDE87007EF0DB /* UMComFeedsTableViewCell.m in Sources */,
+				83AC8EBD1BA1839400590B6B /* MLSelectPhotoPickerGroup.m in Sources */,
 				83ADBFE31B7AEE8400BD3DD2 /* KCUser.m in Sources */,
 				83C3CFEE1B9FDE87007EF0DB /* UMComMenuControlView.m in Sources */,
 				83C3CFEF1B9FDE87007EF0DB /* UMComNoticeSystemViewController.m in Sources */,
 				83C3CFF61B9FDE87007EF0DB /* UMComFilterTopicsViewCell.m in Sources */,
+				83AC8EC21BA1839400590B6B /* MLSelectPhotoPickerViewController.m in Sources */,
 				83C3CFB41B9FDE87007EF0DB /* UMComEmojiPageView.m in Sources */,
 				83C3CFAD1B9FDE87007EF0DB /* UMImagePickerGroupCell.m in Sources */,
 				839BAB251B7C3B35006FBDFA /* CDStatusService.m in Sources */,
 				83C3CFC91B9FDE87007EF0DB /* UMComActionPickerAddView.m in Sources */,
 				83C3CFB51B9FDE87007EF0DB /* UMComImageView.m in Sources */,
 				83C3CFD51B9FDE87007EF0DB /* UMComLocationTableViewCell.m in Sources */,
+				83AC8EBB1BA1839400590B6B /* MLSelectPhotoPickerBrowserPhoto.m in Sources */,
 				83C3CFAC1B9FDE87007EF0DB /* UMImagePickerController.m in Sources */,
 				83C3CFB81B9FDE87007EF0DB /* UIView+UMComTipLabel.m in Sources */,
 				83C3CFA81B9FDE87007EF0DB /* UMAssetsCollectionCheckMarkView.m in Sources */,
@@ -2227,15 +2411,19 @@
 				83C3CFCC1B9FDE87007EF0DB /* UMComEditTopicsTableViewCell.m in Sources */,
 				83C3CFBF1B9FDE87007EF0DB /* UMComRefreshView.m in Sources */,
 				83C3CFCB1B9FDE87007EF0DB /* UMComAddedImageView.m in Sources */,
+				83AC8ECA1BA1839400590B6B /* MLSelectPhotoPickerGroupTableViewCell.m in Sources */,
 				83ADBFAB1B7ADEC000BD3DD2 /* AppDelegate.m in Sources */,
 				83C3CFA11B9FDE87007EF0DB /* UMComGridViewerController.m in Sources */,
 				83C3CFF41B9FDE87007EF0DB /* UMComSearchViewController.m in Sources */,
 				83C3CFE21B9FDE87007EF0DB /* UMComCommentTableViewCell.m in Sources */,
 				83C3D00B1B9FDE87007EF0DB /* UMComUserTableViewCell.m in Sources */,
+				83AC8EC51BA1839400590B6B /* MLSelectPhotoPickerBrowserPhotoScrollView.m in Sources */,
 				83C3CFB11B9FDE87007EF0DB /* UMComiToast.m in Sources */,
 				83ADBFA81B7ADEC000BD3DD2 /* main.m in Sources */,
+				83AC8EBC1BA1839400590B6B /* MLSelectPhotoPickerDatas.m in Sources */,
 				83C3CFE91B9FDE87007EF0DB /* UMComLikeUserViewController.m in Sources */,
 				83B4592B1B8E9E53002BEDC1 /* FMDatabasePool.m in Sources */,
+				83AC8EC41BA1839400590B6B /* MLSelectPhotoPickerBrowserPhotoImageView.m in Sources */,
 				83C3CFC71B9FDE87007EF0DB /* UMComWebViewController.m in Sources */,
 				83C3CFAB1B9FDE87007EF0DB /* UMAssetsCollectionOverlayView.m in Sources */,
 				83C3CFC31B9FDE87007EF0DB /* UMComTableView.m in Sources */,
@@ -2249,10 +2437,12 @@
 				83C3CF2D1B9FDE87007EF0DB /* UMComMessageManager.m in Sources */,
 				839BAB221B7C3B16006FBDFA /* CDUserService.m in Sources */,
 				83ADBFD51B7AE8EB00BD3DD2 /* KCStatusTableViewCell.m in Sources */,
+				83AC8EC91BA1839400590B6B /* MLSelectPhotoPickerFooterCollectionReusableView.m in Sources */,
 				83B4592C1B8E9E53002BEDC1 /* FMDatabaseQueue.m in Sources */,
 				83C3CF2C1B9FDE87007EF0DB /* UMComUMengLoginHandler.m in Sources */,
 				83ADBFF21B7AF51B00BD3DD2 /* DatabaseMainViewController.m in Sources */,
 				83C3CFD11B9FDE87007EF0DB /* UMComFriendTableViewCell.m in Sources */,
+				83AC8EB91BA1839400590B6B /* UIView+MLExtension.m in Sources */,
 				83C3D0091B9FDE87007EF0DB /* UMComUsersTableView.m in Sources */,
 				83C3CFA71B9FDE87007EF0DB /* UMAssetsCollectionCell.m in Sources */,
 				83C3CFCE1B9FDE87007EF0DB /* UMComEditTopicsViewController.m in Sources */,
@@ -2261,9 +2451,12 @@
 				83C3CFBD1B9FDE87007EF0DB /* UMComMutiTextRun.m in Sources */,
 				83C3CFBE1B9FDE87007EF0DB /* UMComPageControlView.m in Sources */,
 				83C3CFA61B9FDE87007EF0DB /* UMComLevelImage.m in Sources */,
+				83AC8EC81BA1839400590B6B /* MLSelectPhotoPickerCollectionViewCell.m in Sources */,
 				83C3CFED1B9FDE87007EF0DB /* UMComCommentControlView.m in Sources */,
+				83AC8ECF1BA1849800590B6B /* PhotoSelectViewController.m in Sources */,
 				83C3CFB91B9FDE87007EF0DB /* UMComActionStyleTableView.m in Sources */,
 				83C3CFDC1B9FDE87007EF0DB /* UMComFeedTableViewController.m in Sources */,
+				83AC8EBA1BA1839400590B6B /* MLSelectPhotoAssets.m in Sources */,
 				83ADBFE01B7AEDC300BD3DD2 /* KCDatabaseCreator.m in Sources */,
 				83C3CFF11B9FDE87007EF0DB /* UMComSysCommentTableView.m in Sources */,
 				83C3CFF91B9FDE87007EF0DB /* UMComTopicsTableViewController.m in Sources */,
@@ -2272,12 +2465,15 @@
 				839BAB181B7C3788006FBDFA /* CDStatus.m in Sources */,
 				83C3CFFA1B9FDE87007EF0DB /* UIViewController+UMComAddition.m in Sources */,
 				83C3CFC11B9FDE87007EF0DB /* UMComShareCollectionView.m in Sources */,
+				83AC8ED31BA192DB00590B6B /* Common.m in Sources */,
 				83C3CF2A1B9FDE87007EF0DB /* UMComLoginViewController.m in Sources */,
 				839BAB341B7C4598006FBDFA /* PaoMaViewController.m in Sources */,
 				83C3CFA41B9FDE87007EF0DB /* UMComLabel.m in Sources */,
 				83C3CFD31B9FDE87007EF0DB /* UMComFriendTableViewController.m in Sources */,
 				83C3CFE81B9FDE87007EF0DB /* UMComLikeListView.m in Sources */,
+				83AC8EC11BA1839400590B6B /* MLSelectPhotoPickerGroupViewController.m in Sources */,
 				83ADBFE61B7AEF9900BD3DD2 /* KCStatus.m in Sources */,
+				83AC8EC71BA1839400590B6B /* MLSelectPhotoPickerCollectionView.m in Sources */,
 				839BAB311B7C4540006FBDFA /* PaoMaView.m in Sources */,
 				83C3CFFB1B9FDE87007EF0DB /* UMComNavigationController.m in Sources */,
 				83C3CFFD1B9FDE87007EF0DB /* UMComMessageSettingViewController.m in Sources */,
@@ -2289,9 +2485,11 @@
 				83C3CFCA1B9FDE87007EF0DB /* UMComAddedImageCellView.m in Sources */,
 				83C3CFFF1B9FDE87007EF0DB /* UMComPhotoAlbumViewController.m in Sources */,
 				83C3CFF81B9FDE87007EF0DB /* UMComTopicsTableView.m in Sources */,
+				83AC8EBE1BA1839400590B6B /* MLSelectPhotoBrowserViewController.m in Sources */,
 				83C3CFF31B9FDE87007EF0DB /* UMComHorizontalTableView.m in Sources */,
 				83C3CFB31B9FDE87007EF0DB /* UMComEmojiKeyBoardView.m in Sources */,
 				83C3D00D1B9FDE87007EF0DB /* UMComEditViewModel.m in Sources */,
+				83AC8EC31BA1839400590B6B /* MLPhotoPickerImageView.m in Sources */,
 				83C3CFA21B9FDE87007EF0DB /* UMComProgressView.m in Sources */,
 				83C3D0051B9FDE87007EF0DB /* UMComUserCenterCollectionView.m in Sources */,
 				83C3CFCF1B9FDE87007EF0DB /* UMComEditViewController.m in Sources */,

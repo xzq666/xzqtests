@@ -10,6 +10,7 @@
 #import "DatabaseMainViewController.h"
 #import "PaoMaViewController.h"
 #import "UMCommunity.h"
+#import "PhotoSelectViewController.h"
 
 @interface ViewController ()
 
@@ -49,6 +50,15 @@
     community.frame = CGRectMake(10, 140, [UIScreen mainScreen].bounds.size.width/2-20, 40);
     [community addTarget:self action:@selector(communityClick) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:community];
+    
+    UIButton *photoselect = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    [photoselect setTitle:@"照片选择" forState:UIControlStateNormal];
+    [photoselect setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    photoselect.layer.masksToBounds = YES;
+    photoselect.layer.borderWidth = 0.5;
+    photoselect.frame = CGRectMake([UIScreen mainScreen].bounds.size.width/2+10, 140, [UIScreen mainScreen].bounds.size.width/2-20, 40);
+    [photoselect addTarget:self action:@selector(photoselectClick) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:photoselect];
 }
 
 - (void)databaseClick {
@@ -66,6 +76,11 @@
     [self presentViewController:communityController animated:YES completion:^{
         
     }];
+}
+
+- (void)photoselectClick {
+    PhotoSelectViewController *vc = [[PhotoSelectViewController alloc] init];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 - (void)didReceiveMemoryWarning {
