@@ -17,6 +17,7 @@
 #import "MLSelectPhotoPickerFooterCollectionReusableView.h"
 #import "MLSelectPhotoBrowserViewController.h"
 #import "UIView+MLExtension.h"
+#import "Common.h"
 
 static CGFloat CELL_ROW = 4;
 static CGFloat CELL_MARGIN = 2;
@@ -104,7 +105,11 @@ static NSString *const _identifier = @"toolBarThumbCollectionViewCell";
     self.collectionView.selectAsstes = self.selectAssets;
     NSInteger count = self.selectAssets.count;
     self.makeView.hidden = !count;
-    self.makeView.text = [NSString stringWithFormat:@"%ld",(long)count];
+    if (count>[Common sharedCommon].max) {
+        self.makeView.text = [NSString stringWithFormat:@"%ld",(long)[Common sharedCommon].max];
+    } else {
+        self.makeView.text = [NSString stringWithFormat:@"%ld",(long)count];
+    }
     self.doneBtn.enabled = (count > 0);
     self.previewBtn.enabled = (count > 0);
 }
@@ -193,7 +198,11 @@ static NSString *const _identifier = @"toolBarThumbCollectionViewCell";
     }
 
     self.makeView.hidden = !count;
-    self.makeView.text = [NSString stringWithFormat:@"%ld",(long)count];
+    if (count>[Common sharedCommon].max) {
+        self.makeView.text = [NSString stringWithFormat:@"%ld",(long)[Common sharedCommon].max];
+    } else {
+        self.makeView.text = [NSString stringWithFormat:@"%ld",(long)count];
+    }
     self.doneBtn.enabled = (count > 0);
     self.previewBtn.enabled = (count > 0);
     
@@ -300,7 +309,11 @@ static NSString *const _identifier = @"toolBarThumbCollectionViewCell";
         
         NSInteger count = self.selectAssets.count;
         self.makeView.hidden = !count;
-        self.makeView.text = [NSString stringWithFormat:@"%ld",(long)count];
+        if (count>[Common sharedCommon].max) {
+            self.makeView.text = [NSString stringWithFormat:@"%ld",(long)[Common sharedCommon].max];
+        } else {
+            self.makeView.text = [NSString stringWithFormat:@"%ld",(long)count];
+        }
         self.previewBtn.enabled = (count > 0);
         self.doneBtn.enabled = (count > 0);
         
@@ -363,14 +376,17 @@ static NSString *const _identifier = @"toolBarThumbCollectionViewCell";
     }
     
     NSInteger count = 0;
-    if (pickerCollectionView.selectAsstes.count < self.selectAssets.count) {
-        count = pickerCollectionView.selectAsstes.count;
-    }else{
+//    if (pickerCollectionView.selectAsstes.count < self.selectAssets.count) {
+//        count = pickerCollectionView.selectAsstes.count;
+//    }else{
         count = self.selectAssets.count;
-    }
-    
+//    }
     self.makeView.hidden = !count;
-    self.makeView.text = [NSString stringWithFormat:@"%ld",(long)count];
+    if (count>[Common sharedCommon].max) {
+        self.makeView.text = [NSString stringWithFormat:@"%ld",(long)[Common sharedCommon].max];
+    } else {
+        self.makeView.text = [NSString stringWithFormat:@"%ld",(long)count];
+    }
     self.doneBtn.enabled = (count > 0);
     self.previewBtn.enabled = (count > 0);
     
@@ -394,7 +410,11 @@ static NSString *const _identifier = @"toolBarThumbCollectionViewCell";
                 [self.selectAssets removeObjectAtIndex:selectAssetsCurrentPage];
             }
             [self.collectionView.selectsIndexPath removeObject:@(selectAssetsCurrentPage)];
-            self.makeView.text = [NSString stringWithFormat:@"%ld",(unsigned long)self.selectAssets.count];
+            if (self.selectAssets.count>[Common sharedCommon].max) {
+                self.makeView.text = [NSString stringWithFormat:@"%ld",(long)[Common sharedCommon].max];
+            } else {
+                self.makeView.text = [NSString stringWithFormat:@"%ld",(unsigned long)self.selectAssets.count];
+            }
         }
         // 刷新下最小的页数
         self.minCount = self.selectAssets.count + self.selectAssets.count;

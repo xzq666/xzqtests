@@ -35,6 +35,7 @@
     if (!_tableView) {
         UITableView *tableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
         tableView.backgroundColor = [UIColor whiteColor];
+        tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
         tableView.dataSource = self;
         tableView.delegate = self;
         tableView.autoresizingMask = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth;
@@ -72,6 +73,7 @@
     [pickerVc showPickerVc:self];
     __weak typeof(self) weakSelf = self;
     pickerVc.callBack = ^(NSArray *assets){
+        [weakSelf.assets removeAllObjects];
         [weakSelf.assets addObjectsFromArray:assets];
         [weakSelf.tableView reloadData];
     };
@@ -79,7 +81,11 @@
 
 #pragma mark - <UITableViewDataSource>
 - (NSInteger) tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return self.assets.count;
+    if (self.assets.count>[Common sharedCommon].max) {
+        return [Common sharedCommon].max;
+    } else {
+        return self.assets.count;
+    }
 }
 
 - (UITableViewCell *) tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -94,6 +100,7 @@
 
 #pragma mark - <UITableViewDelegate>
 - (void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
     MLSelectPhotoBrowserViewController *browserVc = [[MLSelectPhotoBrowserViewController alloc] init];
     browserVc.currentPage = indexPath.row;
     browserVc.photos = self.assets;
