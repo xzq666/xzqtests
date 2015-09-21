@@ -12,6 +12,7 @@
 #import "UMSocialSinaHandler.h"
 #import "UMSocialWechatHandler.h"
 #import "UMComNavigationController.h"
+#import "JPEngine.h"
 
 #define UMengCommunityAppkey @"55eff44ae0f55a9c7e003582"
 
@@ -31,6 +32,13 @@ void uncaughtExceptionHandler(NSException *exception) {
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    [JPEngine startEngine];
+    NSString *sourcePath = [[NSBundle mainBundle] pathForResource:@"demo" ofType:@"js"];
+    NSString *script = [NSString stringWithContentsOfFile:sourcePath encoding:NSUTF8StringEncoding error:nil];
+    NSLog(@"data:%@",script);
+    [JPEngine evaluateScript:script];
+    
     NSSetUncaughtExceptionHandler(&uncaughtExceptionHandler);
     [UMCommunity openLog:YES];
     //Message

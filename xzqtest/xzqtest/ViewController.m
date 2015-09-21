@@ -11,6 +11,9 @@
 #import "PaoMaViewController.h"
 #import "UMCommunity.h"
 #import "PhotoSelectViewController.h"
+#import "TextImageViewController.h"
+#import "GestureLock.h"
+#import "JSPatchViewController.h"
 
 @interface ViewController ()
 
@@ -59,6 +62,33 @@
     photoselect.frame = CGRectMake([UIScreen mainScreen].bounds.size.width/2+10, 140, [UIScreen mainScreen].bounds.size.width/2-20, 40);
     [photoselect addTarget:self action:@selector(photoselectClick) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:photoselect];
+    
+    UIButton *textimg = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    [textimg setTitle:@"图文混排" forState:UIControlStateNormal];
+    [textimg setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    textimg.layer.masksToBounds = YES;
+    textimg.layer.borderWidth = 0.5;
+    textimg.frame = CGRectMake(10, 200, [UIScreen mainScreen].bounds.size.width/2-20, 40);
+    [textimg addTarget:self action:@selector(textimgClick) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:textimg];
+    
+    UIButton *gesturelock = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    [gesturelock setTitle:@"手势解锁" forState:UIControlStateNormal];
+    [gesturelock setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    gesturelock.layer.masksToBounds = YES;
+    gesturelock.layer.borderWidth = 0.5;
+    gesturelock.frame = CGRectMake([UIScreen mainScreen].bounds.size.width/2+10, 200, [UIScreen mainScreen].bounds.size.width/2-20, 40);
+    [gesturelock addTarget:self action:@selector(gesturelockClick) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:gesturelock];
+    
+    UIButton *jspatch = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    [jspatch setTitle:@"JSPatch应用" forState:UIControlStateNormal];
+    [jspatch setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    jspatch.layer.masksToBounds = YES;
+    jspatch.layer.borderWidth = 0.5;
+    jspatch.frame = CGRectMake(10, 260, [UIScreen mainScreen].bounds.size.width/2-20, 40);
+    [jspatch addTarget:self action:@selector(jspatchClick) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:jspatch];
 }
 
 - (void)databaseClick {
@@ -78,8 +108,23 @@
     }];
 }
 
+- (void)textimgClick {
+    TextImageViewController *textimageController = [[TextImageViewController alloc] init];
+    [self.navigationController pushViewController:textimageController animated:YES];
+}
+
 - (void)photoselectClick {
     PhotoSelectViewController *vc = [[PhotoSelectViewController alloc] init];
+    [self.navigationController pushViewController:vc animated:YES];
+}
+
+- (void)gesturelockClick {
+    GestureLock *vc = [[GestureLock alloc] init];
+    [self.navigationController pushViewController:vc animated:YES];
+}
+
+- (void)jspatchClick {
+    JSPatchViewController *vc = [[JSPatchViewController alloc] init];
     [self.navigationController pushViewController:vc animated:YES];
 }
 
