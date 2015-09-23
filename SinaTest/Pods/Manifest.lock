@@ -1,0 +1,57 @@
+PODS:
+  - AFNetworking (2.6.0):
+    - AFNetworking/NSURLConnection (= 2.6.0)
+    - AFNetworking/NSURLSession (= 2.6.0)
+    - AFNetworking/Reachability (= 2.6.0)
+    - AFNetworking/Security (= 2.6.0)
+    - AFNetworking/Serialization (= 2.6.0)
+    - AFNetworking/UIKit (= 2.6.0)
+  - AFNetworking/NSURLConnection (2.6.0):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/NSURLSession (2.6.0):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (2.6.0)
+  - AFNetworking/Security (2.6.0)
+  - AFNetworking/Serialization (2.6.0)
+  - AFNetworking/UIKit (2.6.0):
+    - AFNetworking/NSURLConnection
+    - AFNetworking/NSURLSession
+  - AVOSCloud (3.1.3.6)
+  - FMDB (2.5):
+    - FMDB/standard (= 2.5)
+  - FMDB/common (2.5)
+  - FMDB/standard (2.5):
+    - FMDB/common
+  - MessageDisplayKit (4.4)
+  - MJExtension (2.5.10)
+  - MJRefresh (2.4.9)
+  - OpenShare (0.0.1)
+  - SDWebImage (3.7.3):
+    - SDWebImage/Core (= 3.7.3)
+  - SDWebImage/Core (3.7.3)
+
+DEPENDENCIES:
+  - AFNetworking (~> 2.0)
+  - AVOSCloud
+  - FMDB
+  - MessageDisplayKit
+  - MJExtension
+  - MJRefresh
+  - OpenShare (~> 0.0)
+  - SDWebImage (~> 3.7)
+
+SPEC CHECKSUMS:
+  AFNetworking: 79f7eb1a0fcfa7beb409332b2ca49afe9ce53b05
+  AVOSCloud: a7aa880f15d0c26e6b1d3154459c8b32e96d91ce
+  FMDB: 96e8f1bcc1329e269330f99770ad4285d9003e52
+  MessageDisplayKit: 9f8816621bd6ca490b4f3a8f5a4edd4b30d3fbde
+  MJExtension: 944fb5a12bceb9b866914527f66101566e66292b
+  MJRefresh: be84acb912d0a66364f76a75426698a39528e2ed
+  OpenShare: a560580dbb729d5c0c3cc1ee84cd6aa4a07e94c6
+  SDWebImage: 1d2b1a1efda1ade1b00b6f8498865f8ddedc8a84
+
+COCOAPODS: 0.38.2

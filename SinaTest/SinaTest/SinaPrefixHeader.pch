@@ -1,0 +1,49 @@
+//
+//  SinaPrefixHeader.pch
+//  SinaTest
+//
+//  Created by 许卓权 on 15/9/23.
+//  Copyright © 2015年 许卓权. All rights reserved.
+//
+
+#ifndef SinaPrefixHeader_pch
+#define SinaPrefixHeader_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#import "MyHttpTool.h"
+#import "MyFunctions.h"
+#import "MyControllerTool.h"
+#import "MBProgressHUD+MJ.h"
+#import "MyTabBarController.h"
+#import "UIImage+Extension.h"
+#import "UIView+Extension.h"
+#import "UIBarButtonItem+Extension.h"
+#import "NSString+Extension.h"
+#import <AVOSCloud/AVOSCloud.h>
+
+#define _MyFunctions [MyFunctions sharedObject]
+
+//是否为iOS7
+#define iOS7 ([[UIDevice currentDevice].systemVersion doubleValue] >= 7.0)
+
+//随机色
+#define MyRandomColor [UIColor colorWithRed:arc4random_uniform(256)/255.0 green:arc4random_uniform(256)/255.0 blue:arc4random_uniform(256)/255.0 alpha:1.0]
+//颜色
+#define MyColor(r,g,b) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:1.0]
+//公用颜色
+#define MyCommonColor [UIColor colorWithRed:254/255.0  green:129/255.0 blue:0 alpha:1.0]
+//导航栏标题字体大小
+#define MyNavigationFont [UIFont boldSystemFontOfSize:16]
+//导航栏标题按钮高度和边距
+#define MyNavigationItemOfTitleViewHeight 34
+#define MyNavigationItemMargin 10
+//首页导航popmenu距离顶部高度
+#define MyPopMenuMarginTop 10
+
+// testCloud appkey
+#define ApplicationID @"0y463z4tk9wk4zbtkq4qn21kshdm9zetj8mkouiqkaoovn4e"
+#define ClientKey @"j9de7xoza1gbvkbp0b6qudz10s9lkwsxqll2nvwrjfty3a58"
+
+#endif /* SinaPrefixHeader_pch */
