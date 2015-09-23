@@ -14,6 +14,7 @@
 #import "TextImageViewController.h"
 #import "GestureLock.h"
 #import "JSPatchViewController.h"
+#import "MasonryViewController.h"
 
 @interface ViewController ()
 
@@ -89,6 +90,15 @@
     jspatch.frame = CGRectMake(10, 260, [UIScreen mainScreen].bounds.size.width/2-20, 40);
     [jspatch addTarget:self action:@selector(jspatchClick) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:jspatch];
+    
+    UIButton *masonry = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    [masonry setTitle:@"Masonry自动布局" forState:UIControlStateNormal];
+    [masonry setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    masonry.layer.masksToBounds = YES;
+    masonry.layer.borderWidth = 0.5;
+    masonry.frame = CGRectMake([UIScreen mainScreen].bounds.size.width/2+10, 260, [UIScreen mainScreen].bounds.size.width/2-20, 40);
+    [masonry addTarget:self action:@selector(masonryClick) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:masonry];
 }
 
 - (void)databaseClick {
@@ -125,6 +135,11 @@
 
 - (void)jspatchClick {
     JSPatchViewController *vc = [[JSPatchViewController alloc] init];
+    [self.navigationController pushViewController:vc animated:YES];
+}
+
+- (void)masonryClick {
+    MasonryViewController *vc = [[MasonryViewController alloc] init];
     [self.navigationController pushViewController:vc animated:YES];
 }
 

@@ -149,6 +149,7 @@
 		742D23541BAFEDCD00DCE95D /* UIImage+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 742D22C31BAFEDCD00DCE95D /* UIImage+Extension.m */; settings = {ASSET_TAGS = (); }; };
 		742D23551BAFEDCD00DCE95D /* UIViewExt.m in Sources */ = {isa = PBXBuildFile; fileRef = 742D22C51BAFEDCD00DCE95D /* UIViewExt.m */; settings = {ASSET_TAGS = (); }; };
 		742D23561BAFEDCD00DCE95D /* Utility.m in Sources */ = {isa = PBXBuildFile; fileRef = 742D22C71BAFEDCD00DCE95D /* Utility.m */; settings = {ASSET_TAGS = (); }; };
+		74F2E2D81BB1588C0039E747 /* MasonryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74F2E2D71BB1588C0039E747 /* MasonryViewController.m */; settings = {ASSET_TAGS = (); }; };
 		839BAB111B7C34F9006FBDFA /* XZQModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 839BAB0F1B7C34F9006FBDFA /* XZQModel.xcdatamodeld */; };
 		839BAB151B7C3788006FBDFA /* CDUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 839BAB141B7C3788006FBDFA /* CDUser.m */; };
 		839BAB181B7C3788006FBDFA /* CDStatus.m in Sources */ = {isa = PBXBuildFile; fileRef = 839BAB171B7C3788006FBDFA /* CDStatus.m */; };
@@ -651,6 +652,8 @@
 		742D22C61BAFEDCD00DCE95D /* Utility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Utility.h; sourceTree = "<group>"; };
 		742D22C71BAFEDCD00DCE95D /* Utility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Utility.m; sourceTree = "<group>"; };
 		742D22C81BAFEDCD00DCE95D /* xzqtest.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = xzqtest.pch; sourceTree = "<group>"; };
+		74F2E2D61BB1588C0039E747 /* MasonryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MasonryViewController.h; sourceTree = "<group>"; };
+		74F2E2D71BB1588C0039E747 /* MasonryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MasonryViewController.m; sourceTree = "<group>"; };
 		77C7550E6D29ECE2ABB990A8 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		839BAB101B7C34F9006FBDFA /* XZQModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = XZQModel.xcdatamodel; sourceTree = "<group>"; };
 		839BAB131B7C3788006FBDFA /* CDUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDUser.h; sourceTree = "<group>"; };
@@ -1467,6 +1470,15 @@
 			path = Utils;
 			sourceTree = "<group>";
 		};
+		74F2E2D51BB158750039E747 /* masonry */ = {
+			isa = PBXGroup;
+			children = (
+				74F2E2D61BB1588C0039E747 /* MasonryViewController.h */,
+				74F2E2D71BB1588C0039E747 /* MasonryViewController.m */,
+			);
+			path = masonry;
+			sourceTree = "<group>";
+		};
 		839BAB0E1B7C3414006FBDFA /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
@@ -1671,6 +1683,7 @@
 			children = (
 				742D22C81BAFEDCD00DCE95D /* xzqtest.pch */,
 				742D221A1BAFEDCC00DCE95D /* demo.js */,
+				74F2E2D51BB158750039E747 /* masonry */,
 				742D221B1BAFEDCC00DCE95D /* gesturelock */,
 				742D22211BAFEDCC00DCE95D /* jspatch */,
 				742D22451BAFEDCD00DCE95D /* textimage */,
@@ -3096,6 +3109,7 @@
 				83C3CFC71B9FDE87007EF0DB /* UMComWebViewController.m in Sources */,
 				83C3CFAB1B9FDE87007EF0DB /* UMAssetsCollectionOverlayView.m in Sources */,
 				83C3CFC31B9FDE87007EF0DB /* UMComTableView.m in Sources */,
+				74F2E2D81BB1588C0039E747 /* MasonryViewController.m in Sources */,
 				83C3D0081B9FDE87007EF0DB /* UMComUserCollectionViewCell.m in Sources */,
 				83C3CFDD1B9FDE87007EF0DB /* UMComHomeFeedViewController.m in Sources */,
 				839BAB151B7C3788006FBDFA /* CDUser.m in Sources */,
