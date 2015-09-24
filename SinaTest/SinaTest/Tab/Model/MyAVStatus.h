@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface MyAVStatus : NSObject<AVSubclassing>
+@interface MyAVStatus : AVObject<AVSubclassing>
 
 @property (nonatomic , strong) AVUser *creator;
 @property (nonatomic , copy) NSString *statusContent;

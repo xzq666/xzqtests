@@ -21,12 +21,10 @@
 #import "UIView+Extension.h"
 #import "UIBarButtonItem+Extension.h"
 #import "NSString+Extension.h"
+#import "NSDate+Estension.h"
 #import <AVOSCloud/AVOSCloud.h>
 
 #define _MyFunctions [MyFunctions sharedObject]
-
-//是否为iOS7
-#define iOS7 ([[UIDevice currentDevice].systemVersion doubleValue] >= 7.0)
 
 //随机色
 #define MyRandomColor [UIColor colorWithRed:arc4random_uniform(256)/255.0 green:arc4random_uniform(256)/255.0 blue:arc4random_uniform(256)/255.0 alpha:1.0]
@@ -41,6 +39,53 @@
 #define MyNavigationItemMargin 10
 //首页导航popmenu距离顶部高度
 #define MyPopMenuMarginTop 10
+
+//是否为4inch
+#define MyFourInch ([UIScreen mainScreen].bounds.size.height >= 568.0)
+//是否为iOS7
+#define iOS7 ([[UIDevice currentDevice].systemVersion doubleValue] >= 7.0)
+//是否为iOS8及以上系统
+#define iOS8 ([[UIDevice currentDevice].systemVersion doubleValue] >= 8.0)
+//屏幕宽度
+#define MyScreenWidth [UIScreen mainScreen].bounds.size.width
+//导航栏高度
+#define MyNavigationHeight CGRectGetMaxY([self.navigationController navigationBar].frame)
+//设置一个全局tableview的背景颜色
+#define MyGlobleTableViewBackgroundColor MyColor(239,239,239)
+
+//首页Cell相关信息
+#define MyStatusToolbarWidth 35
+#define MyStatusCellMargin 5
+#define MyStatusCellInset 8
+#define MyStatusOriginalNameFont [UIFont systemFontOfSize:17]
+#define MyStatusOriginalTimeFont [UIFont systemFontOfSize:10]
+#define MyStatusOriginalSourceFont DSStatusOriginalTimeFont
+#define MyStatusRetweetedNameFont [UIFont systemFontOfSize:18]
+#define MyStatusOriginalDidMoreNotication @"StatusOriginalDidMoreNotication"
+
+// 富文本字体
+#define MyStatusRichTextFont [UIFont systemFontOfSize:18]
+// 转发微博正文字体
+#define MyStatusHighTextColor SWColor(93, 123, 169)
+// 表情的最大行数
+#define MyEmotionMaxRows 3
+// 表情的最大列数
+#define MyEmotionMaxCols 7
+// 每页最多显示多少个表情
+#define MyEmotionMaxCountPerPage (DSEmotionMaxRows * DSEmotionMaxCols - 1)
+// 表情选择通知
+#define MyEmotionDidSelectedNotification @"EmotionDidSelectedNotification"
+// 表情选择是emotion key
+#define MySelectedEmotion @"SelectEmotionKey"
+#define MyEmotionDidDeletedNotification @"EmotionDidDeletedNotification"
+// 富文本链接属性标志
+#define MyLinkAttr @"DSLinkAttr"
+// 富文本链接通知
+#define MyLinkDidSelectedNotification @"DSLinkDidSelectedNotification"
+// 转发微博的字体颜色
+#define MyStatusRetweededTextColor DSColor(111, 111, 111)
+// 普通文本通知
+#define MyStatusNormalTextDidSelectedNotification @"DSStatusNormalTextDidSelectedNotification"
 
 // testCloud appkey
 #define ApplicationID @"0y463z4tk9wk4zbtkq4qn21kshdm9zetj8mkouiqkaoovn4e"

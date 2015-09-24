@@ -13,6 +13,7 @@
 #import "MessageViewController.h"
 #import "DiscoverViewController.h"
 #import "ProfileViewController.h"
+#import "MyComposeViewController.h"
 
 @interface MyTabBarController () <MyTabBarDelegate>
 
@@ -75,7 +76,7 @@
  *  @param selectedImageName 选中的图标
  */
 - (void)addOneChildVc:(UIViewController *)childVc title:(NSString *)title imageName:(NSString *)imageName selectedImageName:(NSString *)selectedImageName {
-    //childVc.view.backgroundColor = DSRandomColor;
+    childVc.view.backgroundColor = [UIColor whiteColor];
     //设置标题
     childVc.title = title;
     if ([childVc class] == [DiscoverViewController class]){
@@ -106,6 +107,28 @@
 
 - (void)getUnreadCount {
     
+}
+
+// 在iOS7+中, 会对selectedImage的图片进行再次渲染为蓝色
+// 要想显示原图, 就必须得告诉它: 不要渲染
+/**
+ *  默认只调用该功能一次
+ */
++ (void)initialize {
+    //设置底部tabbar的主题样式
+    UITabBarItem *appearance = [UITabBarItem appearance];
+    [appearance setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:MyCommonColor, NSForegroundColorAttributeName,nil] forState:UIControlStateSelected];
+}
+
+#pragma mark - DSTabBarDelegate
+- (void)tabBarDidClickedPlusButton:(MyTabBar *)tabBar {
+    // 弹出发微博控制器
+    NSLog(@"+");
+    MyComposeViewController *compose = [[MyComposeViewController alloc] init];
+    compose.source = @"compose";
+    compose.homeVc = self.homeViewController;
+    MyNavigationController *nav = [[MyNavigationController alloc] initWithRootViewController:compose];
+    [self presentViewController:nav animated:YES completion:nil];
 }
 
 - (void)didReceiveMemoryWarning {

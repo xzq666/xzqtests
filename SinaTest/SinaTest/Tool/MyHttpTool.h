@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 #import "AFNetworking.h"
+#import "AVConstants.h"
+#import "MyHomeStatus.h"
 
 @interface MyHttpTool : NSObject
 
@@ -16,5 +18,9 @@
 
 //是否展示网络激活指示器
 + (void)showNetworkActivityIndicatior;
+
+- (void)findStatusWithBlock:(AVArrayResultBlock)block;
+
+- (MyHomeStatus *)showHomestatusFromAVObjects:(NSArray *)objects;
 
 @end

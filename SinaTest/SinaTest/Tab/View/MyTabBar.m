@@ -70,7 +70,6 @@
     for (UIView *tabBarButton in self.subviews){
         if (![tabBarButton isKindOfClass:NSClassFromString(@"UITabBarButton")]) continue;
         [self setupTabBarButtonFrame:tabBarButton atIndex:index];
-        
         index++;
     }
 }
