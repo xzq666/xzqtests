@@ -20,7 +20,7 @@
     // Override point for customization after application launch.
     //启动成功以后不隐藏状态栏
     application.statusBarHidden = NO;
-//    [MyAVStatus registerSubclass];
+    [MyAVStatus registerSubclass];
     
     [AVOSCloud setApplicationId:ApplicationID clientKey:ClientKey];
     //1.创建窗口
@@ -43,7 +43,6 @@
     
     //4.监控网络
     [MyHttpTool monitoringReachabilityStatus:^(AFNetworkReachabilityStatus status){
-        
         switch (status) {
             case AFNetworkReachabilityStatusUnknown://未知网络
             case AFNetworkReachabilityStatusNotReachable://没有网络
@@ -53,9 +52,7 @@
                 break;
             case AFNetworkReachabilityStatusReachableViaWiFi:
                 break;
-                
         }
-        
     }];
     //5.增加网络状态激活按钮
     [MyHttpTool showNetworkActivityIndicatior];

@@ -30,6 +30,21 @@
     [[AFNetworkActivityIndicatorManager sharedManager] setEnabled:YES];
 }
 
+- (void)createStatusWithText:(NSString *)text error:(NSError *__autoreleasing *)error {
+    if (text == nil) {
+        text = @"";
+    }
+    NSError *theError;
+    AVUser *user = [AVUser currentUser];
+    //DSAVStatus *avstatus = [DSAVStatus object];
+    AVObject *avstatus = [AVObject objectWithClassName:@"Album"];
+    [avstatus setObject:user forKey:@"creator"];
+    [avstatus setObject:text forKey:@"albumContent"];
+    [avstatus setObject:[NSArray array] forKey:@"comments"];
+    [avstatus save:&theError];
+    *error = theError;
+}
+
 - (void)findStatusWithBlock:(AVArrayResultBlock)block {
     AVQuery *query = [MyAVStatus query];
     [query orderByDescending:@"createdAt"];
@@ -99,6 +114,44 @@
     homestatus.statuses = [tempStatuses mutableCopy];
     homestatus.loadedObjectIDs = [tempLoadedIDs mutableCopy];
     return homestatus;
+}
+
+- (void)digOrCancelDigOfStatus:(MyStatus *)clickedStatus sender:(UIButton *)sender block:(AVBooleanResultBlock)block {
+    AVQuery *query = [AVQuery queryWithClassName:@"Album"];
+    AVObject *status = [query getObjectWithId:clickedStatus.idstr];
+    AVUser *user = [AVUser currentUser];
+    NSMutableArray *digUsers = [status objectForKey:@"digUsers"];
+    if ( [digUsers containsObject:user]){
+        [status removeObject:user forKey:@"digUsers"];
+        [self setupButtonTitle:sender count:clickedStatus.attitudes_count - 1 image:@"timeline_icon_like_disable" defaultTitle:@"赞"];
+    } else {
+        [status addObject:user forKey:@"digUsers"];
+        [self setupButtonTitle:sender count:clickedStatus.attitudes_count + 1 image:@"timeline_icon_like" defaultTitle:@"赞"];
+    }
+    [status saveInBackgroundWithBlock:block];
+}
+
+- (void)setupButtonTitle:(UIButton *)button count:(int)count image:(NSString *)imagename defaultTitle:(NSString *)defaultTitle {
+    if (count >= 10000){
+        defaultTitle = [NSString stringWithFormat:@"%.1f万",count / 10000.0];
+    }else if (count > 0){
+        defaultTitle = [NSString stringWithFormat:@"%d",count];
+    }
+    [button setImage:[UIImage imageNamed:imagename] forState:UIControlStateNormal];
+    [button setTitle:defaultTitle forState:UIControlStateNormal];
+}
+
+- (void)findMoreStatusWithBlock:(NSArray *)loadedStatusIDs block:(AVArrayResultBlock)block {
+    AVQuery *query = [MyAVStatus query];
+    [query orderByDescending:@"createdAt"];
+    [query includeKey:@"albumPhotos"];
+    [query includeKey:@"creator"];
+    [query includeKey:@"comments.commentUser"];
+    [query includeKey:@"comments.toUser"];
+    [query whereKey:@"objectId" notContainedIn:loadedStatusIDs];
+    [query setCachePolicy:kAVCachePolicyNetworkElseCache];
+    query.limit = 50;
+    [query findObjectsInBackgroundWithBlock:block];
 }
 
 @end

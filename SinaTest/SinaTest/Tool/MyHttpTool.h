@@ -10,6 +10,7 @@
 #import "AFNetworking.h"
 #import "AVConstants.h"
 #import "MyHomeStatus.h"
+#import "MyStatus.h"
 
 @interface MyHttpTool : NSObject
 
@@ -19,8 +20,14 @@
 //是否展示网络激活指示器
 + (void)showNetworkActivityIndicatior;
 
+- (void)createStatusWithText:(NSString*)text error:(NSError**)error;
+
 - (void)findStatusWithBlock:(AVArrayResultBlock)block;
 
 - (MyHomeStatus *)showHomestatusFromAVObjects:(NSArray *)objects;
+
+- (void)digOrCancelDigOfStatus:(MyStatus *)status sender:(UIButton *)sender block:(AVBooleanResultBlock)block;
+
+- (void)findMoreStatusWithBlock:(NSArray *)loadedStatusIDs block:(AVArrayResultBlock)block;
 
 @end

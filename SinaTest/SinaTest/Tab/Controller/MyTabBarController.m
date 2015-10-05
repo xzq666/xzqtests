@@ -76,12 +76,12 @@
  *  @param selectedImageName 选中的图标
  */
 - (void)addOneChildVc:(UIViewController *)childVc title:(NSString *)title imageName:(NSString *)imageName selectedImageName:(NSString *)selectedImageName {
-    childVc.view.backgroundColor = [UIColor whiteColor];
+//    childVc.view.backgroundColor = [UIColor whiteColor];
     //设置标题
     childVc.title = title;
-    if ([childVc class] == [DiscoverViewController class]){
-        childVc.navigationItem.title = @"社区";
-    }
+//    if ([childVc class] == [DiscoverViewController class]){
+//        childVc.navigationItem.title = @"社区";
+//    }
     //设置图标
     childVc.tabBarItem.image = [UIImage imageNamed:imageName];
     //设置选中图标

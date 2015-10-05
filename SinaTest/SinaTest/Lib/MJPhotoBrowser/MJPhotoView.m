@@ -25,21 +25,21 @@
 {
     if ((self = [super initWithFrame:frame])) {
         self.clipsToBounds = YES;
-		// 图片
-		_imageView = [[UIImageView alloc] init];
-		_imageView.contentMode = UIViewContentModeScaleAspectFit;
-		[self addSubview:_imageView];
+        // 图片
+        _imageView = [[UIImageView alloc] init];
+        _imageView.contentMode = UIViewContentModeScaleAspectFit;
+        [self addSubview:_imageView];
         
         // 进度条
         _photoLoadingView = [[MJPhotoLoadingView alloc] init];
-		
-		// 属性
-		self.backgroundColor = [UIColor clearColor];
-		self.delegate = self;
-		self.showsHorizontalScrollIndicator = NO;
-		self.showsVerticalScrollIndicator = NO;
-		self.decelerationRate = UIScrollViewDecelerationRateFast;
-		self.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
+        
+        // 属性
+        self.backgroundColor = [UIColor clearColor];
+        self.delegate = self;
+        self.showsHorizontalScrollIndicator = NO;
+        self.showsVerticalScrollIndicator = NO;
+        self.decelerationRate = UIScrollViewDecelerationRateFast;
+        self.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
         
         // 监听点击
         UITapGestureRecognizer *singleTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleSingleTap:)];
@@ -79,12 +79,12 @@
                 // 调整frame参数
                 [photoView adjustFrame];
             }];
-        
+            
         }
     } else {
         [self photoStartLoad];
     }
-
+    
     // 调整frame参数
     [self adjustFrame];
 }
@@ -109,7 +109,7 @@
             }
         } completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
             [photoView photoDidFinishLoadWithImage:image];
-
+            
         }];
     }
 }
@@ -136,7 +136,7 @@
 #pragma mark 调整frame
 - (void)adjustFrame
 {
-	if (_imageView.image == nil) return;
+    if (_imageView.image == nil) return;
     
     // 基本尺寸参数
     CGSize boundsSize = self.bounds.size;
@@ -146,19 +146,19 @@
     CGSize imageSize = _imageView.image.size;
     CGFloat imageWidth = imageSize.width;
     CGFloat imageHeight = imageSize.height;
-	
-	// 设置伸缩比例
+    
+    // 设置伸缩比例
     CGFloat minScale = boundsWidth / imageWidth;
-	if (minScale > 1) {
-		minScale = 1.0;
-	}
-	CGFloat maxScale = 2.0; 
-	if ([UIScreen instancesRespondToSelector:@selector(scale)]) {
-		maxScale = maxScale / [[UIScreen mainScreen] scale];
-	}
-	self.maximumZoomScale = maxScale;
-	self.minimumZoomScale = minScale;
-	self.zoomScale = minScale;
+    if (minScale > 1) {
+        minScale = 1.0;
+    }
+    CGFloat maxScale = 2.0;
+    if ([UIScreen instancesRespondToSelector:@selector(scale)]) {
+        maxScale = maxScale / [[UIScreen mainScreen] scale];
+    }
+    self.maximumZoomScale = maxScale;
+    self.minimumZoomScale = minScale;
+    self.zoomScale = minScale;
     
     CGRect imageFrame = CGRectMake(0, 0, boundsWidth, imageHeight * boundsWidth / imageWidth);
     // 内容尺寸
@@ -167,9 +167,9 @@
     // y值
     if (imageFrame.size.height < boundsHeight) {
         imageFrame.origin.y = floorf((boundsHeight - imageFrame.size.height) / 2.0);
-	} else {
+    } else {
         imageFrame.origin.y = 0;
-	}
+    }
     
     if (_photo.firstShow) { // 第一次显示的图片
         _photo.firstShow = NO; // 已经显示过了
@@ -189,7 +189,7 @@
 
 #pragma mark - UIScrollViewDelegate
 - (UIView *)viewForZoomingInScrollView:(UIScrollView *)scrollView {
-	return _imageView;
+    return _imageView;
 }
 
 #pragma mark - 手势处理
@@ -246,16 +246,16 @@
     _doubleTap = YES;
     
     CGPoint touchPoint = [tap locationInView:self];
-	if (self.zoomScale == self.maximumZoomScale) {
-		[self setZoomScale:self.minimumZoomScale animated:YES];
-	} else {
-		[self zoomToRect:CGRectMake(touchPoint.x, touchPoint.y, 1, 1) animated:YES];
-	}
+    if (self.zoomScale == self.maximumZoomScale) {
+        [self setZoomScale:self.minimumZoomScale animated:YES];
+    } else {
+        [self zoomToRect:CGRectMake(touchPoint.x, touchPoint.y, 1, 1) animated:YES];
+    }
 }
 
-- (void)dealloc
-{
+- (void)dealloc {
     // 取消请求
     [_imageView sd_setImageWithURL:[NSURL URLWithString:@"file:///abc"]];
 }
+
 @end

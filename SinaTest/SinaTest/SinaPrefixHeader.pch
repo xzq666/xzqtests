@@ -59,7 +59,7 @@
 #define MyStatusCellInset 8
 #define MyStatusOriginalNameFont [UIFont systemFontOfSize:17]
 #define MyStatusOriginalTimeFont [UIFont systemFontOfSize:10]
-#define MyStatusOriginalSourceFont DSStatusOriginalTimeFont
+#define MyStatusOriginalSourceFont MyStatusOriginalTimeFont
 #define MyStatusRetweetedNameFont [UIFont systemFontOfSize:18]
 #define MyStatusOriginalDidMoreNotication @"StatusOriginalDidMoreNotication"
 
@@ -72,7 +72,7 @@
 // 表情的最大列数
 #define MyEmotionMaxCols 7
 // 每页最多显示多少个表情
-#define MyEmotionMaxCountPerPage (DSEmotionMaxRows * DSEmotionMaxCols - 1)
+#define MyEmotionMaxCountPerPage (MyEmotionMaxRows * MyEmotionMaxCols - 1)
 // 表情选择通知
 #define MyEmotionDidSelectedNotification @"EmotionDidSelectedNotification"
 // 表情选择是emotion key

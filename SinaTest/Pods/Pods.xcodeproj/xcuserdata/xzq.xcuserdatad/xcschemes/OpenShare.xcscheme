@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "82C96ECB0FC49EE5217C960A"
+               BlueprintIdentifier = "8272C1AD2C7A1CE0C3A22E49"
                BuildableName = "libOpenShare.a"
                BlueprintName = "OpenShare"
                ReferencedContainer = "container:Pods.xcodeproj">

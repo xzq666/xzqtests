@@ -12,11 +12,17 @@
 #import "MyHomeStatus.h"
 #import "MyStatus.h"
 #import "MyStatusFrame.h"
+#import "MyStatusCell.h"
+#import "MyLoadMoreFooter.h"
+#import "MyPopMenu.h"
+//#import "MyCommentViewController.h"
 
-@interface HomeViewController () <UIActionSheetDelegate>
+@interface HomeViewController () <UIActionSheetDelegate, MyStatusCellDelegate>
 
 @property (nonatomic , strong) NSMutableArray *statusesFrame;
 @property (nonatomic , strong) NSMutableArray *loadedObjects;
+@property (nonatomic , strong) NSMutableArray *needLoadArr;
+@property (nonatomic , weak) MyLoadMoreFooter *footer;
 @property (nonatomic , weak) MyTitleButton *titleButton;
 @property (nonatomic , strong) MyHttpTool *HttpToolManager;
 @property (nonatomic , strong) MyHomeStatus *homeStatus;
@@ -31,6 +37,13 @@
         _statusesFrame = [NSMutableArray array];
     }
     return _statusesFrame;
+}
+
+- (NSMutableArray *)needLoadArr {
+    if (_needLoadArr == nil) {
+        _needLoadArr = [NSMutableArray array];
+    }
+    return _needLoadArr;
 }
 
 - (NSMutableArray *)loadedObjects{
@@ -56,7 +69,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
     // 1.设置导航栏
     [self setupNavigationItem];
     // 2.删除分割线
@@ -110,7 +122,10 @@
 //点击标题点击
 - (void)titleClick:(UIButton *)titleButton {
     // 弹出菜单
-    NSLog(@"--标题--");
+    UIButton *button = [UIButton buttonWithType:UIButtonTypeContactAdd];
+    MyPopMenu *menu = [[MyPopMenu alloc] initWithContentView:button];
+    menu.arrowPosition = MyPopMenuArrowPositionCenter;
+    [menu showInRect:CGRectMake((self.view.frame.size.width-217)/2.0,CGRectGetMaxY([self.navigationController navigationBar].frame)-MyPopMenuMarginTop, 217, 300)];
 }
 
 //扫一扫
@@ -134,10 +149,10 @@
     [refreshController beginRefreshing];
     // 4.加载数据
     [self refreshControlStateChange:refreshController];
-//    // 5.添加上拉加载更多控件
-//    DSLoadMoreFooter *footer = [DSLoadMoreFooter footer];
-//    self.tableView.tableFooterView = footer;
-//    self.footer = footer;
+    // 5.添加上拉加载更多控件
+    MyLoadMoreFooter *footer = [MyLoadMoreFooter footer];
+    self.tableView.tableFooterView = footer;
+    self.footer = footer;
 }
 
 /**
@@ -198,7 +213,7 @@
     UILabel *label = [[UILabel alloc] init];
     label.font = [UIFont systemFontOfSize:12];
     // 2.显示文字
-    if (count) {
+    if (count>0) {
         label.text = [NSString stringWithFormat:@"共有%d条新的数据", count];
     } else {
         label.text = @"没有最新的数据";
@@ -236,6 +251,28 @@
     }];
 }
 
+- (void)loadMoreStatuses {
+    NSLog(@"loadmore");
+    [self.HttpToolManager findMoreStatusWithBlock:self.loadedObjects block:^(NSArray *objects , NSError *error){
+        if (!error){
+            MyHomeStatus *tempHomeStatus = [self.HttpToolManager showHomestatusFromAVObjects:objects];
+            [self.homeStatus.statuses addObjectsFromArray:tempHomeStatus.statuses];
+            NSArray *newFrames = [self statusFramesWithStatuses:tempHomeStatus.statuses];
+            [self.footer endRefreshing];
+            // 将新数据插入到旧数据的最后面
+            [self.statusesFrame addObjectsFromArray:newFrames];
+            [self.loadedObjects addObjectsFromArray:tempHomeStatus.loadedObjectIDs];
+            [self.AVObjects addObjectsFromArray:objects];
+            NSLog(@"增加数据中");
+            // 重新刷新表格
+            [self.tableView reloadData];
+        }else{
+            NSLog(@"请求失败");
+            [self.footer endRefreshing];
+        }
+    }];
+}
+
 - (NSArray *)statusFramesWithStatuses:(NSArray *)statuses {
     NSMutableArray *frames = [NSMutableArray array];
     for (MyStatus *status in statuses) {
@@ -247,7 +284,7 @@
 }
 
 - (void)statusOriginalViewDidClickedMoreButton:(NSNotification *)notification {
-    UIActionSheet *sheet = [[UIActionSheet alloc] initWithTitle:nil delegate:self cancelButtonTitle:@"取消" destructiveButtonTitle:nil otherButtonTitles:@"举报",@"屏蔽",@"取消关注",@"收藏", nil];
+    UIActionSheet *sheet = [[UIActionSheet alloc] initWithTitle:nil delegate:self cancelButtonTitle:@"取消" destructiveButtonTitle:nil otherButtonTitles:@"举报",@"屏蔽",@"收藏",@"取消关注", nil];
     [sheet showInView:self.view];
 }
 
@@ -263,36 +300,116 @@
 - (void)statusNormalTextDidSelected:(NSNotification *)notification {
     NSLog(@"跳转cell：到正文");
     UIViewController *newVc = [[UIViewController alloc] init];
-    newVc.view.backgroundColor = [UIColor redColor];
+    newVc.view.backgroundColor = [UIColor whiteColor];
     newVc.title = @"正文";
     [self.navigationController pushViewController:newVc animated:YES];
 }
 
-//- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-//    self.footer.hidden = self.statusesFrame.count == 0 ;
-//    return self.statusesFrame.count;
-//}
-//
-//- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-//    
-//    DSStatusCell *cell = [DSStatusCell cellWithTableView:tableView];
-//    cell.statusFrame = self.statusesFrame[indexPath.row];
-//    NSLog(@"number %d cell loaded",indexPath.row);
-//    cell.delegate = self;
-//    cell.indexpath = indexPath;
-//    return cell;
-//}
-//
-//- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-//    MyStatusFrame *statusFrame = self.statusesFrame[indexPath.row];
-//    return statusFrame.cellHeight;
-//}
-//
-//- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-//    UIViewController *newVc = [[UIViewController alloc] init];
-//    newVc.view.backgroundColor = [UIColor redColor];
-//    newVc.title = @"新控制器";
-//    [self.navigationController pushViewController:newVc animated:YES];
-//}
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    self.footer.hidden = self.statusesFrame.count == 0 ;
+    return self.statusesFrame.count;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    MyStatusCell *cell = [MyStatusCell cellWithTableView:tableView];
+    cell.statusFrame = self.statusesFrame[indexPath.row];
+    NSLog(@"number %d cell loaded",indexPath.row);
+    cell.delegate = self;
+    cell.indexpath = indexPath;
+    return cell;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    MyStatusFrame *statusFrame = self.statusesFrame[indexPath.row];
+    return statusFrame.cellHeight;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    UIViewController *newVc = [[UIViewController alloc] init];
+    newVc.view.backgroundColor = [UIColor whiteColor];
+    newVc.title = @"微博详情";
+    [self.navigationController pushViewController:newVc animated:YES];
+}
+
+- (void)didLikeButtonClicked:(UIButton *)button indexPath:(NSIndexPath *)indexpath {
+    NSLog(@"赞");
+//    MyStatus *status = [self.homeStatus.statuses objectAtIndex:indexpath.row];
+//    [self.HttpToolManager digOrCancelDigOfStatus:status sender:button block:^(BOOL succeeded , NSError *error){
+//        if (succeeded){
+//        }
+//    }];
+}
+
+//点击评论
+- (void)didCommentButtonClicked:(UIButton *)button indexPath:(NSIndexPath *)indexpath {
+    NSLog(@"评论");
+//    MyStatus *status = self.homeStatus.statuses[indexpath.row];
+//    MyCommentViewController *vc = [[MyCommentViewController alloc] init];
+//    vc.comments = status.comments;
+//    vc.object = self.AVObjects[indexpath.row];
+//    [self.navigationController pushViewController:vc animated:YES];
+}
+
+//点击私信
+- (void)didMessageButtonClicked:(UIButton *)button indexPath:(NSIndexPath *)indexpath {
+    NSLog(@"私信");
+//    MyStatus *statue = self.homeStatus.statuses[indexpath.row];
+//    [[MyIMService shareInstance] goWithUserId:statue.user.userId fromVC:self];
+}
+
+//点击转发
+- (void)didShareButtonClicked:(UIButton *)button indexPath:(NSIndexPath *)indexpath {
+    NSLog(@"转发");
+//    MyMessage *msg = [[MyMessage alloc] init];
+//    msg.title = @"hellow msg.title";
+//    [OpenShare shareToWeixinTimeline:msg Success:^(OSMessage *message){
+//        NSLog(@"微信分享到朋友圈成功:\n%@",message);
+//    }Fail:^(OSMessage *message, NSError *error){
+//        NSLog(@"微信分享到朋友圈失败:\n%@\%@n",error,message);
+//    }];
+}
+
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
+    if (self.statusesFrame.count == 0  || self.footer.isRefreshing) return;
+    // 1.差距
+    CGFloat delta = scrollView.contentSize.height - scrollView.contentOffset.y;
+    // 刚好能砍到整个footer的高度
+    CGFloat seeFootH = self.view.height - self.tabBarController.tabBar.height;
+    // 2.如果能看到整个footer
+    if (delta <= (seeFootH - 0)) {
+        // 进入上拉刷新状态
+        [self.footer beginRefreshing];
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2.0 * NSEC_PER_SEC) ),dispatch_get_main_queue(), ^{
+            [self loadMoreStatuses];
+        });
+    }
+}
+
+//按需加载 - 如果目标行与当前行相差超过指定行数，只在目标滚动范围的前后指定3行加载。
+- (void)scrollViewWillEndDragging:(UIScrollView *)scrollView withVelocity:(CGPoint)velocity targetContentOffset:(inout CGPoint *)targetContentOffset{
+    NSIndexPath *ip = [self.tableView indexPathForRowAtPoint:CGPointMake(0, targetContentOffset->y)];
+    NSIndexPath *cip = [[self.tableView indexPathsForVisibleRows] firstObject];
+    NSInteger skipCount = 8;
+    if (labs(cip.row-ip.row)>skipCount) {
+        NSArray *temp = [self.tableView indexPathsForRowsInRect:CGRectMake(0, targetContentOffset->y, self.tableView.width, self.tableView.height)];
+        NSMutableArray *arr = [NSMutableArray arrayWithArray:temp];
+        if (velocity.y<0) {
+            NSIndexPath *indexPath = [temp lastObject];
+            if (indexPath.row+3<self.homeStatus.statuses.count) {
+                [arr addObject:[NSIndexPath indexPathForRow:indexPath.row+1 inSection:0]];
+                [arr addObject:[NSIndexPath indexPathForRow:indexPath.row+2 inSection:0]];
+                [arr addObject:[NSIndexPath indexPathForRow:indexPath.row+3 inSection:0]];
+            }
+        } else {
+            NSIndexPath *indexPath = [temp firstObject];
+            if (indexPath.row>3) {
+                [arr addObject:[NSIndexPath indexPathForRow:indexPath.row-3 inSection:0]];
+                [arr addObject:[NSIndexPath indexPathForRow:indexPath.row-2 inSection:0]];
+                [arr addObject:[NSIndexPath indexPathForRow:indexPath.row-1 inSection:0]];
+            }
+        }
+        [_needLoadArr addObjectsFromArray:arr];
+    }
+}
 
 @end
