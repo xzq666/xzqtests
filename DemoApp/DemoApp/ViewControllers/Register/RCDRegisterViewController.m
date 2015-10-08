@@ -7,8 +7,13 @@
 //
 
 #import "RCDRegisterViewController.h"
+#import "RCDTextFieldValidate.h"
+#import "AFHttpTool.h"
+#import "RCAnimatedImagesView.h"
 #import "RCUnderlineTextField.h"
 #import "RCDLoginViewController.h"
+#import "RCDCommonDefine.h"
+#import <RongIMLib/RongIMLib.h>
 #import "RCDFindPswViewController.h"
 
 @interface RCDRegisterViewController () <UITextFieldDelegate>
@@ -342,36 +347,36 @@
     if (![self checkContent])
         return;
     
-//    RCNetworkStatus stauts = [[RCIMClient sharedRCIMClient] getCurrentNetworkStatus];
-//    
-//    if (RC_NotReachable == stauts) {
-//        _errorMsgLb.text = @"当前网络不可用，请检查！";
-//    }
+    RCNetworkStatus stauts = [[RCIMClient sharedRCIMClient] getCurrentNetworkStatus];
+    
+    if (RC_NotReachable == stauts) {
+        _errorMsgLb.text = @"当前网络不可用，请检查！";
+    }
     NSString *userName = [(UITextField *)[self.view viewWithTag:UserTextFieldTag] text];
     NSString *userPwd = [(UITextField *)[self.view viewWithTag:PassWordFieldTag] text];
     NSString *nickName = [(UITextField *)[self.view viewWithTag:RePassWordFieldTag] text];
-//    [AFHttpTool registerWithEmail:userName
-//                           mobile:@""
-//                         userName:nickName
-//                         password:userPwd
-//                          success:^(id response) {
-//                              int code = [response[@"code"] intValue];
-//                              NSString *messsage = nil;
-//                              if (code == 200) {
-//                                  messsage = @"注册成功!";
-//                              } else if (code == 101) {
-//                                  messsage = @"Email已经被注册！";
-//                              }
-//                              dispatch_async(dispatch_get_main_queue(), ^{
-//                                  _errorMsgLb.text = messsage;
-//                              });
-//                          }
-//                          failure:^(NSError *err) {
-//                              dispatch_async(dispatch_get_main_queue(), ^{
-//                                  _errorMsgLb.text = @"注册失败!";
-//                              });
-//                              
-//                          }];
+    [AFHttpTool registerWithEmail:userName
+                           mobile:@""
+                         userName:nickName
+                         password:userPwd
+                          success:^(id response) {
+                              int code = [response[@"code"] intValue];
+                              NSString *messsage = nil;
+                              if (code == 200) {
+                                  messsage = @"注册成功!";
+                              } else if (code == 101) {
+                                  messsage = @"Email已经被注册！";
+                              }
+                              dispatch_async(dispatch_get_main_queue(), ^{
+                                  _errorMsgLb.text = messsage;
+                              });
+                          }
+                          failure:^(NSError *err) {
+                              dispatch_async(dispatch_get_main_queue(), ^{
+                                  _errorMsgLb.text = @"注册失败!";
+                              });
+                              
+                          }];
 }
 
 /**
@@ -384,11 +389,10 @@
     NSString *userPwd = [(UITextField *)[self.view viewWithTag:PassWordFieldTag] text];
     NSString *reUserPwd =  [(UITextField *)[self.view viewWithTag:RePassWordFieldTag] text];
     
-//    if (![RCDTextFieldValidate validateEmail:userName]) {
-//        _errorMsgLb.text = @"邮箱格式不正确!";
-//        return NO;
-//    }
-    
+    if (![RCDTextFieldValidate validateEmail:userName]) {
+        _errorMsgLb.text = @"邮箱格式不正确!";
+        return NO;
+    }
     if (userName.length == 0) {
         _errorMsgLb.text = @"用户名不能为空!";
         return NO;

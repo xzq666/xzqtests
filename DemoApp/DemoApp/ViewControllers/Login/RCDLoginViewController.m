@@ -232,9 +232,12 @@ MBProgressHUD* hud ;
     _statusBarView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, 20)];
     _statusBarView.backgroundColor = [[UIColor alloc] initWithRed:0 green:0 blue:0 alpha:0.2];
     [self.view addSubview:_statusBarView];
-    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent animated:NO];
     [self.view setNeedsLayout];
     [self.view setNeedsUpdateConstraints];
+}
+
+- (UIStatusBarStyle)preferredStatusBarStyle {
+    return UIStatusBarStyleLightContent;
 }
 
 - (void)onChangeKey:(id)sender {
@@ -265,11 +268,7 @@ MBProgressHUD* hud ;
     if ([textField.text isEqualToString:@"appkeydebug"]) {
         [[NSUserDefaults standardUserDefaults] setBool:!self.rcDebug forKey:@"rongcloud appkey debug"];
         [[NSUserDefaults standardUserDefaults] synchronize];
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Alert"
-                                                        message:(!self.rcDebug ? @"进入debug模式，请重新启动应用！":@"退出debug模式，请重新启动应用")
-                                                       delegate:self
-                                              cancelButtonTitle:@"Cancel"
-                                              otherButtonTitles:nil,nil];
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Alert" message:(!self.rcDebug ? @"进入debug模式，请重新启动应用！":@"退出debug模式，请重新启动应用") delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:nil,nil];
         [alert show];
         self.rcDebug = !self.rcDebug;
         exit(0);
@@ -362,14 +361,14 @@ MBProgressHUD* hud ;
     BOOL notFirstTimeLogin = [DEFAULTS boolForKey:@"notFirstTimeLogin"];
     if (!notFirstTimeLogin) {
         [RCDDataSource cacheAllData:^{ //auto saved after completion.
-            //                                                   [DEFAULTS setBool:YES forKey:@"notFirstTimeLogin"];
-            //                                                   [DEFAULTS synchronize];
+//            [DEFAULTS setBool:YES forKey:@"notFirstTimeLogin"];
+//            [DEFAULTS synchronize];
         }];
     }
     dispatch_async(dispatch_get_main_queue(), ^{
-//        UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-//        UINavigationController *rootNavi = [storyboard instantiateViewControllerWithIdentifier:@"rootNavi"];
-//        [ShareApplicationDelegate window].rootViewController = rootNavi;
+        UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+        UINavigationController *rootNavi = [storyboard instantiateViewControllerWithIdentifier:@"rootNavi"];
+        [ShareApplicationDelegate window].rootViewController = rootNavi;
         [hud hide:YES];
         NSLog(@"登录成功");
         
@@ -385,6 +384,7 @@ MBProgressHUD* hud ;
  */
 - (void)loginRongCloud:(NSString *)userName token:(NSString *)token password:(NSString *)password {
     //登陆融云服务器
+    NSLog(@"token-->%@",token);
     [[RCIM sharedRCIM] connectWithToken:token success:^(NSString *userId) {
         [self loginSuccess:userName password:password token:token userId:userId];
     } error:^(RCConnectErrorCode status) {
@@ -393,7 +393,6 @@ MBProgressHUD* hud ;
         NSLog(@"RCConnectErrorCode is %ld",(long)status);
         _errorMsgLb.text=@"Token无效！";
         [_pwdTextField shake];
-        
     } tokenIncorrect:^{
         NSLog(@"IncorrectToken");
         //        if (_loginFailureTimes<3) {

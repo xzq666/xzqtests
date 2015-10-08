@@ -47,7 +47,6 @@
 //存储好友信息
 -(void)insertFriendToDB:(RCUserInfo *)friend;
 
-
 //清空群组缓存数据
 -(void)clearGroupsData;
 
