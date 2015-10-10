@@ -42,6 +42,13 @@
 		74712B3E1BB251D70001B0F0 /* MyHttpTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 74712B3D1BB251D70001B0F0 /* MyHttpTool.m */; settings = {ASSET_TAGS = (); }; };
 		74712B421BB2592E0001B0F0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 74712B411BB2592E0001B0F0 /* LaunchScreen.storyboard */; settings = {ASSET_TAGS = (); }; };
 		74712B451BB277EA0001B0F0 /* SignViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74712B441BB277EA0001B0F0 /* SignViewController.m */; settings = {ASSET_TAGS = (); }; };
+		747AEE081BC8A2F10059297D /* MyCommentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 747AEE071BC8A2F10059297D /* MyCommentViewController.m */; settings = {ASSET_TAGS = (); }; };
+		747AEE0B1BC8A5A00059297D /* MyAVComment.m in Sources */ = {isa = PBXBuildFile; fileRef = 747AEE0A1BC8A5A00059297D /* MyAVComment.m */; settings = {ASSET_TAGS = (); }; };
+		747AEE0E1BC8A6370059297D /* MyComment.m in Sources */ = {isa = PBXBuildFile; fileRef = 747AEE0D1BC8A6370059297D /* MyComment.m */; settings = {ASSET_TAGS = (); }; };
+		747AEE111BC8A6B80059297D /* MyCommentCellFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 747AEE101BC8A6B80059297D /* MyCommentCellFrame.m */; settings = {ASSET_TAGS = (); }; };
+		747AEE141BC8A72F0059297D /* MyCommentDetailFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 747AEE131BC8A72F0059297D /* MyCommentDetailFrame.m */; settings = {ASSET_TAGS = (); }; };
+		747AEE171BC8A8270059297D /* MyCommentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 747AEE161BC8A8270059297D /* MyCommentCell.m */; settings = {ASSET_TAGS = (); }; };
+		747AEE1A1BC8A8F50059297D /* MyCommentDetailView.m in Sources */ = {isa = PBXBuildFile; fileRef = 747AEE191BC8A8F50059297D /* MyCommentDetailView.m */; settings = {ASSET_TAGS = (); }; };
 		748B59771BB8CBD6008BF1FE /* MyStatusCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 748B59761BB8CBD6008BF1FE /* MyStatusCell.m */; settings = {ASSET_TAGS = (); }; };
 		748B597A1BB8D07D008BF1FE /* MyStatusOriginalView.m in Sources */ = {isa = PBXBuildFile; fileRef = 748B59791BB8D07D008BF1FE /* MyStatusOriginalView.m */; settings = {ASSET_TAGS = (); }; };
 		748B597D1BB8D1F2008BF1FE /* MyStatusDetailView.m in Sources */ = {isa = PBXBuildFile; fileRef = 748B597C1BB8D1F2008BF1FE /* MyStatusDetailView.m */; settings = {ASSET_TAGS = (); }; };
@@ -209,6 +216,20 @@
 		74712B411BB2592E0001B0F0 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		74712B431BB277EA0001B0F0 /* SignViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignViewController.h; sourceTree = "<group>"; };
 		74712B441BB277EA0001B0F0 /* SignViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignViewController.m; sourceTree = "<group>"; };
+		747AEE061BC8A2F10059297D /* MyCommentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyCommentViewController.h; sourceTree = "<group>"; };
+		747AEE071BC8A2F10059297D /* MyCommentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyCommentViewController.m; sourceTree = "<group>"; };
+		747AEE091BC8A5A00059297D /* MyAVComment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyAVComment.h; sourceTree = "<group>"; };
+		747AEE0A1BC8A5A00059297D /* MyAVComment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyAVComment.m; sourceTree = "<group>"; };
+		747AEE0C1BC8A6370059297D /* MyComment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyComment.h; sourceTree = "<group>"; };
+		747AEE0D1BC8A6370059297D /* MyComment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyComment.m; sourceTree = "<group>"; };
+		747AEE0F1BC8A6B80059297D /* MyCommentCellFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyCommentCellFrame.h; sourceTree = "<group>"; };
+		747AEE101BC8A6B80059297D /* MyCommentCellFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyCommentCellFrame.m; sourceTree = "<group>"; };
+		747AEE121BC8A72F0059297D /* MyCommentDetailFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyCommentDetailFrame.h; sourceTree = "<group>"; };
+		747AEE131BC8A72F0059297D /* MyCommentDetailFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyCommentDetailFrame.m; sourceTree = "<group>"; };
+		747AEE151BC8A8270059297D /* MyCommentCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyCommentCell.h; sourceTree = "<group>"; };
+		747AEE161BC8A8270059297D /* MyCommentCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyCommentCell.m; sourceTree = "<group>"; };
+		747AEE181BC8A8F50059297D /* MyCommentDetailView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyCommentDetailView.h; sourceTree = "<group>"; };
+		747AEE191BC8A8F50059297D /* MyCommentDetailView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyCommentDetailView.m; sourceTree = "<group>"; };
 		748B59751BB8CBD6008BF1FE /* MyStatusCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyStatusCell.h; sourceTree = "<group>"; };
 		748B59761BB8CBD6008BF1FE /* MyStatusCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyStatusCell.m; sourceTree = "<group>"; };
 		748B59781BB8D07D008BF1FE /* MyStatusOriginalView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyStatusOriginalView.h; sourceTree = "<group>"; };
@@ -471,6 +492,8 @@
 		7461BBD91BBA98530036DDAD /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				747AEE061BC8A2F10059297D /* MyCommentViewController.h */,
+				747AEE071BC8A2F10059297D /* MyCommentViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -629,6 +652,8 @@
 				748B59761BB8CBD6008BF1FE /* MyStatusCell.m */,
 				74FF82201BB91C870095D021 /* MyComposePhotoViewCell.h */,
 				74FF82211BB91C870095D021 /* MyComposePhotoViewCell.m */,
+				747AEE151BC8A8270059297D /* MyCommentCell.h */,
+				747AEE161BC8A8270059297D /* MyCommentCell.m */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -771,6 +796,8 @@
 				74FF82551BB923870095D021 /* MyEmotionPopView.h */,
 				74FF82561BB923870095D021 /* MyEmotionPopView.m */,
 				74FF82581BB9241B0095D021 /* MyEmotionPopView.xib */,
+				747AEE181BC8A8F50059297D /* MyCommentDetailView.h */,
+				747AEE191BC8A8F50059297D /* MyCommentDetailView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -805,6 +832,14 @@
 				7461BBB31BBA90870036DDAD /* MyAddRequest.m */,
 				7461BBB51BBA90DA0036DDAD /* MyAbuseReport.h */,
 				7461BBB61BBA90DA0036DDAD /* MyAbuseReport.m */,
+				747AEE091BC8A5A00059297D /* MyAVComment.h */,
+				747AEE0A1BC8A5A00059297D /* MyAVComment.m */,
+				747AEE0C1BC8A6370059297D /* MyComment.h */,
+				747AEE0D1BC8A6370059297D /* MyComment.m */,
+				747AEE0F1BC8A6B80059297D /* MyCommentCellFrame.h */,
+				747AEE101BC8A6B80059297D /* MyCommentCellFrame.m */,
+				747AEE121BC8A72F0059297D /* MyCommentDetailFrame.h */,
+				747AEE131BC8A72F0059297D /* MyCommentDetailFrame.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1105,6 +1140,8 @@
 				74C68E451BB4018C00D1262C /* MJPhotoView.m in Sources */,
 				74712A6D1BB243F50001B0F0 /* ViewController.m in Sources */,
 				74FF82221BB91C870095D021 /* MyComposePhotoViewCell.m in Sources */,
+				747AEE081BC8A2F10059297D /* MyCommentViewController.m in Sources */,
+				747AEE1A1BC8A8F50059297D /* MyCommentDetailView.m in Sources */,
 				74FF82401BB91F410095D021 /* MJMethod.m in Sources */,
 				74C68E2B1BB3FF7600D1262C /* MyPhoto.m in Sources */,
 				74AB631C1BB29F4300EE8D31 /* MyControllerTool.m in Sources */,
@@ -1116,6 +1153,7 @@
 				74AB63401BB2B29D00EE8D31 /* DiscoverViewController.m in Sources */,
 				74AB633D1BB2B28600EE8D31 /* MessageViewController.m in Sources */,
 				74712A6A1BB243F50001B0F0 /* AppDelegate.m in Sources */,
+				747AEE171BC8A8270059297D /* MyCommentCell.m in Sources */,
 				74FF82481BB91F880095D021 /* MyEmotionGroup.m in Sources */,
 				74AB63211BB2A2B900EE8D31 /* MyTabBarController.m in Sources */,
 				7461BBB71BBA90DA0036DDAD /* MyAbuseReport.m in Sources */,
@@ -1123,6 +1161,7 @@
 				74FF81EF1BB91B7D0095D021 /* MyComposePhotosView.m in Sources */,
 				74FF82161BB91C200095D021 /* JKAssetsGroupsView.m in Sources */,
 				74C68E1C1BB3FD8E00D1262C /* MyStatusFrame.m in Sources */,
+				747AEE0E1BC8A6370059297D /* MyComment.m in Sources */,
 				74C68E161BB3FB5900D1262C /* MyStatus.m in Sources */,
 				74C68E131BB3F62900D1262C /* MyHomeStatus.m in Sources */,
 				74FF821B1BB91C200095D021 /* JKPhotoBrowserCell.m in Sources */,
@@ -1133,7 +1172,9 @@
 				74C68E101BB3E83F00D1262C /* MyUser.m in Sources */,
 				74712B3E1BB251D70001B0F0 /* MyHttpTool.m in Sources */,
 				7461BBBA1BBA91EE0036DDAD /* UIImage+Icon.m in Sources */,
+				747AEE0B1BC8A5A00059297D /* MyAVComment.m in Sources */,
 				74FF82141BB91C200095D021 /* JKAssetsCollectionFooterView.m in Sources */,
+				747AEE111BC8A6B80059297D /* MyCommentCellFrame.m in Sources */,
 				74AB634F1BB2B6E900EE8D31 /* NSString+Extension.m in Sources */,
 				74712B451BB277EA0001B0F0 /* SignViewController.m in Sources */,
 				748B59771BB8CBD6008BF1FE /* MyStatusCell.m in Sources */,
@@ -1188,6 +1229,7 @@
 				748B598C1BB8D594008BF1FE /* MyLink.m in Sources */,
 				74FF821F1BB91C200095D021 /* UIView+JKPicker.m in Sources */,
 				7461BBB41BBA90870036DDAD /* MyAddRequest.m in Sources */,
+				747AEE141BC8A72F0059297D /* MyCommentDetailFrame.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

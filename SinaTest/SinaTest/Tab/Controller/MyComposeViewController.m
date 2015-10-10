@@ -12,6 +12,7 @@
 #import "MyComposePhotosView.h"
 #import "MyEmotionTextView.h"
 #import "JKImagePickerController.h"
+#import "MyCommentViewController.h"
 
 #define SourceCompose @"compose"
 #define SourceComment @"comment"
@@ -254,18 +255,72 @@
 
 - (void)send {
     if ([self.source isEqual:SourceCompose]){
-//        if (self.photosView.assetsArray.count){
-//            NSLog(@"%d",(int)self.photosView.assetsArray.count);
-//            [self sendStatusWithImage];
-//        }else{
+        if (self.photosView.assetsArray.count){
+            NSLog(@"%d",(int)self.photosView.assetsArray.count);
+            [self sendStatusWithImage];
+        }else{
             [self sendStatusWithoutImage];
-//        }
+        }
     }
-//    if ([self.source isEqual:SourceComment]){
-//        [self sendStatusWithImage];
-//    }
+    if ([self.source isEqual:SourceComment]){
+        [self sendStatusWithImage];
+    }
     // 2.关闭控制器
     [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+-(void)runInMainQueue:(void (^)())queue{
+    dispatch_async(dispatch_get_main_queue(), queue);
+}
+
+-(void)runInGlobalQueue:(void (^)())queue{
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT,0), queue);
+}
+
+-(void)showProgress{
+    [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+}
+
+-(void)hideProgress{
+    [MBProgressHUD hideHUDForView:self.view animated:YES];
+}
+
+- (void)sendStatusWithImage {
+    if ([self.source isEqual:SourceCompose]){ //发表内容为微博
+        if (self.textView.realText.length != 0 || self.photosView.selectedPhotos.count != 0){
+            [self showProgress];
+            [self runInGlobalQueue:^{
+                NSError* error;
+                [self.HttpManager createStatusWithImage:self.textView.text photos:self.photosView.selectedPhotos error:&error];
+                [self runInMainQueue:^{
+                    [self hideProgress];
+                    if(error==nil){
+                        NSLog(@"成功了");
+                        [_homeVc setupRefresh];
+                        //[weakSelf dismiss];
+                    }
+                }];
+            }];
+        }else{
+            NSLog(@"空");
+            [MBProgressHUD showError:@"内容为空,发表失败"];
+        }
+    }
+    if ([self.source isEqual:SourceComment]) {  //发表内容为评论
+        if (self.textView.realText.length != 0){
+            [self showProgress];
+            [self.HttpManager commentToUser:self.object content:self.textView.realText block:^(BOOL succeed , NSError *error){
+                [self hideProgress];
+                if (succeed){
+                    [_commentVc refresh];
+                    NSLog(@"评论成功了");
+                }else{
+                    NSLog(@"空");
+                    [MBProgressHUD showError:@"内容为空,发表失败"];
+                }
+            }];
+        }
+    }
 }
 
 //文本内容（无图片）发布

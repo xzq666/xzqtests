@@ -11,6 +11,7 @@
 #import "MyAVStatus.h"
 #import "MyUser.h"
 #import "MyStatus.h"
+#import "MyComment.h"
 
 @implementation MyHttpTool
 
@@ -45,6 +46,36 @@
     *error = theError;
 }
 
+- (void)createStatusWithImage:(NSString *)text photos:(NSArray *)photos error:(NSError**)error {
+    if (text == nil) {
+        text = @"";
+    }
+    NSMutableArray *photoFiles = [NSMutableArray array];
+    NSError* theError;
+    for(UIImage* photo in photos) {
+        AVFile* photoFile=[AVFile fileWithData:UIImagePNGRepresentation(photo)];
+        [photoFile save:&theError];
+        if(theError==nil){
+            [photoFiles addObject:photoFile];
+        }else{
+            *error=theError;
+            for(AVFile* file in photoFiles){
+                [file deleteInBackground];
+            }
+            return;
+        }
+    }
+    AVUser *user = [AVUser currentUser];
+    MyAVStatus *avstatus = [MyAVStatus object];
+    avstatus.creator = user;
+    //avstatus.statusContent = text;
+    [avstatus setObject:text forKey:@"albumContent"];
+    avstatus.albumPhotos = photoFiles;
+    avstatus.comments = [NSArray array];
+    [avstatus save:&theError];
+    *error = theError;
+}
+
 - (void)findStatusWithBlock:(AVArrayResultBlock)block {
     AVQuery *query = [MyAVStatus query];
     [query orderByDescending:@"createdAt"];
@@ -55,6 +86,26 @@
     [query setCachePolicy:kAVCachePolicyNetworkElseCache];
     query.limit = 50;
     [query findObjectsInBackgroundWithBlock:block];
+}
+
+- (void)commentToUser:(AVObject *)status content:(NSString *)content block:(AVBooleanResultBlock)block {
+    AVObject *comment = [AVObject objectWithClassName:@"Comment"];
+    [comment setObject:content forKey:@"commentContent"];
+    AVUser *user = [AVUser currentUser];
+    [comment setObject:user forKey:@"commentUser"];
+    [comment setObject:status forKey:@"album"];
+    [comment setObject:[status objectForKey:@"creator"] forKey:@"toUser"];
+    [comment setObject:user.username forKey:@"commentUsername"];
+    AVFile *avatarfile = [user objectForKey:@"avatar"];
+    [comment setObject:avatarfile.url forKey:@"avatarUrl"];
+    [comment saveInBackgroundWithBlock:^(BOOL succeeded , NSError *error){
+        if (error) {
+            block(NO,error);
+        }else{
+            [status addObject:comment forKey:@"comments"];
+            [status saveInBackgroundWithBlock:block];
+        }
+    }];
 }
 
 - (MyHomeStatus *)showHomestatusFromAVObjects:(NSArray *)objects {
@@ -152,6 +203,51 @@
     [query setCachePolicy:kAVCachePolicyNetworkElseCache];
     query.limit = 50;
     [query findObjectsInBackgroundWithBlock:block];
+}
+
+- (NSArray *)showCommentFromAVObject:(NSArray *)objects{
+    NSMutableArray *box = [NSMutableArray array];
+    for (AVObject *object in objects){
+        //AVObject *object = [[AVQuery queryWithClassName:@"Comment"] getObjectWithId:obj.objectId];
+        MyComment *comment = [[MyComment alloc] init];
+        comment.idstr = object.objectId;
+        comment.attributedText = [[NSAttributedString alloc] initWithString:[object objectForKey:@"commentContent"]];
+        AVObject *creator = [object objectForKey:@"commentUser"];
+        MyUser *commentUser = [[MyUser alloc] init];
+        commentUser.userId = creator.objectId;
+        commentUser.username = [object objectForKey:@"commentUsername"];
+        commentUser.avatarUrl = [object objectForKey:@"avatarUrl"];
+        comment.user = commentUser;
+        comment.status = [object objectForKey:@"album"];
+        NSDateFormatter *fmt = [[NSDateFormatter alloc] init];
+        fmt.dateFormat = @"EEE MMM dd HH24:mm:ss Z yyyy";
+        NSDate *createDate = object.createdAt;
+        if (createDate.isThisYear) {
+            if (createDate.isToday) { // 今天
+                NSDateComponents *cmps = [createDate deltaWithNow];
+                if (cmps.hour >= 1) { // 至少是1小时前发的
+                    comment.created_at =  [NSString stringWithFormat:@"%ld小时前", (long)cmps.hour];
+                } else if (cmps.minute >= 1) { // 1~59分钟之前发的
+                    comment.created_at = [NSString stringWithFormat:@"%ld分钟前", (long)cmps.minute];
+                } else { // 1分钟内发的
+                    comment.created_at = @"刚刚";
+                }
+            } else if (createDate.isYesterday) { // 昨天
+                fmt.dateFormat = @"昨天 HH:mm";
+                comment.created_at = [fmt stringFromDate:createDate];
+            } else { // 至少是前天
+                fmt.dateFormat = @"MM-dd HH:mm";
+                comment.created_at = [fmt stringFromDate:createDate];
+            }
+        } else { // 非今年
+            fmt.dateFormat = @"yyyy-MM-dd";
+            comment.created_at = [fmt stringFromDate:createDate];
+        }
+        [box insertObject:comment atIndex:0];
+    }
+    NSArray *comments = [[NSArray alloc] init];
+    comments = [NSArray arrayWithArray:box];
+    return comments;
 }
 
 @end

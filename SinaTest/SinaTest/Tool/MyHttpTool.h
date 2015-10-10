@@ -21,13 +21,18 @@
 + (void)showNetworkActivityIndicatior;
 
 - (void)createStatusWithText:(NSString*)text error:(NSError**)error;
+- (void)createStatusWithImage:(NSString*)text photos:(NSArray*)photos error:(NSError**)error;
 
 - (void)findStatusWithBlock:(AVArrayResultBlock)block;
+
+- (void)commentToUser:(AVObject*)status content:(NSString*)content block:(AVBooleanResultBlock)block;
 
 - (MyHomeStatus *)showHomestatusFromAVObjects:(NSArray *)objects;
 
 - (void)digOrCancelDigOfStatus:(MyStatus *)status sender:(UIButton *)sender block:(AVBooleanResultBlock)block;
 
 - (void)findMoreStatusWithBlock:(NSArray *)loadedStatusIDs block:(AVArrayResultBlock)block;
+
+- (NSArray *)showCommentFromAVObject:(NSArray *)object;
 
 @end

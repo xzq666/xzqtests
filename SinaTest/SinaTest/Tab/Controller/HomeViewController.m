@@ -15,7 +15,7 @@
 #import "MyStatusCell.h"
 #import "MyLoadMoreFooter.h"
 #import "MyPopMenu.h"
-//#import "MyCommentViewController.h"
+#import "MyCommentViewController.h"
 
 @interface HomeViewController () <UIActionSheetDelegate, MyStatusCellDelegate>
 
@@ -343,11 +343,11 @@
 //点击评论
 - (void)didCommentButtonClicked:(UIButton *)button indexPath:(NSIndexPath *)indexpath {
     NSLog(@"评论");
-//    MyStatus *status = self.homeStatus.statuses[indexpath.row];
-//    MyCommentViewController *vc = [[MyCommentViewController alloc] init];
-//    vc.comments = status.comments;
-//    vc.object = self.AVObjects[indexpath.row];
-//    [self.navigationController pushViewController:vc animated:YES];
+    MyStatus *status = self.homeStatus.statuses[indexpath.row];
+    MyCommentViewController *vc = [[MyCommentViewController alloc] init];
+    vc.comments = status.comments;
+    vc.object = self.AVObjects[indexpath.row];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 //点击私信

@@ -8,13 +8,13 @@
 
 #import <UIKit/UIKit.h>
 #import "HomeViewController.h"
+@class MyCommentViewController;
 
-@class MyComposeViewController;
 @interface MyComposeViewController : UIViewController
 
 @property (nonatomic , strong) HomeViewController *homeVc;
 @property (nonatomic , assign) NSString *source;
 @property (nonatomic , strong) AVObject *object;
-@property (nonatomic , strong) MyComposeViewController* commentVc;
+@property (nonatomic , strong) MyCommentViewController* commentVc;
 
 @end
