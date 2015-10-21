@@ -149,6 +149,19 @@
 		742D23541BAFEDCD00DCE95D /* UIImage+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 742D22C31BAFEDCD00DCE95D /* UIImage+Extension.m */; settings = {ASSET_TAGS = (); }; };
 		742D23551BAFEDCD00DCE95D /* UIViewExt.m in Sources */ = {isa = PBXBuildFile; fileRef = 742D22C51BAFEDCD00DCE95D /* UIViewExt.m */; settings = {ASSET_TAGS = (); }; };
 		742D23561BAFEDCD00DCE95D /* Utility.m in Sources */ = {isa = PBXBuildFile; fileRef = 742D22C71BAFEDCD00DCE95D /* Utility.m */; settings = {ASSET_TAGS = (); }; };
+		7474FE761BCF4987002596EA /* GGPlaceholderTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7474FE751BCF4987002596EA /* GGPlaceholderTextView.m */; settings = {ASSET_TAGS = (); }; };
+		7488B02D1BD73EDE00AC10DB /* ModelContainsModelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7488B02C1BD73EDE00AC10DB /* ModelContainsModelViewController.m */; settings = {ASSET_TAGS = (); }; };
+		7488B0301BD73F0C00AC10DB /* Status.m in Sources */ = {isa = PBXBuildFile; fileRef = 7488B02F1BD73F0C00AC10DB /* Status.m */; settings = {ASSET_TAGS = (); }; };
+		7488B0331BD7427400AC10DB /* ModelContainsModelArrayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7488B0321BD7427400AC10DB /* ModelContainsModelArrayViewController.m */; settings = {ASSET_TAGS = (); }; };
+		7488B0361BD7429400AC10DB /* Ad.m in Sources */ = {isa = PBXBuildFile; fileRef = 7488B0351BD7429400AC10DB /* Ad.m */; settings = {ASSET_TAGS = (); }; };
+		7488B0391BD742C800AC10DB /* BaseObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 7488B0381BD742C800AC10DB /* BaseObject.m */; settings = {ASSET_TAGS = (); }; };
+		7488B03C1BD7431C00AC10DB /* StatusResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 7488B03B1BD7431C00AC10DB /* StatusResult.m */; settings = {ASSET_TAGS = (); }; };
+		7488B03F1BD7465400AC10DB /* JSONArrToModelArrViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7488B03E1BD7465400AC10DB /* JSONArrToModelArrViewController.m */; settings = {ASSET_TAGS = (); }; };
+		74E3648D1BD6350400321F54 /* MJExtensionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74E3648C1BD6350400321F54 /* MJExtensionViewController.m */; settings = {ASSET_TAGS = (); }; };
+		74E364911BD636E600321F54 /* EasyDicToModelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74E364901BD636E600321F54 /* EasyDicToModelViewController.m */; settings = {ASSET_TAGS = (); }; };
+		74E364941BD639FE00321F54 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 74E364931BD639FE00321F54 /* User.m */; settings = {ASSET_TAGS = (); }; };
+		74E364971BD63A6500321F54 /* MJExtensionConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 74E364961BD63A6500321F54 /* MJExtensionConfig.m */; settings = {ASSET_TAGS = (); }; };
+		74E3649A1BD63F3400321F54 /* JSONStringToModelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74E364991BD63F3400321F54 /* JSONStringToModelViewController.m */; settings = {ASSET_TAGS = (); }; };
 		74F2E2D81BB1588C0039E747 /* MasonryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74F2E2D71BB1588C0039E747 /* MasonryViewController.m */; settings = {ASSET_TAGS = (); }; };
 		839BAB111B7C34F9006FBDFA /* XZQModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 839BAB0F1B7C34F9006FBDFA /* XZQModel.xcdatamodeld */; };
 		839BAB151B7C3788006FBDFA /* CDUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 839BAB141B7C3788006FBDFA /* CDUser.m */; };
@@ -652,6 +665,32 @@
 		742D22C61BAFEDCD00DCE95D /* Utility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Utility.h; sourceTree = "<group>"; };
 		742D22C71BAFEDCD00DCE95D /* Utility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Utility.m; sourceTree = "<group>"; };
 		742D22C81BAFEDCD00DCE95D /* xzqtest.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = xzqtest.pch; sourceTree = "<group>"; };
+		7474FE741BCF4987002596EA /* GGPlaceholderTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GGPlaceholderTextView.h; sourceTree = "<group>"; };
+		7474FE751BCF4987002596EA /* GGPlaceholderTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GGPlaceholderTextView.m; sourceTree = "<group>"; };
+		7488B02B1BD73EDE00AC10DB /* ModelContainsModelViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModelContainsModelViewController.h; sourceTree = "<group>"; };
+		7488B02C1BD73EDE00AC10DB /* ModelContainsModelViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModelContainsModelViewController.m; sourceTree = "<group>"; };
+		7488B02E1BD73F0C00AC10DB /* Status.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Status.h; sourceTree = "<group>"; };
+		7488B02F1BD73F0C00AC10DB /* Status.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Status.m; sourceTree = "<group>"; };
+		7488B0311BD7427400AC10DB /* ModelContainsModelArrayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModelContainsModelArrayViewController.h; sourceTree = "<group>"; };
+		7488B0321BD7427400AC10DB /* ModelContainsModelArrayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModelContainsModelArrayViewController.m; sourceTree = "<group>"; };
+		7488B0341BD7429400AC10DB /* Ad.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ad.h; sourceTree = "<group>"; };
+		7488B0351BD7429400AC10DB /* Ad.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Ad.m; sourceTree = "<group>"; };
+		7488B0371BD742C800AC10DB /* BaseObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseObject.h; sourceTree = "<group>"; };
+		7488B0381BD742C800AC10DB /* BaseObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseObject.m; sourceTree = "<group>"; };
+		7488B03A1BD7431C00AC10DB /* StatusResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatusResult.h; sourceTree = "<group>"; };
+		7488B03B1BD7431C00AC10DB /* StatusResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StatusResult.m; sourceTree = "<group>"; };
+		7488B03D1BD7465400AC10DB /* JSONArrToModelArrViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONArrToModelArrViewController.h; sourceTree = "<group>"; };
+		7488B03E1BD7465400AC10DB /* JSONArrToModelArrViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONArrToModelArrViewController.m; sourceTree = "<group>"; };
+		74E3648B1BD6350400321F54 /* MJExtensionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJExtensionViewController.h; sourceTree = "<group>"; };
+		74E3648C1BD6350400321F54 /* MJExtensionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJExtensionViewController.m; sourceTree = "<group>"; };
+		74E3648F1BD636E600321F54 /* EasyDicToModelViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EasyDicToModelViewController.h; path = Class/EasyDicToModelViewController.h; sourceTree = "<group>"; };
+		74E364901BD636E600321F54 /* EasyDicToModelViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EasyDicToModelViewController.m; path = Class/EasyDicToModelViewController.m; sourceTree = "<group>"; };
+		74E364921BD639FE00321F54 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
+		74E364931BD639FE00321F54 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
+		74E364951BD63A6500321F54 /* MJExtensionConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MJExtensionConfig.h; path = xzqtest/MJExtensionTest/MJExtensionConfig.h; sourceTree = SOURCE_ROOT; };
+		74E364961BD63A6500321F54 /* MJExtensionConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MJExtensionConfig.m; path = xzqtest/MJExtensionTest/MJExtensionConfig.m; sourceTree = SOURCE_ROOT; };
+		74E364981BD63F3400321F54 /* JSONStringToModelViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONStringToModelViewController.h; sourceTree = "<group>"; };
+		74E364991BD63F3400321F54 /* JSONStringToModelViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONStringToModelViewController.m; sourceTree = "<group>"; };
 		74F2E2D61BB1588C0039E747 /* MasonryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MasonryViewController.h; sourceTree = "<group>"; };
 		74F2E2D71BB1588C0039E747 /* MasonryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MasonryViewController.m; sourceTree = "<group>"; };
 		77C7550E6D29ECE2ABB990A8 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -1326,6 +1365,8 @@
 				742D22BB1BAFEDCD00DCE95D /* TextImageViewController.h */,
 				742D22BC1BAFEDCD00DCE95D /* TextImageViewController.m */,
 				742D22BD1BAFEDCD00DCE95D /* Utils */,
+				7474FE741BCF4987002596EA /* GGPlaceholderTextView.h */,
+				7474FE751BCF4987002596EA /* GGPlaceholderTextView.m */,
 			);
 			path = textimage;
 			sourceTree = "<group>";
@@ -1468,6 +1509,45 @@
 				742D22C71BAFEDCD00DCE95D /* Utility.m */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		74E3648A1BD634DF00321F54 /* MJExtensionTest */ = {
+			isa = PBXGroup;
+			children = (
+				74E3648E1BD6356C00321F54 /* Class */,
+				74E3648B1BD6350400321F54 /* MJExtensionViewController.h */,
+				74E3648C1BD6350400321F54 /* MJExtensionViewController.m */,
+				74E3648F1BD636E600321F54 /* EasyDicToModelViewController.h */,
+				74E364901BD636E600321F54 /* EasyDicToModelViewController.m */,
+				74E364981BD63F3400321F54 /* JSONStringToModelViewController.h */,
+				74E364991BD63F3400321F54 /* JSONStringToModelViewController.m */,
+				7488B02B1BD73EDE00AC10DB /* ModelContainsModelViewController.h */,
+				7488B02C1BD73EDE00AC10DB /* ModelContainsModelViewController.m */,
+				7488B0311BD7427400AC10DB /* ModelContainsModelArrayViewController.h */,
+				7488B0321BD7427400AC10DB /* ModelContainsModelArrayViewController.m */,
+				7488B03D1BD7465400AC10DB /* JSONArrToModelArrViewController.h */,
+				7488B03E1BD7465400AC10DB /* JSONArrToModelArrViewController.m */,
+			);
+			path = MJExtensionTest;
+			sourceTree = "<group>";
+		};
+		74E3648E1BD6356C00321F54 /* Class */ = {
+			isa = PBXGroup;
+			children = (
+				74E364951BD63A6500321F54 /* MJExtensionConfig.h */,
+				74E364961BD63A6500321F54 /* MJExtensionConfig.m */,
+				7488B0371BD742C800AC10DB /* BaseObject.h */,
+				7488B0381BD742C800AC10DB /* BaseObject.m */,
+				74E364921BD639FE00321F54 /* User.h */,
+				74E364931BD639FE00321F54 /* User.m */,
+				7488B02E1BD73F0C00AC10DB /* Status.h */,
+				7488B02F1BD73F0C00AC10DB /* Status.m */,
+				7488B0341BD7429400AC10DB /* Ad.h */,
+				7488B0351BD7429400AC10DB /* Ad.m */,
+				7488B03A1BD7431C00AC10DB /* StatusResult.h */,
+				7488B03B1BD7431C00AC10DB /* StatusResult.m */,
+			);
+			path = Class;
 			sourceTree = "<group>";
 		};
 		74F2E2D51BB158750039E747 /* masonry */ = {
@@ -1683,6 +1763,7 @@
 			children = (
 				742D22C81BAFEDCD00DCE95D /* xzqtest.pch */,
 				742D221A1BAFEDCC00DCE95D /* demo.js */,
+				74E3648A1BD634DF00321F54 /* MJExtensionTest */,
 				74F2E2D51BB158750039E747 /* masonry */,
 				742D221B1BAFEDCC00DCE95D /* gesturelock */,
 				742D22211BAFEDCC00DCE95D /* jspatch */,
@@ -2675,6 +2756,7 @@
 				TargetAttributes = {
 					83ADBFA11B7ADEC000BD3DD2 = {
 						CreatedOnToolsVersion = 6.4;
+						DevelopmentTeam = 5USMYPL2E6;
 					};
 					83ADBFBA1B7ADEC000BD3DD2 = {
 						CreatedOnToolsVersion = 6.4;
@@ -3048,16 +3130,21 @@
 				83ADBFE91B7AF06900BD3DD2 /* KCUserService.m in Sources */,
 				83C3D0031B9FDE87007EF0DB /* UMComSettingViewController.m in Sources */,
 				83AC8EC61BA1839400590B6B /* MLSelectPhotoPickerBrowserPhotoView.m in Sources */,
+				7488B02D1BD73EDE00AC10DB /* ModelContainsModelViewController.m in Sources */,
 				742D22D31BAFEDCD00DCE95D /* JPCGTransform.m in Sources */,
+				7488B03F1BD7465400AC10DB /* JSONArrToModelArrViewController.m in Sources */,
 				742D22DB1BAFEDCD00DCE95D /* JPUIKit.m in Sources */,
 				83C3CFA31B9FDE87007EF0DB /* UMImageProgressView.m in Sources */,
 				83AC8EBF1BA1839400590B6B /* MLSelectPhotoNavigationViewController.m in Sources */,
+				74E364971BD63A6500321F54 /* MJExtensionConfig.m in Sources */,
 				83AC8EC01BA1839400590B6B /* MLSelectPhotoPickerAssetsViewController.m in Sources */,
 				83C3CFBA1B9FDE87007EF0DB /* UMComCommentEditView.m in Sources */,
 				83C3D0061B9FDE87007EF0DB /* UMComUserCenterViewController.m in Sources */,
 				83AC8EB81BA1839400590B6B /* UIImage+MLTint.m in Sources */,
+				74E364911BD636E600321F54 /* EasyDicToModelViewController.m in Sources */,
 				839BAB2C1B7C4121006FBDFA /* CDStatusTableViewCell.m in Sources */,
 				83C3CFE11B9FDE87007EF0DB /* UMComCommentTableView.m in Sources */,
+				74E3648D1BD6350400321F54 /* MJExtensionViewController.m in Sources */,
 				83C3CFC41B9FDE87007EF0DB /* UMComTableViewCell.m in Sources */,
 				742D23531BAFEDCD00DCE95D /* JKDBModel.m in Sources */,
 				83C3CFD81B9FDE87007EF0DB /* UMComFeedsTableViewCell.m in Sources */,
@@ -3077,16 +3164,19 @@
 				83C3CFD51B9FDE87007EF0DB /* UMComLocationTableViewCell.m in Sources */,
 				742D22D61BAFEDCD00DCE95D /* JPMemory.m in Sources */,
 				83AC8EBB1BA1839400590B6B /* MLSelectPhotoPickerBrowserPhoto.m in Sources */,
+				7488B0361BD7429400AC10DB /* Ad.m in Sources */,
 				83C3CFAC1B9FDE87007EF0DB /* UMImagePickerController.m in Sources */,
 				83C3CFB81B9FDE87007EF0DB /* UIView+UMComTipLabel.m in Sources */,
 				83C3CFA81B9FDE87007EF0DB /* UMAssetsCollectionCheckMarkView.m in Sources */,
 				83C3CFDE1B9FDE87007EF0DB /* UMComNearbyFeedViewController.m in Sources */,
 				83ADBFEF1B7AF28B00BD3DD2 /* KCMainViewController.m in Sources */,
+				7488B03C1BD7431C00AC10DB /* StatusResult.m in Sources */,
 				83B459291B8E9E53002BEDC1 /* FMDatabase.m in Sources */,
 				742D22D41BAFEDCD00DCE95D /* JPCoreGraphics.m in Sources */,
 				742D22CE1BAFEDCD00DCE95D /* JPCGColor.m in Sources */,
 				83C3CFD71B9FDE87007EF0DB /* UMComFavouratesViewController.m in Sources */,
 				839BAB111B7C34F9006FBDFA /* XZQModel.xcdatamodeld in Sources */,
+				7488B0391BD742C800AC10DB /* BaseObject.m in Sources */,
 				83C3CFC61B9FDE87007EF0DB /* UMComTableViewController.m in Sources */,
 				83C3CFDB1B9FDE87007EF0DB /* UMComFeedTableView.m in Sources */,
 				83C3CFB01B9FDE87007EF0DB /* UMComGridTableViewCellOne.m in Sources */,
@@ -3106,10 +3196,12 @@
 				83C3CFE91B9FDE87007EF0DB /* UMComLikeUserViewController.m in Sources */,
 				83B4592B1B8E9E53002BEDC1 /* FMDatabasePool.m in Sources */,
 				83AC8EC41BA1839400590B6B /* MLSelectPhotoPickerBrowserPhotoImageView.m in Sources */,
+				74E3649A1BD63F3400321F54 /* JSONStringToModelViewController.m in Sources */,
 				83C3CFC71B9FDE87007EF0DB /* UMComWebViewController.m in Sources */,
 				83C3CFAB1B9FDE87007EF0DB /* UMAssetsCollectionOverlayView.m in Sources */,
 				83C3CFC31B9FDE87007EF0DB /* UMComTableView.m in Sources */,
 				74F2E2D81BB1588C0039E747 /* MasonryViewController.m in Sources */,
+				7474FE761BCF4987002596EA /* GGPlaceholderTextView.m in Sources */,
 				83C3D0081B9FDE87007EF0DB /* UMComUserCollectionViewCell.m in Sources */,
 				83C3CFDD1B9FDE87007EF0DB /* UMComHomeFeedViewController.m in Sources */,
 				839BAB151B7C3788006FBDFA /* CDUser.m in Sources */,
@@ -3126,6 +3218,7 @@
 				83AC8EC91BA1839400590B6B /* MLSelectPhotoPickerFooterCollectionReusableView.m in Sources */,
 				742D23521BAFEDCD00DCE95D /* JKDBHelper.m in Sources */,
 				83B4592C1B8E9E53002BEDC1 /* FMDatabaseQueue.m in Sources */,
+				7488B0301BD73F0C00AC10DB /* Status.m in Sources */,
 				83C3CF2C1B9FDE87007EF0DB /* UMComUMengLoginHandler.m in Sources */,
 				83ADBFF21B7AF51B00BD3DD2 /* DatabaseMainViewController.m in Sources */,
 				83C3CFD11B9FDE87007EF0DB /* UMComFriendTableViewCell.m in Sources */,
@@ -3166,6 +3259,7 @@
 				83C3CFE81B9FDE87007EF0DB /* UMComLikeListView.m in Sources */,
 				83AC8EC11BA1839400590B6B /* MLSelectPhotoPickerGroupViewController.m in Sources */,
 				742D22D81BAFEDCD00DCE95D /* JPUIGeometry.m in Sources */,
+				74E364941BD639FE00321F54 /* User.m in Sources */,
 				83ADBFE61B7AEF9900BD3DD2 /* KCStatus.m in Sources */,
 				83AC8EC71BA1839400590B6B /* MLSelectPhotoPickerCollectionView.m in Sources */,
 				839BAB311B7C4540006FBDFA /* PaoMaView.m in Sources */,
@@ -3199,6 +3293,7 @@
 				83C3CFA91B9FDE87007EF0DB /* UMAssetsCollectionController.m in Sources */,
 				83C3CFAE1B9FDE87007EF0DB /* UMImagePickerThumbnailView.m in Sources */,
 				83C3CFC81B9FDE87007EF0DB /* UMComActionDeleteView.m in Sources */,
+				7488B0331BD7427400AC10DB /* ModelContainsModelArrayViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3339,6 +3434,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -3360,6 +3456,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cct.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -3371,6 +3468,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -3392,6 +3490,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cct.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

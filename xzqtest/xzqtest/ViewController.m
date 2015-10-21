@@ -15,6 +15,7 @@
 #import "GestureLock.h"
 #import "JSPatchViewController.h"
 #import "MasonryViewController.h"
+#import "MJExtensionViewController.h"
 
 @interface ViewController ()
 
@@ -99,6 +100,15 @@
     masonry.frame = CGRectMake([UIScreen mainScreen].bounds.size.width/2+10, 260, [UIScreen mainScreen].bounds.size.width/2-20, 40);
     [masonry addTarget:self action:@selector(masonryClick) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:masonry];
+    
+    UIButton *extension = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    [extension setTitle:@"MJExtension测试" forState:UIControlStateNormal];
+    [extension setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    extension.layer.masksToBounds = YES;
+    extension.layer.borderWidth = 0.5;
+    extension.frame = CGRectMake(10, 320, [UIScreen mainScreen].bounds.size.width/2-20, 40);
+    [extension addTarget:self action:@selector(extensionClick) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:extension];
 }
 
 - (void)databaseClick {
@@ -140,6 +150,11 @@
 
 - (void)masonryClick {
     MasonryViewController *vc = [[MasonryViewController alloc] init];
+    [self.navigationController pushViewController:vc animated:YES];
+}
+
+- (void)extensionClick {
+    MJExtensionViewController *vc = [[MJExtensionViewController alloc] init];
     [self.navigationController pushViewController:vc animated:YES];
 }
 

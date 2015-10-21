@@ -19,7 +19,7 @@
 - (instancetype)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     if (self) {
-        self.backgroundColor = [UIColor clearColor];
+//        self.backgroundColor = [UIColor clearColor];
         //添加一个现实提醒文字的label
         UILabel *placehoderLabel = [[UILabel alloc] init];
         placehoderLabel.numberOfLines = 0;

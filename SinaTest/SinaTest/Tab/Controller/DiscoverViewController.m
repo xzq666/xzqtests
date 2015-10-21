@@ -7,6 +7,7 @@
 //
 
 #import "DiscoverViewController.h"
+#import "MyEmotionTextView.h"
 
 @implementation DiscoverViewController
 
@@ -14,6 +15,13 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.view.backgroundColor = [UIColor whiteColor];
+    
+    MyEmotionTextView *textView = [[MyEmotionTextView alloc] init];
+    textView.alwaysBounceVertical = YES ;//垂直方向上有弹簧效果
+    textView.frame = self.view.bounds;
+    [self.view addSubview:textView];
+    // 2.设置提醒文字
+    textView.placeholder = @"发表新微博...";
 }
 
 @end
