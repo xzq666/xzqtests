@@ -1,0 +1,1 @@
+MLPHOTOBROWSER_OTHER_LDFLAGS = -framework "AssetsLibrary"

@@ -59,9 +59,13 @@ install_resource()
 }
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_resource "JSPatch/JSPatch/JSPatch.js"
+  install_resource "MLPhotoBrowser/MLPhotoBrowser/MLPhotoBrowser.bundle"
+  install_resource "SVProgressHUD/SVProgressHUD/SVProgressHUD.bundle"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_resource "JSPatch/JSPatch/JSPatch.js"
+  install_resource "MLPhotoBrowser/MLPhotoBrowser/MLPhotoBrowser.bundle"
+  install_resource "SVProgressHUD/SVProgressHUD/SVProgressHUD.bundle"
 fi
 
 mkdir -p "${CONFIGURATION_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}"

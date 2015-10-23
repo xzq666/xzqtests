@@ -1,0 +1,1 @@
+../../../MLPhotoBrowser/MLPhotoBrowser/Classes/Models/MLPhotoBrowserPhoto.h

@@ -16,6 +16,8 @@
 #import "JSPatchViewController.h"
 #import "MasonryViewController.h"
 #import "MJExtensionViewController.h"
+#import "MBProgressHUDViewController.h"
+#import "MJPhotoBrowserTestViewController.h"
 
 @interface ViewController ()
 
@@ -109,6 +111,24 @@
     extension.frame = CGRectMake(10, 320, [UIScreen mainScreen].bounds.size.width/2-20, 40);
     [extension addTarget:self action:@selector(extensionClick) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:extension];
+    
+    UIButton *progressHUD = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    [progressHUD setTitle:@"MBprogressHUD测试" forState:UIControlStateNormal];
+    [progressHUD setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    progressHUD.layer.masksToBounds = YES;
+    progressHUD.layer.borderWidth = 0.5;
+    progressHUD.frame = CGRectMake([UIScreen mainScreen].bounds.size.width/2+10, 320, [UIScreen mainScreen].bounds.size.width/2-20, 40);
+    [progressHUD addTarget:self action:@selector(progressHUDClick) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:progressHUD];
+    
+    UIButton *mjphotobrowser = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    [mjphotobrowser setTitle:@"MJPhotoBrowser测试" forState:UIControlStateNormal];
+    [mjphotobrowser setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    mjphotobrowser.layer.masksToBounds = YES;
+    mjphotobrowser.layer.borderWidth = 0.5;
+    mjphotobrowser.frame = CGRectMake(10, 380, [UIScreen mainScreen].bounds.size.width/2-20, 40);
+    [mjphotobrowser addTarget:self action:@selector(mjphotobrowserClick) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:mjphotobrowser];
 }
 
 - (void)databaseClick {
@@ -155,6 +175,16 @@
 
 - (void)extensionClick {
     MJExtensionViewController *vc = [[MJExtensionViewController alloc] init];
+    [self.navigationController pushViewController:vc animated:YES];
+}
+
+- (void)progressHUDClick {
+    MBProgressHUDViewController *vc = [[MBProgressHUDViewController alloc] init];
+    [self.navigationController pushViewController:vc animated:YES];
+}
+
+- (void)mjphotobrowserClick {
+    MJPhotoBrowserTestViewController *vc = [[MJPhotoBrowserTestViewController alloc] init];
     [self.navigationController pushViewController:vc animated:YES];
 }
 
