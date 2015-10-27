@@ -10,6 +10,6 @@
 
 @interface ViewController : UIViewController
 
+@property (nonatomic, strong) UIButton *menuBtn;
 
 @end
-

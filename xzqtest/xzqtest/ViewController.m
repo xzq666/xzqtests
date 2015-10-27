@@ -18,6 +18,9 @@
 #import "MJExtensionViewController.h"
 #import "MBProgressHUDViewController.h"
 #import "MJPhotoBrowserTestViewController.h"
+#import "WeChatWebViewViewController.h"
+#import "AppDelegate.h"
+#import "MAMapViewController.h"
 
 @interface ViewController ()
 
@@ -30,6 +33,13 @@
     // Do any additional setup after loading the view, typically from a nib.
     self.title = @"首页";
     self.view.backgroundColor = [UIColor whiteColor];
+    [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]]; 
+    
+    _menuBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    _menuBtn.frame = CGRectMake(0, 0, 20, 18);
+    [_menuBtn setBackgroundImage:[UIImage imageNamed:@"menu"] forState:UIControlStateNormal];
+    [_menuBtn addTarget:self action:@selector(openOrCloseLeftList) forControlEvents:UIControlEventTouchUpInside];
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:_menuBtn];
     
     UIButton *database = [UIButton buttonWithType:UIButtonTypeRoundedRect];
     [database setTitle:@"数据库" forState:UIControlStateNormal];
@@ -129,6 +139,24 @@
     mjphotobrowser.frame = CGRectMake(10, 380, [UIScreen mainScreen].bounds.size.width/2-20, 40);
     [mjphotobrowser addTarget:self action:@selector(mjphotobrowserClick) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:mjphotobrowser];
+    
+    UIButton *wechatWebView = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    [wechatWebView setTitle:@"微信浏览器返回关闭" forState:UIControlStateNormal];
+    [wechatWebView setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    wechatWebView.layer.masksToBounds = YES;
+    wechatWebView.layer.borderWidth = 0.5;
+    wechatWebView.frame = CGRectMake([UIScreen mainScreen].bounds.size.width/2+10, 380, [UIScreen mainScreen].bounds.size.width/2-20, 40);
+    [wechatWebView addTarget:self action:@selector(wechatWebViewClick) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:wechatWebView];
+    
+    UIButton *maMap = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    [maMap setTitle:@"高德地图测试" forState:UIControlStateNormal];
+    [maMap setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    maMap.layer.masksToBounds = YES;
+    maMap.layer.borderWidth = 0.5;
+    maMap.frame = CGRectMake(10, 440, [UIScreen mainScreen].bounds.size.width/2-20, 40);
+    [maMap addTarget:self action:@selector(maMapClick) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:maMap];
 }
 
 - (void)databaseClick {
@@ -191,6 +219,64 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)wechatWebViewClick {
+    WeChatWebViewViewController *vc = [[WeChatWebViewViewController alloc] init];
+    [self.navigationController pushViewController:vc animated:YES];
+}
+
+- (void) openOrCloseLeftList {
+    AppDelegate *tempAppDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    if (tempAppDelegate.LeftSlideVC.closed) {
+        [tempAppDelegate.LeftSlideVC openLeftView];
+    } else {
+        [tempAppDelegate.LeftSlideVC closeLeftView];
+    }
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    NSLog(@"viewWillDisappear");
+    AppDelegate *tempAppDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    [tempAppDelegate.LeftSlideVC setPanEnabled:NO];
+    //在离开此页时移除通知
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    NSLog(@"viewWillAppear");
+    AppDelegate *tempAppDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    [tempAppDelegate.LeftSlideVC setPanEnabled:YES];
+    //在进入此页时添加通知，实现menu按钮的显示隐藏
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(open:) name:@"Open" object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(close:) name:@"Close" object:nil];
+}
+
+- (void)open:(NSNotification *)notification {
+    CATransition *animation = [CATransition animation];
+    [animation setDuration:0.5f];
+    [animation setType:kCATransitionFade];
+    [animation setFillMode:kCAFillModeForwards];
+    [animation setTimingFunction:[CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseOut]];
+    [_menuBtn.layer addAnimation:animation forKey:nil];
+    [_menuBtn setHidden:YES];
+}
+
+- (void)close:(NSNotification *)notification {
+    CATransition *animation = [CATransition animation];
+    [animation setDuration:0.5f];
+    [animation setType:kCATransitionFade];
+    [animation setFillMode:kCAFillModeForwards];
+    [animation setTimingFunction:[CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseIn]];
+    [_menuBtn.layer addAnimation:animation forKey:nil];
+    [_menuBtn setHidden:NO];
+}
+
+- (void)maMapClick {
+    MAMapViewController *vc = [[MAMapViewController alloc] init];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 @end

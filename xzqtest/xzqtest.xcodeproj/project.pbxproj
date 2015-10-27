@@ -160,6 +160,18 @@
 		7488B0391BD742C800AC10DB /* BaseObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 7488B0381BD742C800AC10DB /* BaseObject.m */; };
 		7488B03C1BD7431C00AC10DB /* StatusResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 7488B03B1BD7431C00AC10DB /* StatusResult.m */; };
 		7488B03F1BD7465400AC10DB /* JSONArrToModelArrViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7488B03E1BD7465400AC10DB /* JSONArrToModelArrViewController.m */; };
+		748CB3831BDDB50800946344 /* hema.png in Resources */ = {isa = PBXBuildFile; fileRef = 748CB3821BDDB50800946344 /* hema.png */; };
+		748CB3871BDDB5AF00946344 /* CustomCalloutView.m in Sources */ = {isa = PBXBuildFile; fileRef = 748CB3861BDDB5AF00946344 /* CustomCalloutView.m */; };
+		748CB38B1BDDB7F000946344 /* CustomAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 748CB38A1BDDB7F000946344 /* CustomAnnotationView.m */; };
+		748F87AB1BDCF0AD00A3625F /* MAMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 748F87AA1BDCF0AD00A3625F /* MAMapViewController.m */; };
+		748F87AE1BDD160A00A3625F /* car.png in Resources */ = {isa = PBXBuildFile; fileRef = 748F87AD1BDD160A00A3625F /* car.png */; };
+		749A6BAD1BDA138D00DF19E6 /* WeChatWebViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 749A6BAC1BDA138D00DF19E6 /* WeChatWebViewViewController.m */; };
+		749A6BB01BDA139E00DF19E6 /* WeChatWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = 749A6BAF1BDA139E00DF19E6 /* WeChatWebView.m */; };
+		749A6BB21BDA179600DF19E6 /* back_arrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 749A6BB11BDA179600DF19E6 /* back_arrow@2x.png */; };
+		749A6BB81BDA22B300DF19E6 /* LeftSlideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 749A6BB51BDA22B300DF19E6 /* LeftSlideViewController.m */; };
+		749A6BB91BDA22B300DF19E6 /* UIView_extra.m in Sources */ = {isa = PBXBuildFile; fileRef = 749A6BB71BDA22B300DF19E6 /* UIView_extra.m */; };
+		749A6BBD1BDA236900DF19E6 /* OtherViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 749A6BBC1BDA236900DF19E6 /* OtherViewController.m */; };
+		749A6BC01BDA246800DF19E6 /* LeftSortsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 749A6BBF1BDA246800DF19E6 /* LeftSortsViewController.m */; };
 		74E3648D1BD6350400321F54 /* MJExtensionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74E3648C1BD6350400321F54 /* MJExtensionViewController.m */; };
 		74E364911BD636E600321F54 /* EasyDicToModelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74E364901BD636E600321F54 /* EasyDicToModelViewController.m */; };
 		74E364941BD639FE00321F54 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 74E364931BD639FE00321F54 /* User.m */; };
@@ -700,6 +712,27 @@
 		7488B03B1BD7431C00AC10DB /* StatusResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StatusResult.m; sourceTree = "<group>"; };
 		7488B03D1BD7465400AC10DB /* JSONArrToModelArrViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONArrToModelArrViewController.h; sourceTree = "<group>"; };
 		7488B03E1BD7465400AC10DB /* JSONArrToModelArrViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONArrToModelArrViewController.m; sourceTree = "<group>"; };
+		748CB3821BDDB50800946344 /* hema.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hema.png; sourceTree = "<group>"; };
+		748CB3851BDDB5AF00946344 /* CustomCalloutView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomCalloutView.h; sourceTree = "<group>"; };
+		748CB3861BDDB5AF00946344 /* CustomCalloutView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomCalloutView.m; sourceTree = "<group>"; };
+		748CB3891BDDB7F000946344 /* CustomAnnotationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomAnnotationView.h; sourceTree = "<group>"; };
+		748CB38A1BDDB7F000946344 /* CustomAnnotationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomAnnotationView.m; sourceTree = "<group>"; };
+		748F87A91BDCF0AD00A3625F /* MAMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MAMapViewController.h; sourceTree = "<group>"; };
+		748F87AA1BDCF0AD00A3625F /* MAMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MAMapViewController.m; sourceTree = "<group>"; };
+		748F87AD1BDD160A00A3625F /* car.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = car.png; sourceTree = "<group>"; };
+		749A6BAB1BDA138D00DF19E6 /* WeChatWebViewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeChatWebViewViewController.h; sourceTree = "<group>"; };
+		749A6BAC1BDA138D00DF19E6 /* WeChatWebViewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeChatWebViewViewController.m; sourceTree = "<group>"; };
+		749A6BAE1BDA139E00DF19E6 /* WeChatWebView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeChatWebView.h; sourceTree = "<group>"; };
+		749A6BAF1BDA139E00DF19E6 /* WeChatWebView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeChatWebView.m; sourceTree = "<group>"; };
+		749A6BB11BDA179600DF19E6 /* back_arrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "back_arrow@2x.png"; sourceTree = "<group>"; };
+		749A6BB41BDA22B300DF19E6 /* LeftSlideViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeftSlideViewController.h; sourceTree = "<group>"; };
+		749A6BB51BDA22B300DF19E6 /* LeftSlideViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeftSlideViewController.m; sourceTree = "<group>"; };
+		749A6BB61BDA22B300DF19E6 /* UIView_extra.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIView_extra.h; sourceTree = "<group>"; };
+		749A6BB71BDA22B300DF19E6 /* UIView_extra.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIView_extra.m; sourceTree = "<group>"; };
+		749A6BBB1BDA236900DF19E6 /* OtherViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OtherViewController.h; sourceTree = "<group>"; };
+		749A6BBC1BDA236900DF19E6 /* OtherViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OtherViewController.m; sourceTree = "<group>"; };
+		749A6BBE1BDA246800DF19E6 /* LeftSortsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LeftSortsViewController.h; path = xzqtest/LeftSlideViewController/LeftSortsViewController.h; sourceTree = SOURCE_ROOT; };
+		749A6BBF1BDA246800DF19E6 /* LeftSortsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LeftSortsViewController.m; path = xzqtest/LeftSlideViewController/LeftSortsViewController.m; sourceTree = SOURCE_ROOT; };
 		74E3648B1BD6350400321F54 /* MJExtensionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJExtensionViewController.h; sourceTree = "<group>"; };
 		74E3648C1BD6350400321F54 /* MJExtensionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJExtensionViewController.m; sourceTree = "<group>"; };
 		74E3648F1BD636E600321F54 /* EasyDicToModelViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EasyDicToModelViewController.h; path = Class/EasyDicToModelViewController.h; sourceTree = "<group>"; };
@@ -1571,6 +1604,81 @@
 			path = images;
 			sourceTree = "<group>";
 		};
+		748CB3841BDDB59500946344 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				748CB3851BDDB5AF00946344 /* CustomCalloutView.h */,
+				748CB3861BDDB5AF00946344 /* CustomCalloutView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		748CB3881BDDB7D500946344 /* Annotation */ = {
+			isa = PBXGroup;
+			children = (
+				748CB3891BDDB7F000946344 /* CustomAnnotationView.h */,
+				748CB38A1BDDB7F000946344 /* CustomAnnotationView.m */,
+			);
+			path = Annotation;
+			sourceTree = "<group>";
+		};
+		748F87A81BDCF09C00A3625F /* MAMapTest */ = {
+			isa = PBXGroup;
+			children = (
+				748CB3881BDDB7D500946344 /* Annotation */,
+				748CB3841BDDB59500946344 /* View */,
+				748F87AC1BDD160A00A3625F /* images */,
+				748F87A91BDCF0AD00A3625F /* MAMapViewController.h */,
+				748F87AA1BDCF0AD00A3625F /* MAMapViewController.m */,
+			);
+			path = MAMapTest;
+			sourceTree = "<group>";
+		};
+		748F87AC1BDD160A00A3625F /* images */ = {
+			isa = PBXGroup;
+			children = (
+				748CB3821BDDB50800946344 /* hema.png */,
+				748F87AD1BDD160A00A3625F /* car.png */,
+			);
+			path = images;
+			sourceTree = "<group>";
+		};
+		749A6BAA1BDA136300DF19E6 /* WeChatWebView */ = {
+			isa = PBXGroup;
+			children = (
+				749A6BB11BDA179600DF19E6 /* back_arrow@2x.png */,
+				749A6BAB1BDA138D00DF19E6 /* WeChatWebViewViewController.h */,
+				749A6BAC1BDA138D00DF19E6 /* WeChatWebViewViewController.m */,
+				749A6BAE1BDA139E00DF19E6 /* WeChatWebView.h */,
+				749A6BAF1BDA139E00DF19E6 /* WeChatWebView.m */,
+			);
+			path = WeChatWebView;
+			sourceTree = "<group>";
+		};
+		749A6BB31BDA22B300DF19E6 /* LeftSlideViewController */ = {
+			isa = PBXGroup;
+			children = (
+				749A6BB41BDA22B300DF19E6 /* LeftSlideViewController.h */,
+				749A6BB51BDA22B300DF19E6 /* LeftSlideViewController.m */,
+				749A6BB61BDA22B300DF19E6 /* UIView_extra.h */,
+				749A6BB71BDA22B300DF19E6 /* UIView_extra.m */,
+			);
+			name = LeftSlideViewController;
+			path = xzqtest/LeftSlideViewController;
+			sourceTree = SOURCE_ROOT;
+		};
+		749A6BBA1BDA22CD00DF19E6 /* LeftSlide */ = {
+			isa = PBXGroup;
+			children = (
+				749A6BB31BDA22B300DF19E6 /* LeftSlideViewController */,
+				749A6BBB1BDA236900DF19E6 /* OtherViewController.h */,
+				749A6BBC1BDA236900DF19E6 /* OtherViewController.m */,
+				749A6BBE1BDA246800DF19E6 /* LeftSortsViewController.h */,
+				749A6BBF1BDA246800DF19E6 /* LeftSortsViewController.m */,
+			);
+			path = LeftSlide;
+			sourceTree = "<group>";
+		};
 		74E3648A1BD634DF00321F54 /* MJExtensionTest */ = {
 			isa = PBXGroup;
 			children = (
@@ -1877,6 +1985,9 @@
 			children = (
 				742D22C81BAFEDCD00DCE95D /* xzqtest.pch */,
 				742D221A1BAFEDCC00DCE95D /* demo.js */,
+				748F87A81BDCF09C00A3625F /* MAMapTest */,
+				749A6BBA1BDA22CD00DF19E6 /* LeftSlide */,
+				749A6BAA1BDA136300DF19E6 /* WeChatWebView */,
 				74EB5C041BD8C98D00329239 /* MJPhotoBrowserTest */,
 				748868691BD88292005F8D45 /* MBProgressHUDTest */,
 				74E3648A1BD634DF00321F54 /* MJExtensionTest */,
@@ -2873,6 +2984,11 @@
 					83ADBFA11B7ADEC000BD3DD2 = {
 						CreatedOnToolsVersion = 6.4;
 						DevelopmentTeam = 5USMYPL2E6;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 					83ADBFBA1B7ADEC000BD3DD2 = {
 						CreatedOnToolsVersion = 6.4;
@@ -2940,6 +3056,7 @@
 				742D231A1BAFEDCD00DCE95D /* 062@2x.png in Resources */,
 				742D233A1BAFEDCD00DCE95D /* 094@2x.png in Resources */,
 				83C3CF851B9FDE87007EF0DB /* um_public@2x.png in Resources */,
+				749A6BB21BDA179600DF19E6 /* back_arrow@2x.png in Resources */,
 				742D23351BAFEDCD00DCE95D /* 089@2x.png in Resources */,
 				83C3CF7C1B9FDE87007EF0DB /* um_more@2x.png in Resources */,
 				83C3CF361B9FDE87007EF0DB /* all_more@2x.png in Resources */,
@@ -3104,6 +3221,8 @@
 				742D22F21BAFEDCD00DCE95D /* 022@2x.png in Resources */,
 				742D232D1BAFEDCD00DCE95D /* 081@2x.png in Resources */,
 				83ADBFB11B7ADEC000BD3DD2 /* Main.storyboard in Resources */,
+				748CB3831BDDB50800946344 /* hema.png in Resources */,
+				748F87AE1BDD160A00A3625F /* car.png in Resources */,
 				83C3D0041B9FDE87007EF0DB /* UMComSettingViewController.xib in Resources */,
 				83C3CF7F1B9FDE87007EF0DB /* um_newcontent@2x.png in Resources */,
 				83C3CF871B9FDE87007EF0DB /* um_qzone_logo@2x.png in Resources */,
@@ -3235,6 +3354,7 @@
 				83C3CFB21B9FDE87007EF0DB /* UMComShowToast.m in Sources */,
 				83C3D00A1B9FDE87007EF0DB /* UMComUsersTableViewController.m in Sources */,
 				742D22DA1BAFEDCD00DCE95D /* JPUIImage.m in Sources */,
+				748CB38B1BDDB7F000946344 /* CustomAnnotationView.m in Sources */,
 				83C3CFA01B9FDE87007EF0DB /* UMComGridView.m in Sources */,
 				839BAB281B7C3F3F006FBDFA /* CDMainTableViewController.m in Sources */,
 				83C3CF9F1B9FDE87007EF0DB /* UMComButton.m in Sources */,
@@ -3251,12 +3371,14 @@
 				83ADBFE91B7AF06900BD3DD2 /* KCUserService.m in Sources */,
 				83C3D0031B9FDE87007EF0DB /* UMComSettingViewController.m in Sources */,
 				83AC8EC61BA1839400590B6B /* MLSelectPhotoPickerBrowserPhotoView.m in Sources */,
+				748CB3871BDDB5AF00946344 /* CustomCalloutView.m in Sources */,
 				7488B02D1BD73EDE00AC10DB /* ModelContainsModelViewController.m in Sources */,
 				742D22D31BAFEDCD00DCE95D /* JPCGTransform.m in Sources */,
 				7488B03F1BD7465400AC10DB /* JSONArrToModelArrViewController.m in Sources */,
 				742D22DB1BAFEDCD00DCE95D /* JPUIKit.m in Sources */,
 				83C3CFA31B9FDE87007EF0DB /* UMImageProgressView.m in Sources */,
 				83AC8EBF1BA1839400590B6B /* MLSelectPhotoNavigationViewController.m in Sources */,
+				749A6BBD1BDA236900DF19E6 /* OtherViewController.m in Sources */,
 				74E364971BD63A6500321F54 /* MJExtensionConfig.m in Sources */,
 				83AC8EC01BA1839400590B6B /* MLSelectPhotoPickerAssetsViewController.m in Sources */,
 				83C3CFBA1B9FDE87007EF0DB /* UMComCommentEditView.m in Sources */,
@@ -3264,6 +3386,7 @@
 				83AC8EB81BA1839400590B6B /* UIImage+MLTint.m in Sources */,
 				74E364911BD636E600321F54 /* EasyDicToModelViewController.m in Sources */,
 				839BAB2C1B7C4121006FBDFA /* CDStatusTableViewCell.m in Sources */,
+				749A6BB91BDA22B300DF19E6 /* UIView_extra.m in Sources */,
 				83C3CFE11B9FDE87007EF0DB /* UMComCommentTableView.m in Sources */,
 				74E3648D1BD6350400321F54 /* MJExtensionViewController.m in Sources */,
 				83C3CFC41B9FDE87007EF0DB /* UMComTableViewCell.m in Sources */,
@@ -3287,12 +3410,14 @@
 				83C3CFD51B9FDE87007EF0DB /* UMComLocationTableViewCell.m in Sources */,
 				74EB5C291BD8CFDC00329239 /* MyPhoto.m in Sources */,
 				742D22D61BAFEDCD00DCE95D /* JPMemory.m in Sources */,
+				748F87AB1BDCF0AD00A3625F /* MAMapViewController.m in Sources */,
 				83AC8EBB1BA1839400590B6B /* MLSelectPhotoPickerBrowserPhoto.m in Sources */,
 				7488B0361BD7429400AC10DB /* Ad.m in Sources */,
 				83C3CFAC1B9FDE87007EF0DB /* UMImagePickerController.m in Sources */,
 				83C3CFB81B9FDE87007EF0DB /* UIView+UMComTipLabel.m in Sources */,
 				83C3CFA81B9FDE87007EF0DB /* UMAssetsCollectionCheckMarkView.m in Sources */,
 				83C3CFDE1B9FDE87007EF0DB /* UMComNearbyFeedViewController.m in Sources */,
+				749A6BB81BDA22B300DF19E6 /* LeftSlideViewController.m in Sources */,
 				83ADBFEF1B7AF28B00BD3DD2 /* KCMainViewController.m in Sources */,
 				7488B03C1BD7431C00AC10DB /* StatusResult.m in Sources */,
 				83B459291B8E9E53002BEDC1 /* FMDatabase.m in Sources */,
@@ -3373,7 +3498,9 @@
 				83C3CFF91B9FDE87007EF0DB /* UMComTopicsTableViewController.m in Sources */,
 				83C3CFF21B9FDE87007EF0DB /* UMComSysLikeTableView.m in Sources */,
 				83C3CFB61B9FDE87007EF0DB /* UMComModel.xcdatamodeld in Sources */,
+				749A6BC01BDA246800DF19E6 /* LeftSortsViewController.m in Sources */,
 				742D23511BAFEDCD00DCE95D /* TextImageViewController.m in Sources */,
+				749A6BB01BDA139E00DF19E6 /* WeChatWebView.m in Sources */,
 				839BAB181B7C3788006FBDFA /* CDStatus.m in Sources */,
 				83C3CFFA1B9FDE87007EF0DB /* UIViewController+UMComAddition.m in Sources */,
 				83C3CFC11B9FDE87007EF0DB /* UMComShareCollectionView.m in Sources */,
@@ -3421,6 +3548,7 @@
 				83C3CFA51B9FDE87007EF0DB /* UMComGenderView.m in Sources */,
 				83C3CFAA1B9FDE87007EF0DB /* UMAssetsCollectionGrid.m in Sources */,
 				83C3CFE61B9FDE87007EF0DB /* UMComFeedDetailViewController.m in Sources */,
+				749A6BAD1BDA138D00DF19E6 /* WeChatWebViewViewController.m in Sources */,
 				83C3CFA91B9FDE87007EF0DB /* UMAssetsCollectionController.m in Sources */,
 				83C3CFAE1B9FDE87007EF0DB /* UMImagePickerThumbnailView.m in Sources */,
 				83C3CFC81B9FDE87007EF0DB /* UMComActionDeleteView.m in Sources */,

@@ -20,6 +20,8 @@ PODS:
   - AFNetworking/UIKit (2.6.0):
     - AFNetworking/NSURLConnection
     - AFNetworking/NSURLSession
+  - AMap2DMap (2.6.0)
+  - AMapSearch (2.6.0)
   - DACircularProgress (2.3.1)
   - JSPatch (0.1.3):
     - JSPatch/Core (= 0.1.3)
@@ -38,6 +40,8 @@ PODS:
 
 DEPENDENCIES:
   - AFNetworking (~> 2.0)
+  - AMap2DMap
+  - AMapSearch
   - JSPatch
   - Masonry
   - MBProgressHUD (~> 0.9.1)
@@ -49,6 +53,8 @@ DEPENDENCIES:
 
 SPEC CHECKSUMS:
   AFNetworking: 79f7eb1a0fcfa7beb409332b2ca49afe9ce53b05
+  AMap2DMap: b5ce82581ca53b71a0136da858f7ef04db1ffc59
+  AMapSearch: 0ea3101eec4b9f500b53e33dcda30d343d41613b
   DACircularProgress: 4dd437c0fc3da5161cb289e07ac449493d41db71
   JSPatch: d667f53dd37bffe640e056198d26c5f0f1219e55
   Masonry: 362e8a1cc0beada4a4c4832d5e863da2a51533be

@@ -13,6 +13,9 @@
 #import "UMSocialWechatHandler.h"
 #import "UMComNavigationController.h"
 #import "JPEngine.h"
+#import "ViewController.h"
+#import "LeftSortsViewController.h"
+#import <MAMapKit/MAMapKit.h>
 
 #define UMengCommunityAppkey @"55eff44ae0f55a9c7e003582"
 
@@ -32,6 +35,20 @@ void uncaughtExceptionHandler(NSException *exception) {
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    //启动页结束后显示状态栏
+    [application setStatusBarHidden:NO withAnimation:UIStatusBarAnimationFade];
+    //将状态栏字体颜色改为白色
+    [application setStatusBarStyle:UIStatusBarStyleLightContent];
+    
+    //配置高德地图key
+    [MAMapServices sharedServices].apiKey = @"21d7bb211111dff9deeaaad3e895ba55";
+    
+    ViewController *mainVC = [[ViewController alloc] init];
+    self.mainNavigationController = [[UINavigationController alloc] initWithRootViewController:mainVC];
+    LeftSortsViewController *leftVC = [[LeftSortsViewController alloc] init];
+    self.LeftSlideVC = [[LeftSlideViewController alloc] initWithLeftView:leftVC andMainView:self.mainNavigationController];
+    self.window.rootViewController = self.LeftSlideVC;
+    [[UINavigationBar appearance] setBarTintColor:[UIColor colorWithRed:28/255.f green:173/255.f blue:230/255.f alpha:1]];
     
     [JPEngine startEngine];
     NSString *sourcePath = [[NSBundle mainBundle] pathForResource:@"demo" ofType:@"js"];
