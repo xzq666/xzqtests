@@ -16,6 +16,7 @@
 #import "ViewController.h"
 #import "LeftSortsViewController.h"
 #import <MAMapKit/MAMapKit.h>
+#import <AlipaySDK/AlipaySDK.h>
 
 #define UMengCommunityAppkey @"55eff44ae0f55a9c7e003582"
 
@@ -85,9 +86,12 @@ void uncaughtExceptionHandler(NSException *exception) {
 - (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
     BOOL result = [UMComLoginManager handleOpenURL:url];
     if (result == FALSE) {
-        //调用其他SDK，例如新浪微博SDK等
+        //跳转支付宝钱包进行支付，处理支付结果
+        [[AlipaySDK defaultService] processOrderWithPaymentResult:url standbyCallback:^(NSDictionary *resultDic) {
+            NSLog(@"result = %@",resultDic);
+        }];
     }
-    return result;
+    return YES;
 }
 
 #pragma mark Message

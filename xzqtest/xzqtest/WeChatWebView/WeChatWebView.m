@@ -13,7 +13,7 @@
 @property (nonatomic, weak) UIWebView * webView;
 @property (nonatomic, weak) UIButton * backItem;
 @property (nonatomic, weak) UIButton * closeItem;
-@property (nonatomic, weak) UIActivityIndicatorView * activityView;
+//@property (nonatomic, weak) UIActivityIndicatorView * activityView;
 
 @end
 
@@ -34,11 +34,11 @@
     [self.view addSubview:webView];
     self.webView = webView;
     //activityView
-    UIActivityIndicatorView *activityView = [[UIActivityIndicatorView alloc]initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
-    activityView.center = self.view.center;
-    [activityView startAnimating];
-    self.activityView = activityView;
-    [self.view addSubview:activityView];
+//    UIActivityIndicatorView *activityView = [[UIActivityIndicatorView alloc]initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
+//    activityView.center = self.view.center;
+//    [activityView startAnimating];
+//    self.activityView = activityView;
+//    [self.view addSubview:activityView];
     //清除UIWebView的缓存
     [[NSURLCache sharedURLCache] removeAllCachedResponses];
     [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:self.url] cachePolicy:NSURLRequestReloadIgnoringCacheData timeoutInterval:10.0]];
@@ -85,7 +85,7 @@
 
 #pragma mark - UIWebViewDelegate
 - (void)webViewDidStartLoad:(UIWebView *)webView{
-    self.activityView.hidden = NO;
+//    self.activityView.hidden = NO;
 }
 
 - (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType{
@@ -97,12 +97,12 @@
 }
 
 - (void)webViewDidFinishLoad:(UIWebView *)webView{
-    self.activityView.hidden = YES;
+//    self.activityView.hidden = YES;
     self.title = [webView stringByEvaluatingJavaScriptFromString:@"document.title"];
 }
 
 - (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error{
-    self.activityView.hidden = YES;
+//    self.activityView.hidden = YES;
 }
 
 - (void)didReceiveMemoryWarning {

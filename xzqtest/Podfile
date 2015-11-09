@@ -10,3 +10,6 @@ pod 'YLGIFImage'
 pod 'MLPhotoBrowser', '~> 0.5.0'
 pod 'AMap2DMap' #2D地图SDK
 pod 'AMapSearch' #搜索服务SDK
+
+platform :ios, '9.0'
+pod 'EaseMobSDKFull'

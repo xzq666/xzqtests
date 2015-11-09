@@ -172,6 +172,13 @@
 		749A6BB91BDA22B300DF19E6 /* UIView_extra.m in Sources */ = {isa = PBXBuildFile; fileRef = 749A6BB71BDA22B300DF19E6 /* UIView_extra.m */; };
 		749A6BBD1BDA236900DF19E6 /* OtherViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 749A6BBC1BDA236900DF19E6 /* OtherViewController.m */; };
 		749A6BC01BDA246800DF19E6 /* LeftSortsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 749A6BBF1BDA246800DF19E6 /* LeftSortsViewController.m */; };
+		74A72F0E1BE1C510005D1FA5 /* PayTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74A72F0D1BE1C510005D1FA5 /* PayTestViewController.m */; };
+		74A72F111BE1C6DD005D1FA5 /* AlipaySDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 74A72F0F1BE1C6DD005D1FA5 /* AlipaySDK.bundle */; };
+		74A72F121BE1C6DD005D1FA5 /* AlipaySDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74A72F101BE1C6DD005D1FA5 /* AlipaySDK.framework */; };
+		74C6696C1BE99D2F0001F42A /* DKTagCloudView.m in Sources */ = {isa = PBXBuildFile; fileRef = 74C6696B1BE99D2F0001F42A /* DKTagCloudView.m */; };
+		74C6696F1BE99D530001F42A /* DKTagCloudViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74C6696E1BE99D530001F42A /* DKTagCloudViewController.m */; };
+		74D8C9A11BE2074600EF6DB9 /* ClickViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74D8C9A01BE2074600EF6DB9 /* ClickViewController.m */; };
+		74D8C9A41BE207B700EF6DB9 /* PHPulsingHaloLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 74D8C9A31BE207B700EF6DB9 /* PHPulsingHaloLayer.m */; };
 		74E3648D1BD6350400321F54 /* MJExtensionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74E3648C1BD6350400321F54 /* MJExtensionViewController.m */; };
 		74E364911BD636E600321F54 /* EasyDicToModelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74E364901BD636E600321F54 /* EasyDicToModelViewController.m */; };
 		74E364941BD639FE00321F54 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 74E364931BD639FE00321F54 /* User.m */; };
@@ -190,6 +197,7 @@
 		74EB5C251BD8CAD100329239 /* MJPhotoBrowserTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74EB5C241BD8CAD100329239 /* MJPhotoBrowserTestViewController.m */; };
 		74EB5C291BD8CFDC00329239 /* MyPhoto.m in Sources */ = {isa = PBXBuildFile; fileRef = 74EB5C281BD8CFDC00329239 /* MyPhoto.m */; };
 		74F2E2D81BB1588C0039E747 /* MasonryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74F2E2D71BB1588C0039E747 /* MasonryViewController.m */; };
+		74FA71F81BEA023500084FB4 /* WWTagsCloudView.m in Sources */ = {isa = PBXBuildFile; fileRef = 74FA71F71BEA023500084FB4 /* WWTagsCloudView.m */; };
 		839BAB111B7C34F9006FBDFA /* XZQModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 839BAB0F1B7C34F9006FBDFA /* XZQModel.xcdatamodeld */; };
 		839BAB151B7C3788006FBDFA /* CDUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 839BAB141B7C3788006FBDFA /* CDUser.m */; };
 		839BAB181B7C3788006FBDFA /* CDStatus.m in Sources */ = {isa = PBXBuildFile; fileRef = 839BAB171B7C3788006FBDFA /* CDStatus.m */; };
@@ -692,6 +700,7 @@
 		742D22C61BAFEDCD00DCE95D /* Utility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Utility.h; sourceTree = "<group>"; };
 		742D22C71BAFEDCD00DCE95D /* Utility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Utility.m; sourceTree = "<group>"; };
 		742D22C81BAFEDCD00DCE95D /* xzqtest.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = xzqtest.pch; sourceTree = "<group>"; };
+		7452479A1BE07F0A00047A1C /* LxDBAnything.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LxDBAnything.h; sourceTree = "<group>"; };
 		7474FE741BCF4987002596EA /* GGPlaceholderTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GGPlaceholderTextView.h; sourceTree = "<group>"; };
 		7474FE751BCF4987002596EA /* GGPlaceholderTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GGPlaceholderTextView.m; sourceTree = "<group>"; };
 		7488686A1BD882AD005F8D45 /* MBProgressHUDViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUDViewController.h; sourceTree = "<group>"; };
@@ -733,6 +742,18 @@
 		749A6BBC1BDA236900DF19E6 /* OtherViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OtherViewController.m; sourceTree = "<group>"; };
 		749A6BBE1BDA246800DF19E6 /* LeftSortsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LeftSortsViewController.h; path = xzqtest/LeftSlideViewController/LeftSortsViewController.h; sourceTree = SOURCE_ROOT; };
 		749A6BBF1BDA246800DF19E6 /* LeftSortsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LeftSortsViewController.m; path = xzqtest/LeftSlideViewController/LeftSortsViewController.m; sourceTree = SOURCE_ROOT; };
+		74A72F0C1BE1C510005D1FA5 /* PayTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PayTestViewController.h; sourceTree = "<group>"; };
+		74A72F0D1BE1C510005D1FA5 /* PayTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PayTestViewController.m; sourceTree = "<group>"; };
+		74A72F0F1BE1C6DD005D1FA5 /* AlipaySDK.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = AlipaySDK.bundle; sourceTree = "<group>"; };
+		74A72F101BE1C6DD005D1FA5 /* AlipaySDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AlipaySDK.framework; sourceTree = "<group>"; };
+		74C6696A1BE99D2F0001F42A /* DKTagCloudView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DKTagCloudView.h; sourceTree = "<group>"; };
+		74C6696B1BE99D2F0001F42A /* DKTagCloudView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DKTagCloudView.m; sourceTree = "<group>"; };
+		74C6696D1BE99D530001F42A /* DKTagCloudViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DKTagCloudViewController.h; sourceTree = "<group>"; };
+		74C6696E1BE99D530001F42A /* DKTagCloudViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DKTagCloudViewController.m; sourceTree = "<group>"; };
+		74D8C99F1BE2074600EF6DB9 /* ClickViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClickViewController.h; sourceTree = "<group>"; };
+		74D8C9A01BE2074600EF6DB9 /* ClickViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClickViewController.m; sourceTree = "<group>"; };
+		74D8C9A21BE207B700EF6DB9 /* PHPulsingHaloLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PHPulsingHaloLayer.h; sourceTree = "<group>"; };
+		74D8C9A31BE207B700EF6DB9 /* PHPulsingHaloLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PHPulsingHaloLayer.m; sourceTree = "<group>"; };
 		74E3648B1BD6350400321F54 /* MJExtensionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJExtensionViewController.h; sourceTree = "<group>"; };
 		74E3648C1BD6350400321F54 /* MJExtensionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJExtensionViewController.m; sourceTree = "<group>"; };
 		74E3648F1BD636E600321F54 /* EasyDicToModelViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EasyDicToModelViewController.h; path = Class/EasyDicToModelViewController.h; sourceTree = "<group>"; };
@@ -767,6 +788,8 @@
 		74EB5C281BD8CFDC00329239 /* MyPhoto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyPhoto.m; sourceTree = "<group>"; };
 		74F2E2D61BB1588C0039E747 /* MasonryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MasonryViewController.h; sourceTree = "<group>"; };
 		74F2E2D71BB1588C0039E747 /* MasonryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MasonryViewController.m; sourceTree = "<group>"; };
+		74FA71F61BEA023500084FB4 /* WWTagsCloudView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WWTagsCloudView.h; sourceTree = "<group>"; };
+		74FA71F71BEA023500084FB4 /* WWTagsCloudView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WWTagsCloudView.m; sourceTree = "<group>"; };
 		77C7550E6D29ECE2ABB990A8 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		839BAB101B7C34F9006FBDFA /* XZQModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = XZQModel.xcdatamodel; sourceTree = "<group>"; };
 		839BAB131B7C3788006FBDFA /* CDUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDUser.h; sourceTree = "<group>"; };
@@ -1331,6 +1354,7 @@
 				83C3D0211B9FDE87007EF0DB /* libWeChatSDK.a in Frameworks */,
 				83C3D00F1B9FDE87007EF0DB /* umeng_community_ios_sdk_v2.1.1.a in Frameworks */,
 				83ADBFDB1B7AE9D900BD3DD2 /* libsqlite3.dylib in Frameworks */,
+				74A72F121BE1C6DD005D1FA5 /* AlipaySDK.framework in Frameworks */,
 				83C3D01D1B9FDE87007EF0DB /* libSocialQQ.a in Frameworks */,
 				83C3D0201B9FDE87007EF0DB /* libSocialWechat.a in Frameworks */,
 				83C3D01C1B9FDE87007EF0DB /* libSocialSina.a in Frameworks */,
@@ -1679,6 +1703,46 @@
 			path = LeftSlide;
 			sourceTree = "<group>";
 		};
+		74A72F0B1BE1C4FD005D1FA5 /* paytest */ = {
+			isa = PBXGroup;
+			children = (
+				74A72F0C1BE1C510005D1FA5 /* PayTestViewController.h */,
+				74A72F0D1BE1C510005D1FA5 /* PayTestViewController.m */,
+			);
+			path = paytest;
+			sourceTree = "<group>";
+		};
+		74C669681BE99D2F0001F42A /* DKTagCloudTest */ = {
+			isa = PBXGroup;
+			children = (
+				74FA71F51BEA023500084FB4 /* WWTagsCloudView */,
+				74C669691BE99D2F0001F42A /* DKTagCloudView */,
+				74C6696D1BE99D530001F42A /* DKTagCloudViewController.h */,
+				74C6696E1BE99D530001F42A /* DKTagCloudViewController.m */,
+			);
+			path = DKTagCloudTest;
+			sourceTree = "<group>";
+		};
+		74C669691BE99D2F0001F42A /* DKTagCloudView */ = {
+			isa = PBXGroup;
+			children = (
+				74C6696A1BE99D2F0001F42A /* DKTagCloudView.h */,
+				74C6696B1BE99D2F0001F42A /* DKTagCloudView.m */,
+			);
+			path = DKTagCloudView;
+			sourceTree = "<group>";
+		};
+		74D8C99E1BE2073300EF6DB9 /* Click */ = {
+			isa = PBXGroup;
+			children = (
+				74D8C9A21BE207B700EF6DB9 /* PHPulsingHaloLayer.h */,
+				74D8C9A31BE207B700EF6DB9 /* PHPulsingHaloLayer.m */,
+				74D8C99F1BE2074600EF6DB9 /* ClickViewController.h */,
+				74D8C9A01BE2074600EF6DB9 /* ClickViewController.m */,
+			);
+			path = Click;
+			sourceTree = "<group>";
+		};
 		74E3648A1BD634DF00321F54 /* MJExtensionTest */ = {
 			isa = PBXGroup;
 			children = (
@@ -1779,6 +1843,15 @@
 				74F2E2D71BB1588C0039E747 /* MasonryViewController.m */,
 			);
 			path = masonry;
+			sourceTree = "<group>";
+		};
+		74FA71F51BEA023500084FB4 /* WWTagsCloudView */ = {
+			isa = PBXGroup;
+			children = (
+				74FA71F61BEA023500084FB4 /* WWTagsCloudView.h */,
+				74FA71F71BEA023500084FB4 /* WWTagsCloudView.m */,
+			);
+			path = WWTagsCloudView;
 			sourceTree = "<group>";
 		};
 		839BAB0E1B7C3414006FBDFA /* CoreData */ = {
@@ -1983,8 +2056,13 @@
 		83ADBFA41B7ADEC000BD3DD2 /* xzqtest */ = {
 			isa = PBXGroup;
 			children = (
+				74A72F0F1BE1C6DD005D1FA5 /* AlipaySDK.bundle */,
+				74A72F101BE1C6DD005D1FA5 /* AlipaySDK.framework */,
 				742D22C81BAFEDCD00DCE95D /* xzqtest.pch */,
 				742D221A1BAFEDCC00DCE95D /* demo.js */,
+				74C669681BE99D2F0001F42A /* DKTagCloudTest */,
+				74D8C99E1BE2073300EF6DB9 /* Click */,
+				74A72F0B1BE1C4FD005D1FA5 /* paytest */,
 				748F87A81BDCF09C00A3625F /* MAMapTest */,
 				749A6BBA1BDA22CD00DF19E6 /* LeftSlide */,
 				749A6BAA1BDA136300DF19E6 /* WeChatWebView */,
@@ -2187,6 +2265,7 @@
 		83C3CD5F1B9FDE7C007EF0DB /* ThirdSDK */ = {
 			isa = PBXGroup;
 			children = (
+				7452479A1BE07F0A00047A1C /* LxDBAnything.h */,
 				83AC8E891BA1839400590B6B /* MLSelectPhoto */,
 				83C3CD601B9FDE86007EF0DB /* umeng_community_ios_sdk_v2.1.1 */,
 			);
@@ -3191,6 +3270,7 @@
 				83C3CFD21B9FDE87007EF0DB /* UMComFriendTableViewCell.xib in Resources */,
 				742D231D1BAFEDCD00DCE95D /* 065@2x.png in Resources */,
 				742D22FA1BAFEDCD00DCE95D /* 030@2x.png in Resources */,
+				74A72F111BE1C6DD005D1FA5 /* AlipaySDK.bundle in Resources */,
 				742D23291BAFEDCD00DCE95D /* 077@2x.png in Resources */,
 				83C3CF511B9FDE87007EF0DB /* new@2x.png in Resources */,
 				83C3CF2B1B9FDE87007EF0DB /* UMComLoginViewController.xib in Resources */,
@@ -3482,8 +3562,10 @@
 				83ADBFEC1B7AF19600BD3DD2 /* KCStatusService.m in Sources */,
 				742D22DC1BAFEDCD00DCE95D /* JSPatchViewController.m in Sources */,
 				83C3CFBD1B9FDE87007EF0DB /* UMComMutiTextRun.m in Sources */,
+				74FA71F81BEA023500084FB4 /* WWTagsCloudView.m in Sources */,
 				83C3CFBE1B9FDE87007EF0DB /* UMComPageControlView.m in Sources */,
 				83C3CFA61B9FDE87007EF0DB /* UMComLevelImage.m in Sources */,
+				74C6696F1BE99D530001F42A /* DKTagCloudViewController.m in Sources */,
 				83AC8EC81BA1839400590B6B /* MLSelectPhotoPickerCollectionViewCell.m in Sources */,
 				74EB5C1A1BD8C9A800329239 /* MJPhotoToolbar.m in Sources */,
 				83C3CFED1B9FDE87007EF0DB /* UMComCommentControlView.m in Sources */,
@@ -3533,6 +3615,7 @@
 				83C3CFFF1B9FDE87007EF0DB /* UMComPhotoAlbumViewController.m in Sources */,
 				83C3CFF81B9FDE87007EF0DB /* UMComTopicsTableView.m in Sources */,
 				83AC8EBE1BA1839400590B6B /* MLSelectPhotoBrowserViewController.m in Sources */,
+				74A72F0E1BE1C510005D1FA5 /* PayTestViewController.m in Sources */,
 				83C3CFF31B9FDE87007EF0DB /* UMComHorizontalTableView.m in Sources */,
 				83C3CFB31B9FDE87007EF0DB /* UMComEmojiKeyBoardView.m in Sources */,
 				83C3D00D1B9FDE87007EF0DB /* UMComEditViewModel.m in Sources */,
@@ -3540,6 +3623,7 @@
 				83C3CFA21B9FDE87007EF0DB /* UMComProgressView.m in Sources */,
 				83C3D0051B9FDE87007EF0DB /* UMComUserCenterCollectionView.m in Sources */,
 				83C3CFCF1B9FDE87007EF0DB /* UMComEditViewController.m in Sources */,
+				74C6696C1BE99D2F0001F42A /* DKTagCloudView.m in Sources */,
 				74EB5C211BD8CA5000329239 /* MBProgressHUD+MJ.m in Sources */,
 				83B4592A1B8E9E53002BEDC1 /* FMDatabaseAdditions.m in Sources */,
 				83C3CFC21B9FDE87007EF0DB /* UMComSyntaxHighlightTextStorage.m in Sources */,
@@ -3547,11 +3631,13 @@
 				83C3CF2E1B9FDE87007EF0DB /* UMComUMengMessageHandler.m in Sources */,
 				83C3CFA51B9FDE87007EF0DB /* UMComGenderView.m in Sources */,
 				83C3CFAA1B9FDE87007EF0DB /* UMAssetsCollectionGrid.m in Sources */,
+				74D8C9A11BE2074600EF6DB9 /* ClickViewController.m in Sources */,
 				83C3CFE61B9FDE87007EF0DB /* UMComFeedDetailViewController.m in Sources */,
 				749A6BAD1BDA138D00DF19E6 /* WeChatWebViewViewController.m in Sources */,
 				83C3CFA91B9FDE87007EF0DB /* UMAssetsCollectionController.m in Sources */,
 				83C3CFAE1B9FDE87007EF0DB /* UMImagePickerThumbnailView.m in Sources */,
 				83C3CFC81B9FDE87007EF0DB /* UMComActionDeleteView.m in Sources */,
+				74D8C9A41BE207B700EF6DB9 /* PHPulsingHaloLayer.m in Sources */,
 				7488B0331BD7427400AC10DB /* ModelContainsModelArrayViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -3698,6 +3784,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/xzqtest/ThirdSDK/umeng_community_ios_sdk_v2.1.1/UMSocial_Sdk_4.2/UMSocial_Sdk_Extra_Frameworks/TencentOpenAPI",
+					"$(PROJECT_DIR)/xzqtest",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = xzqtest/xzqtest.pch;
@@ -3732,6 +3819,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/xzqtest/ThirdSDK/umeng_community_ios_sdk_v2.1.1/UMSocial_Sdk_4.2/UMSocial_Sdk_Extra_Frameworks/TencentOpenAPI",
+					"$(PROJECT_DIR)/xzqtest",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = xzqtest/xzqtest.pch;

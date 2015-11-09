@@ -21,6 +21,9 @@
 #import "WeChatWebViewViewController.h"
 #import "AppDelegate.h"
 #import "MAMapViewController.h"
+#import "PayTestViewController.h"
+#import "ClickViewController.h"
+#import "DKTagCloudViewController.h"
 
 @interface ViewController ()
 
@@ -157,6 +160,33 @@
     maMap.frame = CGRectMake(10, 440, [UIScreen mainScreen].bounds.size.width/2-20, 40);
     [maMap addTarget:self action:@selector(maMapClick) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:maMap];
+    
+    UIButton *paytest = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    [paytest setTitle:@"支付宝快捷支付测试" forState:UIControlStateNormal];
+    [paytest setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    paytest.layer.masksToBounds = YES;
+    paytest.layer.borderWidth = 0.5;
+    paytest.frame = CGRectMake([UIScreen mainScreen].bounds.size.width/2+10, 440, [UIScreen mainScreen].bounds.size.width/2-20, 40);
+    [paytest addTarget:self action:@selector(paytestClick) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:paytest];
+    
+    UIButton *clicktest = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    [clicktest setTitle:@"戳一戳" forState:UIControlStateNormal];
+    [clicktest setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    clicktest.layer.masksToBounds = YES;
+    clicktest.layer.borderWidth = 0.5;
+    clicktest.frame = CGRectMake(10, 500, [UIScreen mainScreen].bounds.size.width/2-20, 40);
+    [clicktest addTarget:self action:@selector(clicktestClick) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:clicktest];
+    
+    UIButton *tagCloud = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    [tagCloud setTitle:@"标签云" forState:UIControlStateNormal];
+    [tagCloud setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    tagCloud.layer.masksToBounds = YES;
+    tagCloud.layer.borderWidth = 0.5;
+    tagCloud.frame = CGRectMake([UIScreen mainScreen].bounds.size.width/2+10, 500, [UIScreen mainScreen].bounds.size.width/2-20, 40);
+    [tagCloud addTarget:self action:@selector(tagCloudClick) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:tagCloud];
 }
 
 - (void)databaseClick {
@@ -213,6 +243,21 @@
 
 - (void)mjphotobrowserClick {
     MJPhotoBrowserTestViewController *vc = [[MJPhotoBrowserTestViewController alloc] init];
+    [self.navigationController pushViewController:vc animated:YES];
+}
+
+- (void)paytestClick {
+    PayTestViewController *vc = [[PayTestViewController alloc] init];
+    [self.navigationController pushViewController:vc animated:YES];
+}
+
+- (void)clicktestClick {
+    ClickViewController *vc = [[ClickViewController alloc] init];
+    [self.navigationController pushViewController:vc animated:YES];
+}
+
+- (void)tagCloudClick {
+    DKTagCloudViewController *vc = [[DKTagCloudViewController alloc] init];
     [self.navigationController pushViewController:vc animated:YES];
 }
 
